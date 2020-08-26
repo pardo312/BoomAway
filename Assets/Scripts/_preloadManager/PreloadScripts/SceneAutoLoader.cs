@@ -1,7 +1,8 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
- 
+
 /// <summary>
 /// Scene auto loader.
 /// </summary>
@@ -17,13 +18,12 @@ using UnityEditor.SceneManagement;
 [InitializeOnLoad]
 static class SceneAutoLoader
 {
+	
 	// Static constructor binds a playmode-changed callback.
 	// [InitializeOnLoad] above makes sure this gets executed.
 	static SceneAutoLoader()
 	{
-        #if UNITY_EDITOR 
 		EditorApplication.playModeStateChanged += OnPlayModeChanged;
-        #endif
 	}
  
 	// Menu items to select the "master" scene and control whether or not to load it.
@@ -131,3 +131,4 @@ static class SceneAutoLoader
 		set { EditorPrefs.SetString(cEditorPrefPreviousScene, value); }
 	}
 }
+#endif

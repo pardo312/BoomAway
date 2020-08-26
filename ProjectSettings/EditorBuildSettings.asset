@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
-    path: Assets/Scenes/PreloadScene/_preload.unity
+    path: Assets/Scenes/_preloadScene/_preload.unity
     guid: 222f7157ba714854ebf99d4da6e5ed59
   - enabled: 1
     path: Assets/Scenes/TitleScreen/TitleScreen.unity
     guid: e93bb0385ef856049abc2352447b2ec0
+  - enabled: 1
+    path: Assets/Scenes/Prototiping/DanielScene.unity
+    guid: e166893f6dc869349b9f905c683c9304
   m_configObjects: {}
