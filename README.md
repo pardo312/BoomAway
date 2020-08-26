@@ -1,7 +1,7 @@
 
 ![](https://img.shields.io/badge/Plataforma-PC-brightgreen)
 ![](https://img.shields.io/badge/Motor-Unity-blue)
-![](https://img.shields.io/badge/Tecnologia-CSharp-blueviolet)
+![](https://img.shields.io/badge/Lenguaje-CSharp-blueviolet)
 
 # BoomAway <img src="https://raw.githubusercontent.com/pardo312/BoomAway/master/boomGif.gif" width="70px">
 
