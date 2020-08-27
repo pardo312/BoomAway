@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 798fbf9ce69271b4983e813cbc36ad44
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2810155961919471713
+    second: s4m_ur4i_huge-assetpack-ui-portraits_0
+  - first:
+      213: 2774353749669819406
+    second: s4m_ur4i_huge-assetpack-ui-portraits_1
+  - first:
+      213: 6442074511997395586
+    second: s4m_ur4i_huge-assetpack-ui-portraits_2
+  - first:
+      213: 739773588877928569
+    second: s4m_ur4i_huge-assetpack-ui-portraits_3
+  - first:
+      213: -4203094512701766484
+    second: s4m_ur4i_huge-assetpack-ui-portraits_4
+  - first:
+      213: 8947066559907409441
+    second: s4m_ur4i_huge-assetpack-ui-portraits_5
+  - first:
+      213: -1763311997823178646
+    second: s4m_ur4i_huge-assetpack-ui-portraits_6
+  - first:
+      213: 4637007884670788167
+    second: s4m_ur4i_huge-assetpack-ui-portraits_7
+  - first:
+      213: 4232812664902697219
+    second: s4m_ur4i_huge-assetpack-ui-portraits_8
+  - first:
+      213: 6159487170636416450
+    second: s4m_ur4i_huge-assetpack-ui-portraits_9
+  - first:
+      213: 6810073593847316489
+    second: s4m_ur4i_huge-assetpack-ui-portraits_10
+  - first:
+      213: 545493652560955072
+    second: s4m_ur4i_huge-assetpack-ui-portraits_11
+  - first:
+      213: -4551509213832417748
+    second: s4m_ur4i_huge-assetpack-ui-portraits_12
+  - first:
+      213: -6403838843060956060
+    second: s4m_ur4i_huge-assetpack-ui-portraits_13
+  - first:
+      213: -5239870307767604951
+    second: s4m_ur4i_huge-assetpack-ui-portraits_14
+  - first:
+      213: 2540536776895857053
+    second: s4m_ur4i_huge-assetpack-ui-portraits_15
+  - first:
+      213: -2810433609906902328
+    second: s4m_ur4i_huge-assetpack-ui-portraits_16
+  - first:
+      213: 2467191514737881068
+    second: s4m_ur4i_huge-assetpack-ui-portraits_17
+  - first:
+      213: -8093016298084501623
+    second: s4m_ur4i_huge-assetpack-ui-portraits_18
+  - first:
+      213: -512115444005669738
+    second: s4m_ur4i_huge-assetpack-ui-portraits_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 750
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16008a165fdaff620800000000000000
+      internalID: 2810155961919471713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 750
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04b752490c708620800000000000000
+      internalID: 2774353749669819406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_2
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 750
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282e33813a8d66950800000000000000
+      internalID: 6442074511997395586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 750
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978e84bd824344a00800000000000000
+      internalID: 739773588877928569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_4
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 750
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca484054fcb9ba5c0800000000000000
+      internalID: -4203094512701766484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_5
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 750
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12eae05f1ad5a2c70800000000000000
+      internalID: 8947066559907409441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_6
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 510
+        width: 183
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68a09594157787e0800000000000000
+      internalID: -1763311997823178646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_7
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 510
+        width: 183
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742ec7a6a16f95040800000000000000
+      internalID: 4637007884670788167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_8
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 510
+        width: 183
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301cc4c31b8fdba30800000000000000
+      internalID: 4232812664902697219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_9
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 510
+        width: 183
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c50c5482f4ea7550800000000000000
+      internalID: 6159487170636416450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_10
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 510
+        width: 183
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900898f2add328e50800000000000000
+      internalID: 6810073593847316489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_11
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 510
+        width: 183
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6402c369bf19700800000000000000
+      internalID: 545493652560955072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_12
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 270
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ee9952c7ac5d0c0800000000000000
+      internalID: -4551509213832417748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_13
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 270
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464d080508ef027a0800000000000000
+      internalID: -6403838843060956060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_14
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 270
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929256497bd3847b0800000000000000
+      internalID: -5239870307767604951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_15
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 30
+        width: 193
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9181bdfcbcc14320800000000000000
+      internalID: 2540536776895857053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_16
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 30
+        width: 192
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca2ea8a5855ff8d0800000000000000
+      internalID: -2810433609906902328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_17
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 30
+        width: 192
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef2fc46c993d3220800000000000000
+      internalID: 2467191514737881068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_18
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 30
+        width: 192
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 987f9373e84dfaf80800000000000000
+      internalID: -8093016298084501623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s4m_ur4i_huge-assetpack-ui-portraits_19
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 30
+        width: 202
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694fc0c87b994e8f0800000000000000
+      internalID: -512115444005669738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 118021294b0634249a4427267d2d329f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
