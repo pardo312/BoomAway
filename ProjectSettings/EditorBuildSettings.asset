@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/_preloadScene/_preload.unity
+    path: Assets/Pacl/tilemap-selectedtiled-example/Scenes/_preloadScene/_preload.unity
     guid: 222f7157ba714854ebf99d4da6e5ed59
   - enabled: 1
-    path: Assets/Scenes/TitleScreen/TitleScreen.unity
+    path: Assets/Pacl/tilemap-selectedtiled-example/Scenes/TitleScreen/TitleScreen.unity
     guid: e93bb0385ef856049abc2352447b2ec0
   - enabled: 1
-    path: Assets/Scenes/Prototiping/DanielScene.unity
+    path: Assets/Pacl/tilemap-selectedtiled-example/Scenes/Prototiping/DanielScene.unity
     guid: e166893f6dc869349b9f905c683c9304
   m_configObjects: {}
