@@ -7,7 +7,11 @@ namespace BoomAway.Assets.Scripts.Helpers
     {
         public void saveGame(string path, object data)
         {
-            Grid.gameSaveManager.saveGame(path, data);
+            Grid.saveGameManger.saveGame(path, data);
+        }
+        public void changeEditorMode()
+        {
+            Grid.gameStateManager.changeEditorMode();
         }
     }
 }

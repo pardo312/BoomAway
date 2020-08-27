@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2760577323414584358}
   - component: {fileID: 2760577323414584376}
-  - component: {fileID: 2760577323414584359}
+  - component: {fileID: 4897909208547167961}
+  - component: {fileID: 7114409800863312233}
   m_Layer: 0
   m_Name: DoubleRockLight
   m_TagString: Untagged
@@ -83,7 +84,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2760577323414584359
+--- !u!114 &4897909208547167961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2760577323414584357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
+  id: 0
+--- !u!61 &7114409800863312233
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,12 +115,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 16, y: 16}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16, y: 16}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0

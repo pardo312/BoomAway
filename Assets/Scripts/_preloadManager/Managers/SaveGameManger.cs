@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace BoomAway.Assets.Scripts.PreloadManager{
-    public class GameSaveManager : MonoBehaviour
+    public class SaveGameManger : MonoBehaviour
     {
         private string path;
 
