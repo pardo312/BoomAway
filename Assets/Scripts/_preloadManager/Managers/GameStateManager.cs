@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameStateManager : MonoBehaviour
 {
     
-    public bool editing;
+    [HideInInspector]public bool editing;
     void Awake()
     {
         editing=true;
