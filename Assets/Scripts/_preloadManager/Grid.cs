@@ -12,14 +12,14 @@ static class Grid
     #if UNITY_EDITOR
     public static NextSceneLoader nextSceneLoader;
     #endif
-    public static SaveGameManger saveGameManger;
+    public static WorldSaveManager worldSaveManager;
     public static GameStateManager gameStateManager;
     public static AudioManager audioManager;
    
     static Grid()
     {
         GameObject g = safeFind("Managers");
-        saveGameManger = (SaveGameManger)SafeComponent(g, "SaveGameManger");
+        worldSaveManager = (WorldSaveManager)SafeComponent(g, "WorldSaveManager");
         gameStateManager = (GameStateManager)SafeComponent(g, "GameStateManager");
         audioManager = (AudioManager)SafeComponent(g, "AudioManager");
 

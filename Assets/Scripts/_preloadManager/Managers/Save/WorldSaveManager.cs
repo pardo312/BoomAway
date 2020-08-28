@@ -2,14 +2,15 @@
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace BoomAway.Assets.Scripts.PreloadManager{
-
+namespace BoomAway.Assets.Scripts.PreloadManager
+{
     [System.Serializable]
     public struct Tile
     {
-        public float x,y,z;
+        public float x, y, z;
         public int id;
-        public Tile(float x, float y, float z, int id){
+        public Tile(float x, float y, float z, int id)
+        {
             this.x = x;
             this.y = y;
             this.z = z;
@@ -17,17 +18,19 @@ namespace BoomAway.Assets.Scripts.PreloadManager{
         }
     }
 
-    public class SaveGameManger : MonoBehaviour
+    public class WorldSaveManager : MonoBehaviour
     {
         public MakerTile[] makerTilePrefab;
         MakerTile[] makerTiles;
-        private string path;
+        [HideInInspector]
+        public string path;
 
-        private void Awake() {
-           path = Application.persistentDataPath + "/game_save";
+        private void Awake()
+        {
+            path = Application.persistentDataPath + "/saved_worlds";
         }
-        public bool saveGame(string saveName)
-        {   
+        public bool saveWorld(string saveName)
+        {
             makerTiles = GameObject.FindObjectsOfType<MakerTile>();
             BinaryFormatter bf = new BinaryFormatter();
 
@@ -37,7 +40,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager{
             }
 
             //Crear archivo de guardado
-            FileStream file = new FileStream(path + "/"+ saveName + ".save", FileMode.Create, FileAccess.Write,FileShare.None);
+            FileStream file = new FileStream(path + "/" + saveName + ".save", FileMode.Create, FileAccess.Write, FileShare.None);
 
             Tile[] t = new Tile[makerTiles.Length];
 
@@ -55,16 +58,16 @@ namespace BoomAway.Assets.Scripts.PreloadManager{
             return true;
         }
 
-        public bool loadGame(string loadName)
+        public bool loadWorld(string loadName)
         {
             if (!File.Exists(path + "/" + loadName + ".save"))
             {
-                
-            Debug.Log("fail");
+
+                Debug.Log("fail");
                 return false;
             }
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = new FileStream(path + "/" + loadName + ".save", FileMode.Open, FileAccess.Read,FileShare.Read);
+            FileStream file = new FileStream(path + "/" + loadName + ".save", FileMode.Open, FileAccess.Read, FileShare.Read);
 
             try
             {
@@ -74,10 +77,10 @@ namespace BoomAway.Assets.Scripts.PreloadManager{
                 Debug.Log(obj.Length);
                 for (int i = 0; i < obj.Length; i++)
                 {
-                    
+
                     Instantiate(makerTilePrefab[obj[i].id],
                     new Vector3(obj[i].x, obj[i].y, obj[i].z),
-                    Quaternion.identity);   
+                    Quaternion.identity);
                 }
                 return true;
             }
@@ -89,7 +92,8 @@ namespace BoomAway.Assets.Scripts.PreloadManager{
             }
         }
 
-        public void Clear(){
+        public void Clear()
+        {
             Debug.Log("hi");
             makerTiles = GameObject.FindObjectsOfType<MakerTile>();
             foreach (var i in makerTiles)
@@ -98,5 +102,4 @@ namespace BoomAway.Assets.Scripts.PreloadManager{
             }
         }
     }
-
 }

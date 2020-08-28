@@ -18,6 +18,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Prototiping/PabloScene.unity
     guid: 2c0cabccd34816e4681295adbe7ffe25
   - enabled: 1
-    path: Assets/Scenes/Prototiping/DanielScene.unity
+    path: Assets/Scenes/Prototiping/WorldBuilder.unity
     guid: e166893f6dc869349b9f905c683c9304
   m_configObjects: {}
