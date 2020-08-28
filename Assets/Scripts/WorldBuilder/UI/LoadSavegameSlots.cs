@@ -32,14 +32,14 @@ public class LoadSavegameSlots : MonoBehaviour
             });
             
             buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[index].Replace(
-                Application.persistentDataPath + "/saved_worlds"+@"\",""
+                Application.persistentDataPath + "/saved_worlds/",""
             ).Replace(".save",""); 
         }
     }
 
     public void GetLoadFiles()
     {
-        string pathFolder = Grid.worldSaveManager.path;
+        string pathFolder = Grid.worldSaveManager.rootPath+ "/saved_worlds/";
         if (!Directory.Exists(pathFolder))
         {
             Directory.CreateDirectory(pathFolder);

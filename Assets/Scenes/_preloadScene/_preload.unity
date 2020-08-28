@@ -135,8 +135,8 @@ GameObject:
   - component: {fileID: 269602051}
   - component: {fileID: 269602050}
   - component: {fileID: 269602052}
-  - component: {fileID: 269602054}
   - component: {fileID: 269602053}
+  - component: {fileID: 269602054}
   - component: {fileID: 269602055}
   m_Layer: 0
   m_Name: Managers
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269602048}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7995d7dda75924e46a5193b161e86190, type: 3}
   m_Name: 
@@ -222,9 +222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b9d6113b92e4642a82459da854ffff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  makerTilePrefab:
-  - {fileID: 4897909208547167961, guid: 61fb4065b0e388f4e923533ae0f27b11, type: 3}
-  - {fileID: 5189228270987527219, guid: b6b5ba66fcbafe744a6acd02ebd92d6d, type: 3}
   path: 
 --- !u!114 &269602055
 MonoBehaviour:

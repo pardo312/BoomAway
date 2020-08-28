@@ -8,6 +8,8 @@ public class SaveGameAs : MonoBehaviour
     public TMP_InputField saveName;
 
     public void saveGameAs(){
-        Grid.worldSaveManager.saveWorld(saveName.text);
+
+        var savemanager = Grid.worldSaveManager;
+        savemanager.saveWorld(saveName.text,SaveType.Builder);
     }
 }
