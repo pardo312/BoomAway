@@ -5,13 +5,13 @@ namespace BoomAway.Assets.Scripts.Helpers
 {
     public class AccessToManagersForButtons : MonoBehaviour
     {
-        public void saveGame(string path, object data)
+        public void saveGame(string path)
         {
-            Grid.saveGameManger.saveGame(path, data);
+            Grid.saveGameManger.saveGame(path);
         }
-        public void changeEditorMode()
+        public void loadGame(string path)
         {
-            Grid.gameStateManager.changeEditorMode();
+            Grid.saveGameManger.loadGame(path);
         }
     }
 }

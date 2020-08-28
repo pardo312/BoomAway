@@ -10,8 +10,5 @@ public class GameStateManager : MonoBehaviour
     {
         editing=true;
     }
-    public void changeEditorMode()
-    {
-        editing = !editing;
-    }
+    
 }

@@ -21,12 +21,13 @@ namespace BoomAway.Assets.Scripts.Game.Player
         // Update is called once per frame
         void Update()
         {
+            if(!Grid.gameStateManager.editing){
             horizontalInput = Input.GetAxis("Horizontal");
             flipSprite();
+            }
         }
         void FixedUpdate()
         {
-            if(!Grid.gameStateManager.editing)
                 rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
         }
         void flipSprite()

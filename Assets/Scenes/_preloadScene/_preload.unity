@@ -221,3 +221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b9d6113b92e4642a82459da854ffff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  makerTilePrefab:
+  - {fileID: 4897909208547167961, guid: 61fb4065b0e388f4e923533ae0f27b11, type: 3}
+  - {fileID: 5189228270987527219, guid: b6b5ba66fcbafe744a6acd02ebd92d6d, type: 3}

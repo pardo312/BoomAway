@@ -9,6 +9,7 @@ public class MakerManager : MonoBehaviour
     public GameObject buttonPrefab;
     public Transform layout;
     public SpriteRenderer preview;
+    public GameObject[] hideOnEditObjects;
     int id;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class MakerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        preview.enabled = Grid.gameStateManager.editing;
+        
 
         if(UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
             return;
@@ -54,6 +55,16 @@ public class MakerManager : MonoBehaviour
         {
             if(c.collider != null)
                 Destroy(c.collider.gameObject);
+        }
+    }
+    public void changeEditorMode()
+    {
+        bool state = Grid.gameStateManager.editing;
+        Grid.gameStateManager.editing = !state ;
+        preview.enabled = !state;
+        for (int i = 0; i < hideOnEditObjects.Length; i++)
+        {
+            hideOnEditObjects[i].SetActive(!state);
         }
     }
 }
