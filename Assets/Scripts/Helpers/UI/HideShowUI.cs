@@ -15,7 +15,8 @@ public class HideShowUI : MonoBehaviour
     }
     public void PauseTime()
     {
-         Time.timeScale = 0;
+        Grid.gameStateManager.editing = false;
+        Time.timeScale = 0;
     }
     public void UnPauseTime()
     {

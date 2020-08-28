@@ -72,11 +72,10 @@ namespace BoomAway.Assets.Scripts.PreloadManager
             {
                 var obj = (Tile[])bf.Deserialize(file);
                 file.Close();
-
-                Debug.Log(obj.Length);
+                Clear();
+                
                 for (int i = 0; i < obj.Length; i++)
                 {
-
                     Instantiate(makerTilePrefab[obj[i].id],
                     new Vector3(obj[i].x, obj[i].y, obj[i].z),
                     Quaternion.identity);
