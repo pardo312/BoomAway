@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 1354645189535672846}
   - component: {fileID: 1354645189535672847}
   m_Layer: 5
-  m_Name: SaveGameTemplate
+  m_Name: SaveWorldButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

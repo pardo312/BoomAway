@@ -60,14 +60,13 @@ namespace BoomAway.Assets.Scripts.PreloadManager
 
         public bool loadWorld(string loadName)
         {
-            if (!File.Exists(path + "/" + loadName + ".save"))
+            if (!File.Exists(loadName))
             {
-
-                Debug.Log("fail");
+                Debug.Log("fail, path:" + loadName);
                 return false;
             }
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = new FileStream(path + "/" + loadName + ".save", FileMode.Open, FileAccess.Read, FileShare.Read);
+            FileStream file = new FileStream(loadName, FileMode.Open, FileAccess.Read, FileShare.Read);
 
             try
             {

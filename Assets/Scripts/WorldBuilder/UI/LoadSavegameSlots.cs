@@ -13,17 +13,25 @@ public class LoadSavegameSlots : MonoBehaviour
     public void showLoadScreen()
     {
         GetLoadFiles();
+
+        for(int i = 0; i < loadArea.transform.childCount; i++)
+        {
+            Transform button = loadArea.transform.GetChild(i);
+            Destroy(button.gameObject);
+        }
+
         for (int i = 0; i < saveFiles.Length; i++)
         {
             GameObject buttonObject = Instantiate(loadButtonPrefab);
             buttonObject.transform.SetParent(loadArea.transform,false);
-
+            
+            int index= i;
             buttonObject.GetComponent<Button>().onClick.AddListener(()=>
             {
-                Grid.worldSaveManager.loadWorld(saveFiles[i]);
+                Grid.worldSaveManager.loadWorld(saveFiles[index]);
             });
             
-            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[i].Replace(
+            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[index].Replace(
                 Application.persistentDataPath + "/saved_worlds"+@"\",""
             ).Replace(".save",""); 
         }
