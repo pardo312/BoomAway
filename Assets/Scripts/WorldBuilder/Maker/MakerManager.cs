@@ -12,8 +12,9 @@ public class MakerManager : MonoBehaviour
     public GameObject[] hideOnEditObjects;
     int id;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        Grid.gameStateManager.editing = true;
         for (int i = 0; i < tiles.Length; i++)
         {
             int u = i;

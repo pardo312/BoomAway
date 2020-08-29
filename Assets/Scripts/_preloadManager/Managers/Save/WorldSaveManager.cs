@@ -52,7 +52,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager
                     path+= "/saved_worlds/";
                     break;
                 case SaveType.Story:
-                    path+= "/game_save/";
+                    path+= "/story_worlds/";
                     break;
             }
             //Crear archivo de guardado
@@ -115,7 +115,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager
                     path+= "/saved_worlds/";
                     break;
                 case SaveType.Story:
-                    path+= "/game_save/";
+                    path+= "/story_worlds/";
                     break;
             }
             path+=loadName;
