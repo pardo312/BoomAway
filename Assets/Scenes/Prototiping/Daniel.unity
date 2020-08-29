@@ -3462,7 +3462,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 341350482837559755, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 732729060447237276, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
+      propertyPath: worldParent
+      value: 
+      objectReference: {fileID: 1039753299}
+    - target: {fileID: 3525073477510829173, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
       propertyPath: worldParent
       value: 
       objectReference: {fileID: 1039753299}
@@ -3492,7 +3500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4867111674429403683, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5189995917139742492, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
       propertyPath: m_Size.x
@@ -3626,6 +3634,10 @@ PrefabInstance:
       propertyPath: worldParent
       value: 
       objectReference: {fileID: 1039753299}
+    - target: {fileID: 8562713416711729263, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
+      propertyPath: timeUntilExplode
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
 --- !u!1 &623666409

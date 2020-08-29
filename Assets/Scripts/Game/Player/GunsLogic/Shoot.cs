@@ -14,7 +14,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns{
         {
             rb = this.GetComponent<Rigidbody2D>();
             bc = this.GetComponent<BoxCollider2D>();
-            gun = GetComponent<IGun>();
+            gun = this.GetComponent<IGun>();
         }
 
         // Update is called once per frame

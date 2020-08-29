@@ -2,13 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace BoomAway.Assets.Scripts.Game.Player.Guns
 {
-    public class C4 : MonoBehaviour, IGun, IExplosive
+    public class Bomb : MonoBehaviour,IGun,IExplosive
     {
-
+        
         private bool alredyShoot;
         private bool readyToExplode;
+        
+        [SerializeField]private int timeUntilExplode;
+
+        void Awake()
+        {
+            readyToExplode = false;
+        }
+        private void Update() {
+            if(timeUntilExplode>0 && readyToExplode){
+                Debug.Log("Tiempo Restante: "+timeUntilExplode);
+                timeUntilExplode--;
+            }
+        }
         public void shoot(float shootForce,BoxCollider2D bc, Rigidbody2D rb, GameObject worldParent)
         {
             if (!alredyShoot)
@@ -24,21 +38,23 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
         IEnumerator setReadyToExplode()
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             readyToExplode = true;
         }
 
         public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToHit)
         {
-            if(readyToExplode){
+            
+            if(timeUntilExplode == 0){
+
                 Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact, layerToHit);
 
                 foreach (Collider2D obj in objects)
                 {
                     Vector2 direction = obj.transform.position - transform.position;
-                    Debug.Log(direction*explosionForce);
                     obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
-                }
+                }   
+                //ponerle sprite explosion
                 Destroy(gameObject);
             }
         }
@@ -48,6 +64,6 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
             Gizmos.DrawWireSphere(transform.position,2);
         }
 
+        
     }
-
 }

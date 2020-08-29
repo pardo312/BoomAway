@@ -16,10 +16,8 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns{
 
         // Update is called once per frame
         void Update()
-        {
-            if(Input.GetKeyDown(KeyCode.Q)){                
-                explosive.explode(radiousOfImpact,explosionForce,layerToHit);
-            }
+        {                
+            explosive.explode(radiousOfImpact,explosionForce,layerToHit);
         }
     }
 
