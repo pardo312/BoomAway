@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Moveable
+  - Static
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: Weapon
     uniqueID: 339660009
+    locked: 0
+  - name: Enviroment
+    uniqueID: 2580180967
     locked: 0

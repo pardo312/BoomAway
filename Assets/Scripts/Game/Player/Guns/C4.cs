@@ -4,33 +4,48 @@ using UnityEngine;
 
 namespace BoomAway.Assets.Scripts.Game.Player.Guns
 {
-    public class C4 : MonoBehaviour, IGun
-{
-        [SerializeField]private float force;
-        [SerializeField]private GameObject worldParent;
-        private Rigidbody2D rb;
-        private BoxCollider2D bc;
+    public class C4 : MonoBehaviour, IGun, IExplosive
+    {
+
         private bool alredyShoot;
-        
-
-        private void Awake() {
-            rb = this.GetComponent<Rigidbody2D>();
-            bc = this.GetComponent<BoxCollider2D>();
-        }
-
-        public void shoot()
+        private bool readyToExplode;
+        public void shoot(float shootForce,BoxCollider2D bc, Rigidbody2D rb, GameObject worldParent)
         {
-            if(!alredyShoot){
-                
+            if (!alredyShoot)
+            {
                 transform.parent = worldParent.transform;
                 bc.isTrigger = false;
                 rb.isKinematic = false;
-                rb.AddForce(transform.right * force *-1);
+                rb.AddForce(transform.right * shootForce * -1);
                 alredyShoot=true;
+                StartCoroutine(setReadyToExplode());
             }
-            else
+        }
+
+        IEnumerator setReadyToExplode()
+        {
+            yield return new WaitForSeconds(2);
+            readyToExplode = true;
+        }
+
+        public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToHit)
+        {
+            if(readyToExplode){
+                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact, layerToHit);
+
+                foreach (Collider2D obj in objects)
+                {
+                    Vector2 direction = obj.transform.position - transform.position;
+                    Debug.Log(direction*explosionForce);
+                    obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
+                }
                 Destroy(gameObject);
-                
+            }
+        }
+        void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position,2);
         }
 
     }

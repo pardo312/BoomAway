@@ -338,8 +338,9 @@ GameObject:
   - component: {fileID: 8195333023175072648}
   - component: {fileID: 7707876198929661820}
   - component: {fileID: 5189995917139742492}
-  - component: {fileID: 732729060447237276}
   - component: {fileID: 6730976781802103815}
+  - component: {fileID: 732729060447237276}
+  - component: {fileID: 5794720010799048076}
   m_Layer: 5
   m_Name: C4
   m_TagString: Untagged
@@ -464,18 +465,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.68, y: 3.83}
   m_EdgeRadius: 0
---- !u!114 &732729060447237276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4867111674429403683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c78cb1cbcc6ca74db0f37d62be4195c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6730976781802103815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,8 +477,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f97a8036f813e343998f1a9c063ddf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 5
+--- !u!114 &732729060447237276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4867111674429403683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78cb1cbcc6ca74db0f37d62be4195c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   worldParent: {fileID: 0}
+  shootForce: 700
+--- !u!114 &5794720010799048076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4867111674429403683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431e70ab886ff55488c4ee1f28babc46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionForce: 5
+  radiousOfImpact: 2
+  layerToHit:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &5605954090504890815
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ea62317fafadc499498273dae8c59c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 35
+  speed: 10
 --- !u!1 &5824802988488542055
 GameObject:
   m_ObjectHideFlags: 0
