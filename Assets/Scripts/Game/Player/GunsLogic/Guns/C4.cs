@@ -10,11 +10,11 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         private bool alredyShoot;
         private bool readyToExplode;
 
-        public void shoot(float shootForce,BoxCollider2D bc, Rigidbody2D rb, GameObject worldParent)
+        public void shoot(float shootForce,BoxCollider2D bc, Rigidbody2D rb)
         {
             if (!alredyShoot)
             {
-                transform.parent = worldParent.transform;
+                transform.parent = null;
                 bc.isTrigger = false;
                 rb.isKinematic = false;
                 rb.AddForce(transform.right * shootForce * -1);

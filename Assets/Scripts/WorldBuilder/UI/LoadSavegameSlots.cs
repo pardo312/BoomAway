@@ -2,13 +2,15 @@
 using TMPro;
 using System.IO;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class LoadSavegameSlots : MonoBehaviour
 {
     public GameObject loadButtonPrefab;
     public GameObject loadArea;
 
-    private string[] saveFiles;
+    private string[] directoryFiles;
+    private List<string> saveFiles = new List<string>();
 
     public void showLoadScreen()
     {
@@ -20,7 +22,7 @@ public class LoadSavegameSlots : MonoBehaviour
             Destroy(button.gameObject);
         }
 
-        for (int i = 0; i < saveFiles.Length; i++)
+        for (int i = 0; i < saveFiles.Count; i++)
         {
             GameObject buttonObject = Instantiate(loadButtonPrefab);
             buttonObject.transform.SetParent(loadArea.transform,false);
@@ -45,6 +47,12 @@ public class LoadSavegameSlots : MonoBehaviour
             Directory.CreateDirectory(pathFolder);
         }
 
-        saveFiles = Directory.GetFiles(pathFolder);
+        directoryFiles = Directory.GetFiles(pathFolder);
+        for (int i = 0; i < directoryFiles.Length; i++)
+        {
+            if(!directoryFiles[i].Contains(".state")){
+                saveFiles.Add(directoryFiles[i]);
+            }
+        }
     }
 }
