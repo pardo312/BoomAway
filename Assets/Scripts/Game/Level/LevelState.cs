@@ -4,12 +4,31 @@ using UnityEngine;
 
 public class LevelState : MonoBehaviour
 {
-    //0 = Bomb ; 1 = C4 ; 
-    [HideInInspector]public int[] ammo = new int[2];
-    private bool endLevel = false;
-    
-    private void Start() {
-        ammo[0] = 3;
-        ammo[1] = 4;
+    private bool enterPlay = true;
+    [SerializeField] private GameObject[] gunsPrefab;
+    [SerializeField] private Transform ammoParent;
+    private void Update()
+    {
+        if (!Grid.gameStateManager.editing)
+        {
+            if (enterPlay)
+            {
+                int[] ammoGuns = Grid.gameStateManager.ammo;
+                for (int i = 0; i < ammoGuns.Length; i++)
+                {
+                    for (int j = 0; j < ammoGuns[i]; j++)
+                    {
+                        Instantiate(gunsPrefab[i], ammoParent);
+                    }
+                }
+                enterPlay = false;
+            }
+        }
+        else
+        {
+            if (!enterPlay)
+                enterPlay = true;
+        }
+
     }
 }

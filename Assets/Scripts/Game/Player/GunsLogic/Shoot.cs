@@ -4,7 +4,6 @@ using UnityEngine;
 namespace BoomAway.Assets.Scripts.Game.Player.Guns{
     public class Shoot : MonoBehaviour
     {
-        [SerializeField]private GameObject worldParent;
         [SerializeField]private float shootForce;
         private IGun gun;
         private Rigidbody2D rb;
@@ -22,7 +21,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns{
         {
             if(!Grid.gameStateManager.editing){
                 if(Input.GetKeyDown(KeyCode.Q)){   
-                    gun.shoot(shootForce,bc,rb,worldParent);
+                    gun.shoot(shootForce,bc,rb);
                 }
             }
         }
