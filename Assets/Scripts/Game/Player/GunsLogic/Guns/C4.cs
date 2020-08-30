@@ -9,6 +9,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
         private bool alredyShoot;
         private bool readyToExplode;
+
         public void shoot(float shootForce,BoxCollider2D bc, Rigidbody2D rb, GameObject worldParent)
         {
             if (!alredyShoot)
@@ -40,8 +41,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                         Vector2 direction = obj.transform.position - transform.position;
                         obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
                     }   
-                    //ponerle sprite explosion
-                    Destroy(gameObject);
+                    //Instanciar otro
+                        
+                    
                 }
             }
         }

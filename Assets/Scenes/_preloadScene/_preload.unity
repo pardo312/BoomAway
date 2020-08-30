@@ -225,4 +225,5 @@ MonoBehaviour:
   makerTilePrefab:
   - {fileID: 4897909208547167961, guid: 61fb4065b0e388f4e923533ae0f27b11, type: 3}
   - {fileID: 5189228270987527219, guid: b6b5ba66fcbafe744a6acd02ebd92d6d, type: 3}
+  - {fileID: -5663836299355659523, guid: c922eb460fb20d6438f2b3cc43adcd23, type: 3}
   rootPath: 

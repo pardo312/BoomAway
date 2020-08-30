@@ -8,18 +8,18 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
     public class Bomb : MonoBehaviour,IGun,IExplosive
     {
         
+        [SerializeField]private int timeUntilExplode;
         private bool alredyShoot;
         private bool readyToExplode;
-        
-        [SerializeField]private int timeUntilExplode;
 
-        void Awake()
-        {
+        private void Awake() {
             readyToExplode = false;
         }
         private void Update() {
             if(timeUntilExplode>0 && readyToExplode){
-                Debug.Log("Tiempo Restante: "+timeUntilExplode);
+                if(timeUntilExplode%100 == 0){                   
+                    Debug.Log("Tiempo Restante: "+timeUntilExplode/100);
+                }
                 timeUntilExplode--;
             }
         }
@@ -54,8 +54,6 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                     Vector2 direction = obj.transform.position - transform.position;
                     obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
                 }   
-                //ponerle sprite explosion
-                Destroy(gameObject);
             }
         }
         void OnDrawGizmos()

@@ -16,8 +16,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns{
 
         // Update is called once per frame
         void Update()
-        {                
-            explosive.explode(radiousOfImpact,explosionForce,layerToHit);
+        {           
+            if(!Grid.gameStateManager.editing)     
+                explosive.explode(radiousOfImpact,explosionForce,layerToHit);
         }
     }
 
