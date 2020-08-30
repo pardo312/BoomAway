@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class MakerManager : MonoBehaviour
 {
-    public MakerTile[] tiles;
-    public GameObject buttonPrefab;
-    public Transform layout;
-    public SpriteRenderer preview;
-    public GameObject[] hideOnEditObjects;
+    private MakerTile[] tiles;
+    [SerializeField]private GameObject buttonPrefab;
+    [SerializeField]private Transform layout;
+    [SerializeField]private SpriteRenderer preview;
+    [SerializeField]private GameObject[] hideOnEditObjects;
     int id;
     // Start is called before the first frame update
     void Awake()
     {
+        tiles= Grid.worldSaveManager.makerTilePrefab;
         Grid.gameStateManager.editing = true;
         for (int i = 0; i < tiles.Length; i++)
         {
