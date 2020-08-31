@@ -19129,6 +19129,22 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6490676961320274378, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6490676961320274378, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.145
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038314235508042578, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038314235508042578, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8224566630245887564, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
       propertyPath: m_Name
       value: Player

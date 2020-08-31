@@ -30,7 +30,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
         IEnumerator setReadyToExplode()
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             readyToExplode = true;
         }
 
