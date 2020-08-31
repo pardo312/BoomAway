@@ -45,7 +45,6 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 isShooting = true;
 
                 bc.isTrigger = false;
-                rb.AddForce(transform.right * shootForce * -1);
 
                 Grid.gameStateManager.currentAmmo[2]--;
             }
