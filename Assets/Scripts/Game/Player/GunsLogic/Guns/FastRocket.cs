@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.AssetImporters;
 using UnityEngine;
 
 
@@ -9,16 +10,27 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
     {
 
         private bool waitForRocket = false;
+        private bool isShooting = false;
+        private bool readyToExplode = false;
 
+        private Rigidbody2D rb; 
         public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToHit)
         {
-            Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact, layerToHit);
+                if (readyToExplode)
+                {
+                    Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact, layerToHit);
 
-            foreach (Collider2D obj in objects)
-            {
-                Vector2 direction = obj.transform.position - transform.position;
-                obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
-            }
+                    foreach (Collider2D obj in objects)
+                    {
+                        // Podemos mirar si se pueden hacer scrips para cada tipo de bloque (todos implementan explosión)
+                        // 
+                        Vector2 direction = obj.transform.position - transform.position;
+                        obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
+                    }
+                    //Instanciar otro
+                    Grid.gameStateManager.hasCurrentAmmo = false;
+                    Destroy(gameObject);
+                }
         }
 
         public void shoot(float shootForce, BoxCollider2D bc, Rigidbody2D rb)
@@ -29,30 +41,34 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 transform.SetParent(null);
                 transform.position = tempPosition;
 
+                this.rb = rb;
+                isShooting = true;
+
                 bc.isTrigger = false;
-                rb.isKinematic = false;
                 rb.AddForce(transform.right * shootForce * -1);
 
-                Grid.gameStateManager.currentAmmo[1]--;
-                StartCoroutine(waitForFastRocket());
+                Grid.gameStateManager.currentAmmo[2]--;
             }
-        }
-
-        IEnumerator waitForFastRocket()
-        {
-            yield return new WaitForSeconds(1);
-            waitForRocket = true;
-        }
-        // Start is called before the first frame update
-        void Start()
-        {
-
         }
 
         // Update is called once per frame
         void Update()
         {
+            if (isShooting)
+            {
+                rb.MovePosition(transform.position + new Vector3(1f, 0, 0));
+                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 0.5f, 5);
+                if (objects.Length != 0)
+                {
+                    readyToExplode = true;
+                }
+            }
+        }
 
+        void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, 0.5f);
         }
 
     }
