@@ -3,13 +3,25 @@
 public class ManageAmmo : MonoBehaviour
 {
     [SerializeField] private GameObject[] gunsPrefab;
-    [HideInInspector]
+    private int ammoType;
 
+    private void Awake() {
+        ammoType = Grid.gameStateManager.currentAmmoType;
+    }
     // Update is called once per frame
     void Update()
     {
-        int ammoType = Grid.gameStateManager.currentAmmoType;
+        int localAmmoType  = Grid.gameStateManager.currentAmmoType;
 
+        if(localAmmoType != ammoType)
+        {
+            foreach (Transform child in transform)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+            ammoType = localAmmoType;
+            Grid.gameStateManager.hasCurrentAmmo=false;
+        }
         if(!Grid.gameStateManager.hasCurrentAmmo){
             if(Grid.gameStateManager.currentAmmo[ammoType]>0){
                 Grid.gameStateManager.hasCurrentAmmo=true;

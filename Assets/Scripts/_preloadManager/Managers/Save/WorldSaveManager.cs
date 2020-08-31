@@ -160,6 +160,8 @@ namespace BoomAway.Assets.Scripts.PreloadManager
                         new Vector3(obj[i].x, obj[i].y, obj[i].z),
                         Quaternion.identity);
                     }
+                    string statePath = path.Replace(".save", ".state");
+                    loadState(statePath);
                     return true;
                 }
                 catch
@@ -185,6 +187,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager
                 {
                     var state = (State)bf.Deserialize(file);
                     Grid.gameStateManager.ammo = state.ammo;
+                    Grid.gameStateManager.currentAmmo = state.ammo;
                     file.Close();
                     return true;
                 }
