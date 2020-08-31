@@ -6,6 +6,9 @@ public class GameStateManager : MonoBehaviour
 {
     //0 = Bomb ; 1 = C4 ; 
     [HideInInspector]public int[] ammo = new int[2];
+    [HideInInspector]public int[] currentAmmo = new int[2];
+    [HideInInspector]public int currentAmmoType = 0;
+    [HideInInspector]public bool hasCurrentAmmo = false;
     [HideInInspector]public bool editing;
     [HideInInspector]public string currentLevel;
     private bool endLevel = false;
@@ -22,6 +25,11 @@ public class GameStateManager : MonoBehaviour
         ammo[0] = 3;
         //C4
         ammo[1] = 4;
+
+        //Bomb
+        currentAmmo[0] = 3;
+        //C4
+        currentAmmo[1] = 4;
     }
     
 }

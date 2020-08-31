@@ -27,11 +27,17 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         {
             if (!alredyShoot)
             {
-                transform.parent = null;
+                Vector3 tempPosition = transform.position;
+                transform.SetParent (null);
+                transform.position = tempPosition;
+
                 bc.isTrigger = false;
                 rb.isKinematic = false;
                 rb.AddForce(transform.right * shootForce * -1);
+
                 alredyShoot=true;
+                Grid.gameStateManager.currentAmmo[0]--;
+                
                 StartCoroutine(setReadyToExplode());
             }
         }
@@ -53,7 +59,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 {
                     Vector2 direction = obj.transform.position - transform.position;
                     obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
-                }   
+                }
+                Grid.gameStateManager.hasCurrentAmmo = false;
+                Destroy(gameObject);   
             }
         }
         void OnDrawGizmos()

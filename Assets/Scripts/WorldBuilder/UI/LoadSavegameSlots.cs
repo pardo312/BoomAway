@@ -14,13 +14,15 @@ public class LoadSavegameSlots : MonoBehaviour
 
     public void showLoadScreen()
     {
-        GetLoadFiles();
 
+        saveFiles=new List<string>();
         for(int i = 0; i < loadArea.transform.childCount; i++)
         {
             Transform button = loadArea.transform.GetChild(i);
             Destroy(button.gameObject);
         }
+        
+        GetLoadFiles();
 
         for (int i = 0; i < saveFiles.Count; i++)
         {

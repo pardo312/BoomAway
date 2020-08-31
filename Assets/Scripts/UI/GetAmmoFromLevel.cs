@@ -17,6 +17,6 @@ public class GetAmmoFromLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textMP.text = Grid.gameStateManager.ammo[ammoType].ToString();
+        textMP.text = Grid.gameStateManager.currentAmmo[ammoType].ToString();
     }
 }
