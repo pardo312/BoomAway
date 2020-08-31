@@ -208,6 +208,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec969da038d0b764e85201a4ad7e6e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ammo: 0000000000000000
+  currentAmmo: 0000000000000000
+  currentAmmoType: 0
+  hasCurrentAmmo: 0
   editing: 0
   currentLevel: 
 --- !u!114 &269602055

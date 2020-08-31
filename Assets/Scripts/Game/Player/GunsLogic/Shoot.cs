@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace BoomAway.Assets.Scripts.Game.Player.Guns{
+namespace BoomAway.Assets.Scripts.Game.Player.Guns
+{
     public class Shoot : MonoBehaviour
     {
-        [SerializeField]private float shootForce;
+        [SerializeField] private float shootForce;
         private IGun gun;
         private Rigidbody2D rb;
         private BoxCollider2D bc;
@@ -19,9 +20,11 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns{
         // Update is called once per frame
         void Update()
         {
-            if(!Grid.gameStateManager.editing){
-                if(Input.GetKeyDown(KeyCode.Q)){   
-                    gun.shoot(shootForce,bc,rb);
+            if (!Grid.gameStateManager.editing)
+            {
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    gun.shoot(shootForce, bc, rb);
                 }
             }
         }

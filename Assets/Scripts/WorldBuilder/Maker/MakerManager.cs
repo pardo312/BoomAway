@@ -60,7 +60,7 @@ public class MakerManager : MonoBehaviour
         }
     }
     public void changeEditorMode()
-    {
+    {       
         bool state = Grid.gameStateManager.editing;
         Grid.gameStateManager.editing = !state ;
         preview.enabled = !state;
