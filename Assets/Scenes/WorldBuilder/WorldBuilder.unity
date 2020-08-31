@@ -163,7 +163,6 @@ GameObject:
   m_Component:
   - component: {fileID: 25733995}
   - component: {fileID: 25733998}
-  - component: {fileID: 25733997}
   - component: {fileID: 25733996}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (72)
@@ -212,20 +211,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &25733997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 25733994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &25733998
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -522,7 +507,6 @@ GameObject:
   m_Component:
   - component: {fileID: 79684272}
   - component: {fileID: 79684275}
-  - component: {fileID: 79684274}
   - component: {fileID: 79684273}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (17)
@@ -571,20 +555,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &79684274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 79684271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &79684275
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -646,7 +616,6 @@ GameObject:
   m_Component:
   - component: {fileID: 94738497}
   - component: {fileID: 94738500}
-  - component: {fileID: 94738499}
   - component: {fileID: 94738498}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (37)
@@ -695,20 +664,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &94738499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 94738496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &94738500
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -770,7 +725,6 @@ GameObject:
   m_Component:
   - component: {fileID: 105325054}
   - component: {fileID: 105325057}
-  - component: {fileID: 105325056}
   - component: {fileID: 105325055}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (87)
@@ -819,20 +773,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &105325056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105325053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &105325057
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -894,7 +834,6 @@ GameObject:
   m_Component:
   - component: {fileID: 106600583}
   - component: {fileID: 106600586}
-  - component: {fileID: 106600585}
   - component: {fileID: 106600584}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (77)
@@ -943,20 +882,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &106600585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106600582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &106600586
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1093,7 +1018,6 @@ GameObject:
   m_Component:
   - component: {fileID: 131689711}
   - component: {fileID: 131689714}
-  - component: {fileID: 131689713}
   - component: {fileID: 131689712}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (3)
@@ -1142,20 +1066,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &131689713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131689710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &131689714
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1351,7 +1261,6 @@ GameObject:
   m_Component:
   - component: {fileID: 156763160}
   - component: {fileID: 156763163}
-  - component: {fileID: 156763162}
   - component: {fileID: 156763161}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (94)
@@ -1400,20 +1309,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &156763162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156763159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &156763163
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1475,7 +1370,6 @@ GameObject:
   m_Component:
   - component: {fileID: 175263022}
   - component: {fileID: 175263025}
-  - component: {fileID: 175263024}
   - component: {fileID: 175263023}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (63)
@@ -1524,20 +1418,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &175263024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175263021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &175263025
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1599,7 +1479,6 @@ GameObject:
   m_Component:
   - component: {fileID: 192196359}
   - component: {fileID: 192196362}
-  - component: {fileID: 192196361}
   - component: {fileID: 192196360}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (91)
@@ -1648,20 +1527,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &192196361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192196358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &192196362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1723,7 +1588,6 @@ GameObject:
   m_Component:
   - component: {fileID: 204093424}
   - component: {fileID: 204093427}
-  - component: {fileID: 204093426}
   - component: {fileID: 204093425}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (5)
@@ -1772,20 +1636,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &204093426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204093423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &204093427
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1847,7 +1697,6 @@ GameObject:
   m_Component:
   - component: {fileID: 218466642}
   - component: {fileID: 218466645}
-  - component: {fileID: 218466644}
   - component: {fileID: 218466643}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (112)
@@ -1896,20 +1745,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &218466644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 218466641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &218466645
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1971,7 +1806,6 @@ GameObject:
   m_Component:
   - component: {fileID: 222693648}
   - component: {fileID: 222693651}
-  - component: {fileID: 222693650}
   - component: {fileID: 222693649}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (61)
@@ -2020,20 +1854,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &222693650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 222693647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &222693651
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2095,7 +1915,6 @@ GameObject:
   m_Component:
   - component: {fileID: 260898425}
   - component: {fileID: 260898428}
-  - component: {fileID: 260898427}
   - component: {fileID: 260898426}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (11)
@@ -2144,20 +1963,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &260898427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260898424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &260898428
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2219,7 +2024,6 @@ GameObject:
   m_Component:
   - component: {fileID: 276749068}
   - component: {fileID: 276749071}
-  - component: {fileID: 276749070}
   - component: {fileID: 276749069}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (32)
@@ -2268,20 +2072,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &276749070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276749067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &276749071
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2343,7 +2133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 276835889}
   - component: {fileID: 276835892}
-  - component: {fileID: 276835891}
   - component: {fileID: 276835890}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (23)
@@ -2392,20 +2181,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &276835891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276835888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &276835892
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2507,7 +2282,6 @@ GameObject:
   m_Component:
   - component: {fileID: 317301228}
   - component: {fileID: 317301231}
-  - component: {fileID: 317301230}
   - component: {fileID: 317301229}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (52)
@@ -2556,20 +2330,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &317301230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 317301227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &317301231
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2631,7 +2391,6 @@ GameObject:
   m_Component:
   - component: {fileID: 321105191}
   - component: {fileID: 321105194}
-  - component: {fileID: 321105193}
   - component: {fileID: 321105192}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (4)
@@ -2680,20 +2439,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &321105193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321105190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &321105194
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2755,7 +2500,6 @@ GameObject:
   m_Component:
   - component: {fileID: 321112245}
   - component: {fileID: 321112248}
-  - component: {fileID: 321112247}
   - component: {fileID: 321112246}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (10)
@@ -2804,20 +2548,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &321112247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321112244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &321112248
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2879,7 +2609,6 @@ GameObject:
   m_Component:
   - component: {fileID: 328680400}
   - component: {fileID: 328680403}
-  - component: {fileID: 328680402}
   - component: {fileID: 328680401}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (108)
@@ -2928,20 +2657,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &328680402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328680399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &328680403
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3003,7 +2718,6 @@ GameObject:
   m_Component:
   - component: {fileID: 335546107}
   - component: {fileID: 335546110}
-  - component: {fileID: 335546109}
   - component: {fileID: 335546108}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (73)
@@ -3052,20 +2766,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &335546109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335546106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &335546110
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3261,7 +2961,6 @@ GameObject:
   m_Component:
   - component: {fileID: 380103937}
   - component: {fileID: 380103940}
-  - component: {fileID: 380103939}
   - component: {fileID: 380103938}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (117)
@@ -3310,20 +3009,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &380103939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380103936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &380103940
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3437,7 +3122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 391817418}
   - component: {fileID: 391817421}
-  - component: {fileID: 391817420}
   - component: {fileID: 391817419}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (41)
@@ -3486,20 +3170,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &391817420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391817417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &391817421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3952,7 +3622,6 @@ GameObject:
   m_Component:
   - component: {fileID: 461541106}
   - component: {fileID: 461541109}
-  - component: {fileID: 461541108}
   - component: {fileID: 461541107}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (65)
@@ -4001,20 +3670,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &461541108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461541105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &461541109
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4076,7 +3731,6 @@ GameObject:
   m_Component:
   - component: {fileID: 463997796}
   - component: {fileID: 463997799}
-  - component: {fileID: 463997798}
   - component: {fileID: 463997797}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (14)
@@ -4125,20 +3779,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &463997798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463997795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &463997799
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4200,7 +3840,6 @@ GameObject:
   m_Component:
   - component: {fileID: 502668043}
   - component: {fileID: 502668046}
-  - component: {fileID: 502668045}
   - component: {fileID: 502668044}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (64)
@@ -4249,20 +3888,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &502668045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502668042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &502668046
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4361,7 +3986,6 @@ GameObject:
   m_Component:
   - component: {fileID: 541713086}
   - component: {fileID: 541713089}
-  - component: {fileID: 541713088}
   - component: {fileID: 541713087}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (47)
@@ -4410,20 +4034,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &541713088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541713085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &541713089
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4552,7 +4162,6 @@ GameObject:
   m_Component:
   - component: {fileID: 571179957}
   - component: {fileID: 571179960}
-  - component: {fileID: 571179959}
   - component: {fileID: 571179958}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (80)
@@ -4601,20 +4210,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &571179959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571179956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &571179960
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4810,7 +4405,6 @@ GameObject:
   m_Component:
   - component: {fileID: 582427627}
   - component: {fileID: 582427630}
-  - component: {fileID: 582427629}
   - component: {fileID: 582427628}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (28)
@@ -4859,20 +4453,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &582427629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582427626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &582427630
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5082,7 +4662,6 @@ GameObject:
   m_Component:
   - component: {fileID: 635107653}
   - component: {fileID: 635107656}
-  - component: {fileID: 635107655}
   - component: {fileID: 635107654}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (45)
@@ -5131,20 +4710,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &635107655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635107652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &635107656
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5206,7 +4771,6 @@ GameObject:
   m_Component:
   - component: {fileID: 637231249}
   - component: {fileID: 637231252}
-  - component: {fileID: 637231251}
   - component: {fileID: 637231250}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (111)
@@ -5255,20 +4819,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &637231251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 637231248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &637231252
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5608,7 +5158,6 @@ GameObject:
   m_Component:
   - component: {fileID: 656292986}
   - component: {fileID: 656292989}
-  - component: {fileID: 656292988}
   - component: {fileID: 656292987}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (92)
@@ -5657,20 +5206,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &656292988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656292985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &656292989
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5732,7 +5267,6 @@ GameObject:
   m_Component:
   - component: {fileID: 665460132}
   - component: {fileID: 665460135}
-  - component: {fileID: 665460134}
   - component: {fileID: 665460133}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (74)
@@ -5781,20 +5315,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &665460134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 665460131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &665460135
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6065,7 +5585,6 @@ GameObject:
   m_Component:
   - component: {fileID: 709484618}
   - component: {fileID: 709484621}
-  - component: {fileID: 709484620}
   - component: {fileID: 709484619}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (82)
@@ -6114,20 +5633,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &709484620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709484617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &709484621
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6189,7 +5694,6 @@ GameObject:
   m_Component:
   - component: {fileID: 722182165}
   - component: {fileID: 722182168}
-  - component: {fileID: 722182167}
   - component: {fileID: 722182166}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (30)
@@ -6238,20 +5742,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &722182167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722182164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &722182168
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6313,7 +5803,6 @@ GameObject:
   m_Component:
   - component: {fileID: 742977251}
   - component: {fileID: 742977254}
-  - component: {fileID: 742977253}
   - component: {fileID: 742977252}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (44)
@@ -6362,20 +5851,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &742977253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 742977250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &742977254
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6539,7 +6014,6 @@ GameObject:
   m_Component:
   - component: {fileID: 770333512}
   - component: {fileID: 770333515}
-  - component: {fileID: 770333514}
   - component: {fileID: 770333513}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (34)
@@ -6588,20 +6062,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &770333514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770333511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &770333515
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6663,7 +6123,6 @@ GameObject:
   m_Component:
   - component: {fileID: 772544102}
   - component: {fileID: 772544105}
-  - component: {fileID: 772544104}
   - component: {fileID: 772544103}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (81)
@@ -6712,20 +6171,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &772544104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772544101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &772544105
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6944,7 +6389,6 @@ GameObject:
   m_Component:
   - component: {fileID: 783764328}
   - component: {fileID: 783764331}
-  - component: {fileID: 783764330}
   - component: {fileID: 783764329}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (31)
@@ -6993,20 +6437,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &783764330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783764327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &783764331
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7068,7 +6498,6 @@ GameObject:
   m_Component:
   - component: {fileID: 814812769}
   - component: {fileID: 814812772}
-  - component: {fileID: 814812771}
   - component: {fileID: 814812770}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (38)
@@ -7117,20 +6546,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &814812771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814812768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &814812772
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7294,7 +6709,6 @@ GameObject:
   m_Component:
   - component: {fileID: 841785572}
   - component: {fileID: 841785575}
-  - component: {fileID: 841785574}
   - component: {fileID: 841785573}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (89)
@@ -7343,20 +6757,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &841785574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841785571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &841785575
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7418,7 +6818,6 @@ GameObject:
   m_Component:
   - component: {fileID: 865168631}
   - component: {fileID: 865168634}
-  - component: {fileID: 865168633}
   - component: {fileID: 865168632}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (69)
@@ -7467,20 +6866,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &865168633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865168630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &865168634
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7697,7 +7082,6 @@ GameObject:
   m_Component:
   - component: {fileID: 905994102}
   - component: {fileID: 905994105}
-  - component: {fileID: 905994104}
   - component: {fileID: 905994103}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (75)
@@ -7746,20 +7130,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &905994104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 905994101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &905994105
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7821,7 +7191,6 @@ GameObject:
   m_Component:
   - component: {fileID: 938789450}
   - component: {fileID: 938789453}
-  - component: {fileID: 938789452}
   - component: {fileID: 938789451}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (115)
@@ -7870,20 +7239,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &938789452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938789449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &938789453
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7945,7 +7300,6 @@ GameObject:
   m_Component:
   - component: {fileID: 946469567}
   - component: {fileID: 946469570}
-  - component: {fileID: 946469569}
   - component: {fileID: 946469568}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (70)
@@ -7994,20 +7348,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &946469569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946469566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &946469570
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8069,7 +7409,6 @@ GameObject:
   m_Component:
   - component: {fileID: 966486250}
   - component: {fileID: 966486253}
-  - component: {fileID: 966486252}
   - component: {fileID: 966486251}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (76)
@@ -8118,20 +7457,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &966486252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966486249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &966486253
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8193,7 +7518,6 @@ GameObject:
   m_Component:
   - component: {fileID: 986057993}
   - component: {fileID: 986057996}
-  - component: {fileID: 986057995}
   - component: {fileID: 986057994}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (59)
@@ -8242,20 +7566,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &986057995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 986057992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &986057996
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8317,7 +7627,6 @@ GameObject:
   m_Component:
   - component: {fileID: 992071695}
   - component: {fileID: 992071698}
-  - component: {fileID: 992071697}
   - component: {fileID: 992071696}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (60)
@@ -8366,20 +7675,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &992071697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992071694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &992071698
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8441,7 +7736,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1012883098}
   - component: {fileID: 1012883101}
-  - component: {fileID: 1012883100}
   - component: {fileID: 1012883099}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (88)
@@ -8490,20 +7784,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1012883100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012883097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1012883101
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8772,7 +8052,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1025331797}
   - component: {fileID: 1025331800}
-  - component: {fileID: 1025331799}
   - component: {fileID: 1025331798}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (7)
@@ -8821,20 +8100,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1025331799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025331796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1025331800
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9030,7 +8295,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1074766272}
   - component: {fileID: 1074766275}
-  - component: {fileID: 1074766274}
   - component: {fileID: 1074766273}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (109)
@@ -9079,20 +8343,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1074766274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074766271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1074766275
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9154,7 +8404,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1075577414}
   - component: {fileID: 1075577417}
-  - component: {fileID: 1075577416}
   - component: {fileID: 1075577415}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (50)
@@ -9203,20 +8452,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1075577416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075577413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1075577417
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9368,7 +8603,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1112601935}
   - component: {fileID: 1112601938}
-  - component: {fileID: 1112601937}
   - component: {fileID: 1112601936}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (35)
@@ -9417,20 +8651,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1112601937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112601934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1112601938
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9492,7 +8712,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1129142882}
   - component: {fileID: 1129142885}
-  - component: {fileID: 1129142884}
   - component: {fileID: 1129142883}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (12)
@@ -9541,20 +8760,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1129142884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1129142881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1129142885
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9616,7 +8821,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1144283522}
   - component: {fileID: 1144283525}
-  - component: {fileID: 1144283524}
   - component: {fileID: 1144283523}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (22)
@@ -9665,20 +8869,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1144283524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144283521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1144283525
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9740,7 +8930,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1157317773}
   - component: {fileID: 1157317776}
-  - component: {fileID: 1157317775}
   - component: {fileID: 1157317774}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (78)
@@ -9789,20 +8978,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1157317775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157317772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1157317776
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9864,7 +9039,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1165042761}
   - component: {fileID: 1165042764}
-  - component: {fileID: 1165042763}
   - component: {fileID: 1165042762}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (29)
@@ -9913,20 +9087,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1165042763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165042760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1165042764
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9988,7 +9148,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1171485414}
   - component: {fileID: 1171485417}
-  - component: {fileID: 1171485416}
   - component: {fileID: 1171485415}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (2)
@@ -10037,20 +9196,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1171485416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171485413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1171485417
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10160,7 +9305,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1205957693}
   - component: {fileID: 1205957696}
-  - component: {fileID: 1205957695}
   - component: {fileID: 1205957694}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (16)
@@ -10209,20 +9353,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1205957695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205957692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1205957696
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10784,7 +9914,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1279913588}
   - component: {fileID: 1279913591}
-  - component: {fileID: 1279913590}
   - component: {fileID: 1279913589}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (90)
@@ -10833,20 +9962,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1279913590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279913587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1279913591
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10908,7 +10023,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1301094454}
   - component: {fileID: 1301094457}
-  - component: {fileID: 1301094456}
   - component: {fileID: 1301094455}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (57)
@@ -10957,20 +10071,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1301094456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301094453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1301094457
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11032,7 +10132,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1305443118}
   - component: {fileID: 1305443121}
-  - component: {fileID: 1305443120}
   - component: {fileID: 1305443119}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (71)
@@ -11081,20 +10180,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1305443120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1305443117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1305443121
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11156,7 +10241,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1308831385}
   - component: {fileID: 1308831388}
-  - component: {fileID: 1308831387}
   - component: {fileID: 1308831386}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (114)
@@ -11205,20 +10289,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1308831387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1308831384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1308831388
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11280,7 +10350,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1313015277}
   - component: {fileID: 1313015280}
-  - component: {fileID: 1313015279}
   - component: {fileID: 1313015278}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (68)
@@ -11329,20 +10398,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1313015279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313015276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1313015280
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11404,7 +10459,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1319727352}
   - component: {fileID: 1319727355}
-  - component: {fileID: 1319727354}
   - component: {fileID: 1319727353}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (51)
@@ -11453,20 +10507,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1319727354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319727351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1319727355
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11528,7 +10568,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1323412003}
   - component: {fileID: 1323412006}
-  - component: {fileID: 1323412005}
   - component: {fileID: 1323412004}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (116)
@@ -11577,20 +10616,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1323412005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323412002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1323412006
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12071,7 +11096,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1332266496}
   - component: {fileID: 1332266499}
-  - component: {fileID: 1332266498}
   - component: {fileID: 1332266497}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (86)
@@ -12120,20 +11144,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1332266498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332266495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1332266499
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12195,7 +11205,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1349601752}
   - component: {fileID: 1349601755}
-  - component: {fileID: 1349601754}
   - component: {fileID: 1349601753}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (83)
@@ -12244,20 +11253,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1349601754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349601751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1349601755
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12480,7 +11475,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1377078522}
   - component: {fileID: 1377078525}
-  - component: {fileID: 1377078524}
   - component: {fileID: 1377078523}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (66)
@@ -12529,20 +11523,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1377078524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377078521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1377078525
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12604,7 +11584,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1406096979}
   - component: {fileID: 1406096982}
-  - component: {fileID: 1406096981}
   - component: {fileID: 1406096980}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (84)
@@ -12653,20 +11632,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1406096981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406096978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1406096982
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12909,7 +11874,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1421700392}
   - component: {fileID: 1421700395}
-  - component: {fileID: 1421700394}
   - component: {fileID: 1421700393}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (36)
@@ -12958,20 +11922,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1421700394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421700391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1421700395
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13167,7 +12117,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1442750990}
   - component: {fileID: 1442750993}
-  - component: {fileID: 1442750992}
   - component: {fileID: 1442750991}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (62)
@@ -13216,20 +12165,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1442750992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1442750989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1442750993
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13435,7 +12370,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1444904156}
   - component: {fileID: 1444904159}
-  - component: {fileID: 1444904158}
   - component: {fileID: 1444904157}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (79)
@@ -13484,20 +12418,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1444904158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1444904155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1444904159
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13559,7 +12479,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1450445127}
   - component: {fileID: 1450445130}
-  - component: {fileID: 1450445129}
   - component: {fileID: 1450445128}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (113)
@@ -13608,20 +12527,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1450445129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450445126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1450445130
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13683,7 +12588,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1482651158}
   - component: {fileID: 1482651161}
-  - component: {fileID: 1482651160}
   - component: {fileID: 1482651159}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (56)
@@ -13732,20 +12636,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1482651160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1482651157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1482651161
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13807,7 +12697,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1500589565}
   - component: {fileID: 1500589568}
-  - component: {fileID: 1500589567}
   - component: {fileID: 1500589566}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (43)
@@ -13856,20 +12745,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1500589567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500589564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1500589568
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13931,7 +12806,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1509210633}
   - component: {fileID: 1509210636}
-  - component: {fileID: 1509210635}
   - component: {fileID: 1509210634}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (25)
@@ -13980,20 +12854,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1509210635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509210632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1509210636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14055,7 +12915,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1523821279}
   - component: {fileID: 1523821282}
-  - component: {fileID: 1523821281}
   - component: {fileID: 1523821280}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (40)
@@ -14104,20 +12963,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1523821281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523821278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1523821282
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14257,7 +13102,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1556164131}
   - component: {fileID: 1556164134}
-  - component: {fileID: 1556164133}
   - component: {fileID: 1556164132}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (118)
@@ -14306,20 +13150,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1556164133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1556164130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1556164134
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14381,7 +13211,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1558795250}
   - component: {fileID: 1558795253}
-  - component: {fileID: 1558795252}
   - component: {fileID: 1558795251}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (24)
@@ -14430,20 +13259,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1558795252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558795249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1558795253
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14505,7 +13320,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1586491044}
   - component: {fileID: 1586491047}
-  - component: {fileID: 1586491046}
   - component: {fileID: 1586491045}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (1)
@@ -14554,20 +13368,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1586491046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586491043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1586491047
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14919,7 +13719,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1663221403}
   - component: {fileID: 1663221406}
-  - component: {fileID: 1663221405}
   - component: {fileID: 1663221404}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (18)
@@ -14968,20 +13767,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1663221405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663221402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1663221406
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15178,7 +13963,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1741380745}
   - component: {fileID: 1741380748}
-  - component: {fileID: 1741380747}
   - component: {fileID: 1741380746}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (95)
@@ -15227,20 +14011,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1741380747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741380744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1741380748
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15302,7 +14072,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1745716245}
   - component: {fileID: 1745716248}
-  - component: {fileID: 1745716247}
   - component: {fileID: 1745716246}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (15)
@@ -15351,20 +14120,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1745716247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745716244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1745716248
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15426,7 +14181,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1748492878}
   - component: {fileID: 1748492881}
-  - component: {fileID: 1748492880}
   - component: {fileID: 1748492879}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (6)
@@ -15475,20 +14229,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1748492880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1748492877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1748492881
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15767,7 +14507,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1771672749}
   - component: {fileID: 1771672752}
-  - component: {fileID: 1771672751}
   - component: {fileID: 1771672750}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (13)
@@ -15816,20 +14555,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1771672751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771672748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1771672752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15891,7 +14616,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1810138452}
   - component: {fileID: 1810138455}
-  - component: {fileID: 1810138454}
   - component: {fileID: 1810138453}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (58)
@@ -15940,20 +14664,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1810138454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810138451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1810138455
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16015,7 +14725,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1826215087}
   - component: {fileID: 1826215090}
-  - component: {fileID: 1826215089}
   - component: {fileID: 1826215088}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (26)
@@ -16064,20 +14773,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1826215089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826215086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1826215090
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16139,7 +14834,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1837452870}
   - component: {fileID: 1837452873}
-  - component: {fileID: 1837452872}
   - component: {fileID: 1837452871}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (20)
@@ -16188,20 +14882,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1837452872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837452869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1837452873
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16263,7 +14943,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1839757612}
   - component: {fileID: 1839757615}
-  - component: {fileID: 1839757614}
   - component: {fileID: 1839757613}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (49)
@@ -16312,20 +14991,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1839757614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839757611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1839757615
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16387,7 +15052,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1866631331}
   - component: {fileID: 1866631334}
-  - component: {fileID: 1866631333}
   - component: {fileID: 1866631332}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (8)
@@ -16436,20 +15100,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1866631333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866631330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1866631334
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16577,7 +15227,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1909436156}
   - component: {fileID: 1909436159}
-  - component: {fileID: 1909436158}
   - component: {fileID: 1909436157}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (46)
@@ -16626,20 +15275,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1909436158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909436155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1909436159
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16701,7 +15336,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1924549858}
   - component: {fileID: 1924549861}
-  - component: {fileID: 1924549860}
   - component: {fileID: 1924549859}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (27)
@@ -16750,20 +15384,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1924549860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924549857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1924549861
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16959,7 +15579,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1933283096}
   - component: {fileID: 1933283099}
-  - component: {fileID: 1933283098}
   - component: {fileID: 1933283097}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (42)
@@ -17008,20 +15627,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1933283098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933283095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1933283099
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17083,7 +15688,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1936701858}
   - component: {fileID: 1936701861}
-  - component: {fileID: 1936701860}
   - component: {fileID: 1936701859}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (33)
@@ -17132,20 +15736,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1936701860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936701857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1936701861
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17207,7 +15797,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1976829074}
   - component: {fileID: 1976829077}
-  - component: {fileID: 1976829076}
   - component: {fileID: 1976829075}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (93)
@@ -17256,20 +15845,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1976829076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976829073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1976829077
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17331,7 +15906,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1989498029}
   - component: {fileID: 1989498032}
-  - component: {fileID: 1989498031}
   - component: {fileID: 1989498030}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone)
@@ -17380,20 +15954,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1989498031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989498028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1989498032
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17455,7 +16015,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1989762402}
   - component: {fileID: 1989762405}
-  - component: {fileID: 1989762404}
   - component: {fileID: 1989762403}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (110)
@@ -17504,20 +16063,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1989762404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989762401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &1989762405
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17579,7 +16124,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2017047747}
   - component: {fileID: 2017047750}
-  - component: {fileID: 2017047749}
   - component: {fileID: 2017047748}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (9)
@@ -17628,20 +16172,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2017047749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017047746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &2017047750
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17703,7 +16233,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2021219824}
   - component: {fileID: 2021219827}
-  - component: {fileID: 2021219826}
   - component: {fileID: 2021219825}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (67)
@@ -17752,20 +16281,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2021219826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021219823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &2021219827
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18001,7 +16516,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2061602078}
   - component: {fileID: 2061602081}
-  - component: {fileID: 2061602080}
   - component: {fileID: 2061602079}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (48)
@@ -18050,20 +16564,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2061602080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061602077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &2061602081
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18289,7 +16789,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2087459445}
   - component: {fileID: 2087459448}
-  - component: {fileID: 2087459447}
   - component: {fileID: 2087459446}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (85)
@@ -18338,20 +16837,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2087459447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087459444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &2087459448
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18413,7 +16898,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2095441364}
   - component: {fileID: 2095441367}
-  - component: {fileID: 2095441366}
   - component: {fileID: 2095441365}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (39)
@@ -18462,20 +16946,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2095441366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095441363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &2095441367
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18537,7 +17007,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2118986881}
   - component: {fileID: 2118986884}
-  - component: {fileID: 2118986883}
   - component: {fileID: 2118986882}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (21)
@@ -18586,20 +17055,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2118986883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118986880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &2118986884
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18661,7 +17116,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2120595264}
   - component: {fileID: 2120595267}
-  - component: {fileID: 2120595266}
   - component: {fileID: 2120595265}
   m_Layer: 0
   m_Name: DoubleRockLight(Clone) (19)
@@ -18710,20 +17164,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2120595266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2120595263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a369638abb2d04eb8d17781fe02d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
 --- !u!212 &2120595267
 SpriteRenderer:
   m_ObjectHideFlags: 0

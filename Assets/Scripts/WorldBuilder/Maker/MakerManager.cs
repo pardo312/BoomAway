@@ -50,13 +50,19 @@ public class MakerManager : MonoBehaviour
 
         if(Input.GetKey(KeyCode.Mouse0))
         {
-            if(c.collider == null)
-                Instantiate(tiles[id].gameObject,pos,Quaternion.identity);
+            if(c.collider == null )
+                Instantiate(tiles[id].gameObject,pos,Quaternion.identity);      
         }
         if(Input.GetKey(KeyCode.Mouse1))
         {
-            if(c.collider != null)
-                Destroy(c.collider.gameObject);
+            
+            if(c.collider != null )
+            {
+                c.collider.gameObject.TryGetComponent<MakerTile>(out MakerTile mk);
+                if(mk)
+                    if(mk.id == id)
+                        Destroy(c.collider.gameObject);
+            }
         }
     }
     public void changeEditorMode()
