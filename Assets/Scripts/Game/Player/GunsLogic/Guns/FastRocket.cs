@@ -27,7 +27,6 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                         Vector2 direction = obj.transform.position - transform.position;
                         obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
                     }
-                    //Instanciar otro
                     Grid.gameStateManager.hasCurrentAmmo = false;
                     Destroy(gameObject);
                 }
@@ -35,29 +34,31 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
         public void shoot(float shootForce, BoxCollider2D bc, Rigidbody2D rb)
         {
-            if (!waitForRocket)
-            {
                 Vector3 tempPosition = transform.position;
                 transform.SetParent(null);
                 transform.position = tempPosition;
 
                 this.rb = rb;
                 isShooting = true;
-
                 bc.isTrigger = false;
-
-                Grid.gameStateManager.currentAmmo[2]--;
-            }
+                //Grid.gameStateManager.currentAmmo[1]--;
         }
 
-        // Update is called once per frame
-        void Update()
+        private void FixedUpdate()
         {
+            Debug.Log(isShooting);
             if (isShooting)
             {
-                rb.MovePosition(transform.position + new Vector3(1f, 0, 0));
-                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 0.5f, 5);
-                if (objects.Length != 0)
+                var locVel = transform.InverseTransformDirection(rb.velocity);
+
+                locVel.x = 4f;
+                rb.velocity = transform.TransformDirection(locVel);
+
+
+                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 0.8f, 5);
+                Collider2D[] objects2 = Physics2D.OverlapCircleAll(transform.position, 0.8f, 8);
+
+                if (objects.Length != 0 || objects2.Length != 0)
                 {
                     readyToExplode = true;
                 }

@@ -16,12 +16,12 @@ public class GameStateManager : MonoBehaviour
     
     void Awake()
     {
+        ammo = new int[amountGuns];
+        currentAmmo = new int[amountGuns];
         setAmmo();
         editing=true;
         //temporal, cambiar luego
         currentLevel = "LVL1";
-        ammo = new int[amountGuns];
-        currentAmmo = new int[amountGuns];
     }
     void setAmmo(){
         //Bomb
