@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c78cb1cbcc6ca74db0f37d62be4195c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootForce: 10
+  shootForce: 2
 --- !u!114 &5265213156167673599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +179,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionForce: 1000
   radiousOfImpact: 2
-  layerToHit:
+  layerToExplode:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 2304

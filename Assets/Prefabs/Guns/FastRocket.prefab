@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2893601346403641507}
   - component: {fileID: 3703199631677066327}
   - component: {fileID: 1266946532872846391}
+  - component: {fileID: -7886814736215132516}
   - component: {fileID: 6032754028919375799}
   - component: {fileID: 718732903929714343}
-  - component: {fileID: -7886814736215132516}
   m_Layer: 10
   m_Name: FastRocket
   m_TagString: Untagged
@@ -139,36 +139,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.68, y: 3.83}
   m_EdgeRadius: 0
---- !u!114 &6032754028919375799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880530637259964680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c78cb1cbcc6ca74db0f37d62be4195c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootForce: 150
---- !u!114 &718732903929714343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880530637259964680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 431e70ab886ff55488c4ee1f28babc46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionForce: 1000
-  radiousOfImpact: 2
-  layerToHit:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!114 &-7886814736215132516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,3 +151,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43f77e19344c2b149aae48e2dae9cdfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerToHit:
+    serializedVersion: 2
+    m_Bits: 257
+--- !u!114 &6032754028919375799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880530637259964680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78cb1cbcc6ca74db0f37d62be4195c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootForce: 70
+--- !u!114 &718732903929714343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880530637259964680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431e70ab886ff55488c4ee1f28babc46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionForce: 500
+  radiousOfImpact: 2
+  layerToExplode:
+    serializedVersion: 2
+    m_Bits: 2304

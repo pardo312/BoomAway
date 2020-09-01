@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6490676961320274378}
   - component: {fileID: 7896189891299770764}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CurrentGun
   m_TagString: CurrentGun
   m_Icon: {fileID: 0}
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 917580062114300845}
   - component: {fileID: 7467120877708417386}
   - component: {fileID: 7020921940582245477}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RocketLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 2045248425136056857}
   - component: {fileID: 8038314235508042578}
   - component: {fileID: 6194631137193918775}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}

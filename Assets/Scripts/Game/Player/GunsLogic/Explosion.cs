@@ -6,7 +6,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns{
     {
         [SerializeField]private float explosionForce;
         [SerializeField]private float radiousOfImpact;
-        [SerializeField]private LayerMask layerToHit;
+        [SerializeField]private LayerMask layerToExplode;
         private IExplosive explosive;
         // Start is called before the first frame update
         void Start()
@@ -18,7 +18,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns{
         void Update()
         {           
             if(!Grid.gameStateManager.editing)     
-                explosive.explode(radiousOfImpact,explosionForce,layerToHit);
+                explosive.explode(radiousOfImpact,explosionForce,layerToExplode);
         }
     }
 

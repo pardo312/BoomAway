@@ -9,17 +9,18 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
     public class SlowRocket : MonoBehaviour, IGun, IExplosive
     {
 
+        [SerializeField]private LayerMask layerToHit;
         private bool waitForRocket = false;
         private bool isShooting = false;
         private bool readyToExplode = false;
         private float shootForce;
 
         private Rigidbody2D rb; 
-        public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToHit)
+        public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToExplode)
         {
                 if (readyToExplode)
                 {
-                    Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact, layerToHit);
+                    Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact, layerToExplode);
 
                     foreach (Collider2D obj in objects)
                     {
@@ -41,6 +42,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
                 this.shootForce = shootForce;
                 this.rb = rb;
+
                 bc.isTrigger = false;
                 isShooting = true;
                 Grid.gameStateManager.currentAmmo[Constants.SLOW_ROCKET_TYPE]--;
@@ -57,10 +59,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 rb.velocity = transform.TransformDirection(locVel);
 
 
-                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 0.8f, 5);
-                Collider2D[] objects2 = Physics2D.OverlapCircleAll(transform.position, 0.8f, 8);
+                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 0.8f, layerToHit);
 
-                if (objects.Length != 0 || objects2.Length != 0)
+                if (objects.Length != 0 )
                 {
                     readyToExplode = true;
                 }
