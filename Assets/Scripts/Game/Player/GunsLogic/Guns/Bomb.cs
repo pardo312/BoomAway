@@ -14,6 +14,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
         private void Awake() {
             readyToExplode = false;
+            timeUntilExplode*=100;
         }
         private void Update() {
             if(timeUntilExplode>0 && readyToExplode){
@@ -33,7 +34,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
                 bc.isTrigger = false;
                 rb.isKinematic = false;
-                rb.AddForce(transform.right * shootForce * -1);
+                rb.AddForce(transform.right *  (shootForce*100) * -1);
 
                 alredyShoot=true;
                 Grid.gameStateManager.currentAmmo[Constants.BOMB_TYPE]--;
@@ -44,7 +45,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
         IEnumerator setReadyToExplode()
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
             readyToExplode = true;
         }
 

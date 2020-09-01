@@ -20,7 +20,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
                 bc.isTrigger = false;
                 rb.isKinematic = false;
-                rb.AddForce(transform.right * shootForce * -1);
+                rb.AddForce(transform.right * (shootForce*100) * -1);
 
                 alredyShoot=true;
                 Grid.gameStateManager.currentAmmo[Constants.C4_TYPE]--;
@@ -30,7 +30,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
         IEnumerator setReadyToExplode()
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
             readyToExplode = true;
         }
 

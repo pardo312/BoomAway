@@ -33,16 +33,18 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
         public void shoot(float shootForce, BoxCollider2D bc, Rigidbody2D rb)
         {
-            Vector3 tempPosition = transform.position;
-            transform.SetParent(null);
-            transform.position = tempPosition;
+            if(!isShooting)
+            {
+                Vector3 tempPosition = transform.position;
+                transform.SetParent(null);
+                transform.position = tempPosition;
 
-            this.shootForce = shootForce;
-            this.rb = rb;
-            bc.isTrigger = false;
-            isShooting = true;
-            Debug.Log(Grid.gameStateManager.currentAmmo.Length);
-            Grid.gameStateManager.currentAmmo[Constants.SLOW_ROCKET_TYPE]--;
+                this.shootForce = shootForce;
+                this.rb = rb;
+                bc.isTrigger = false;
+                isShooting = true;
+                Grid.gameStateManager.currentAmmo[Constants.SLOW_ROCKET_TYPE]--;
+            }
         }
 
         private void FixedUpdate()
