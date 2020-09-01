@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
-    private int amountGuns = 3;
+    private int amountGuns = 4;
     //0 = Bomb ; 1 = C4 ; 
     [HideInInspector]public int[] ammo;
     [HideInInspector]public int[] currentAmmo;
@@ -30,6 +30,8 @@ public class GameStateManager : MonoBehaviour
         ammo[1] = 4;
         //FastRocket
         ammo[2] = 5;
+        //SlowRocket
+        ammo[3] = 5;
 
         //Bomb
         currentAmmo[0] = 3;
@@ -37,6 +39,8 @@ public class GameStateManager : MonoBehaviour
         currentAmmo[1] = 4;
         //FastRocket
         currentAmmo[2] = 5;
+        //SlowRocket
+        currentAmmo[3] = 5;
     }
     
 }

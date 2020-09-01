@@ -12,6 +12,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         private bool waitForRocket = false;
         private bool isShooting = false;
         private bool readyToExplode = false;
+        private float shootForce;
 
         private Rigidbody2D rb; 
         public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToHit)
@@ -34,7 +35,8 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
         public void shoot(float shootForce, BoxCollider2D bc, Rigidbody2D rb)
         {
-                Vector3 tempPosition = transform.position;
+            this.shootForce = shootForce;
+            Vector3 tempPosition = transform.position;
                 transform.SetParent(null);
                 transform.position = tempPosition;
 
@@ -51,7 +53,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
             {
                 var locVel = transform.InverseTransformDirection(rb.velocity);
 
-                locVel.x = 4f;
+                locVel.x = shootForce;
                 rb.velocity = transform.TransformDirection(locVel);
 
 
