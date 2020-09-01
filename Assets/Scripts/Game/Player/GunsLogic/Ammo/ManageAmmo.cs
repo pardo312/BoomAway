@@ -13,6 +13,7 @@ public class ManageAmmo : MonoBehaviour
     {
         int localAmmoType  = Grid.gameStateManager.currentAmmoType;
 
+        //Si ya tiene arma y selecciona otra: destruye la que ya tiene.
         if(localAmmoType != ammoType)
         {
             foreach (Transform child in transform)
@@ -22,6 +23,7 @@ public class ManageAmmo : MonoBehaviour
             ammoType = localAmmoType;
             Grid.gameStateManager.hasCurrentAmmo=false;
         }
+        //Si no tiene arma y tiene balas del arma seleccionada: instanciar arma
         if(!Grid.gameStateManager.hasCurrentAmmo){
             if(Grid.gameStateManager.currentAmmo[ammoType]>0){
                 Grid.gameStateManager.hasCurrentAmmo=true;

@@ -23,7 +23,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 rb.AddForce(transform.right * shootForce * -1);
 
                 alredyShoot=true;
-                Grid.gameStateManager.currentAmmo[1]--;
+                Grid.gameStateManager.currentAmmo[Constants.C4_TYPE]--;
                 StartCoroutine(setReadyToExplode());
             }
         }

@@ -5,8 +5,9 @@ using TMPro;
 
 public class GetAmmoFromLevel : MonoBehaviour
 {
-    [Tooltip("Types of guns: \n 0 = Bomb \n 1 = C4")]
-    [SerializeField]private int ammoType;
+    
+    [Tooltip("0 = Bomb \n 1 = C4 \n 2 = FR \n 3 = SR")]
+    [SerializeField][Range(0,Constants.AMOUNT_GUNS-1)]private int ammoType;
     private TextMeshProUGUI textMP;
     // Start is called before the first frame update
     void Start()

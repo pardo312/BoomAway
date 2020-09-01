@@ -19,6 +19,5 @@ public struct Tile
 [System.Serializable]
 public struct State
 {
-    //0 = Bomb ; 1 = C4 ; 
     public int[] ammo;
 }

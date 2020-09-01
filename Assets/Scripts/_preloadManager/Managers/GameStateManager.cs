@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
-    private int amountGuns = 4;
-    //0 = Bomb ; 1 = C4 ; 
     [HideInInspector]public int[] ammo;
     [HideInInspector]public int[] currentAmmo;
-    [HideInInspector]public int currentAmmoType = 0;
+    [HideInInspector]public int currentAmmoType ;
     [HideInInspector]public bool hasCurrentAmmo = false;
     [HideInInspector]public bool editing;
     [HideInInspector]public string currentLevel;
@@ -16,31 +14,27 @@ public class GameStateManager : MonoBehaviour
     
     void Awake()
     {
-        ammo = new int[amountGuns];
-        currentAmmo = new int[amountGuns];
+        currentAmmoType = Constants.BOMB_TYPE;
+
+        ammo = new int[Constants.AMOUNT_GUNS];
+        currentAmmo = new int[Constants.AMOUNT_GUNS];
         setAmmo();
+
         editing=true;
         //temporal, cambiar luego
         currentLevel = "LVL1";
     }
     void setAmmo(){
-        //Bomb
-        ammo[0] = 3;
-        //C4
-        ammo[1] = 4;
-        //FastRocket
-        ammo[2] = 5;
-        //SlowRocket
-        ammo[3] = 5;
 
-        //Bomb
-        currentAmmo[0] = 3;
-        //C4
-        currentAmmo[1] = 4;
-        //FastRocket
-        currentAmmo[2] = 5;
-        //SlowRocket
-        currentAmmo[3] = 5;
+        ammo[Constants.BOMB_TYPE] = 3;
+        ammo[Constants.C4_TYPE] = 4;
+        ammo[Constants.FAST_ROCKET_TYPE] = 5;
+        ammo[Constants.SLOW_ROCKET_TYPE] = 5;
+
+        ammo[Constants.BOMB_TYPE] = 3;
+        ammo[Constants.C4_TYPE] = 4;
+        ammo[Constants.FAST_ROCKET_TYPE] = 5;
+        ammo[Constants.SLOW_ROCKET_TYPE] = 5;
     }
     
 }

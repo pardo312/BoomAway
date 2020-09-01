@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5364639123864905474}
   - component: {fileID: 1540320350992155809}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Scope2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596827103678327386}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.408, y: 0.109, z: 0}
+  m_LocalPosition: {x: 1.55, y: 0.145, z: 0}
   m_LocalScale: {x: 1.4285713, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 917580062114300845}
@@ -128,6 +128,8 @@ MonoBehaviour:
   gunsPrefab:
   - {fileID: 4253079745285633796, guid: 1f3403ffa4853874d961149c905e38c9, type: 3}
   - {fileID: 8128339604987308339, guid: 85215edf0ecc3c34e9e05b30505ab6e9, type: 3}
+  - {fileID: 1880530637259964680, guid: 3ab16fb3bb5514c42baa5110f26a76ae, type: 3}
+  - {fileID: 894090532544602778, guid: a5ccc7c2bd05ea24f9e83ad33bb78e16, type: 3}
 --- !u!1 &1380071526104728492
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2442285379592384845}
   - component: {fileID: 5675697371428801831}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Scope1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,13 +221,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 443503521160965431}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Scope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &443503521160965431
 Transform:
   m_ObjectHideFlags: 0
@@ -254,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8252655100119314836}
   - component: {fileID: 1472572516107532016}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BigScope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3156205010513658215}
   - component: {fileID: 6780437896815197790}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Scope3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,10 +626,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 67
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace BoomAway.Assets.Scripts.Game.Player.Guns
 {
-    public class FastRocket : MonoBehaviour, IGun, IExplosive
+    public class SlowRocket : MonoBehaviour, IGun, IExplosive
     {
 
         private bool waitForRocket = false;
@@ -42,7 +42,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
             bc.isTrigger = false;
             isShooting = true;
             Debug.Log(Grid.gameStateManager.currentAmmo.Length);
-            Grid.gameStateManager.currentAmmo[Constants.FAST_ROCKET_TYPE]--;
+            Grid.gameStateManager.currentAmmo[Constants.SLOW_ROCKET_TYPE]--;
         }
 
         private void FixedUpdate()
