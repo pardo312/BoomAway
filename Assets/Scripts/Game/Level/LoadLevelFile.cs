@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class LoadLevelFile : MonoBehaviour
 {
+    [SerializeField]private bool needToLoadLevel;
     // Start is called before the first frame update
     void Start()
     {
         Grid.gameStateManager.editing = false;
-        Grid.worldSaveManager.loadWorldFromFolder(Grid.gameStateManager.currentLevel,SaveType.Story);
+        
+    }
+    void loadLevel(){
+        if(needToLoadLevel)
+            Grid.worldSaveManager.loadWorldFromFolder(Grid.gameStateManager.currentLevel,SaveType.Story);
+
     }
 }
