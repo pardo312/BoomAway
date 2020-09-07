@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431e70ab886ff55488c4ee1f28babc46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionForce: 1000
+  explosionForce: 500
   radiousOfImpact: 2
   layerToExplode:
     serializedVersion: 2
