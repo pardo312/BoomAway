@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class BreakableTile : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    public bool explode;
+
+    private void Update()
     {
-        if (collision.tag.Equals("Explosive"))
+        if (explode)
         {
             GameObject.Destroy(gameObject);
         }
     }
+
 }

@@ -47,6 +47,10 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                         // 
                         Vector2 direction = obj.transform.position - transform.position;
                         obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
+                        if (obj.tag.Equals("BreakableTile"))
+                        {
+                            obj.GetComponent<BreakableTile>().explode = true;
+                        }
                     }   
                     //Instanciar otro
                     Grid.gameStateManager.hasCurrentAmmo = false;

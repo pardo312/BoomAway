@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4115245572489847699}
   m_Layer: 0
   m_Name: BreakableTile
-  m_TagString: Untagged
+  m_TagString: BreakableTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.029022217, y: -0.023223877}
@@ -137,3 +137,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 252f58e94454f4c40b1bbdd55a44d891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explode: 0
