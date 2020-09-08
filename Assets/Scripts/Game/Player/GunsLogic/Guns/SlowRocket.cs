@@ -25,8 +25,13 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                     foreach (Collider2D obj in objects)
                     {
                         Vector2 direction = obj.transform.position - transform.position;
+                    if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D prueba))
+                    {
                         obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
-                    if (obj.tag.Equals("BreakableTile"))
+                    }
+
+                    Debug.Log(obj.TryGetComponent<BreakableTile>(out BreakableTile hola));
+                    if (obj.TryGetComponent<BreakableTile>(out BreakableTile hola2))
                     {
                         obj.GetComponent<BreakableTile>().explode = true;
                     }

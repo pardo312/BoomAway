@@ -10,7 +10,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         private bool alredyShoot;
         private bool readyToExplode;
 
-        public void shoot(float shootForce,BoxCollider2D bc, Rigidbody2D rb)
+        public void shoot(float shootForce, BoxCollider2D bc, Rigidbody2D rb)
         {
             if (!alredyShoot)
             {
@@ -20,9 +20,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
                 bc.isTrigger = false;
                 rb.isKinematic = false;
-                rb.AddForce(transform.right * (shootForce*100) * -1);
+                rb.AddForce(transform.right * (shootForce * 100) * -1);
 
-                alredyShoot=true;
+                alredyShoot = true;
                 Grid.gameStateManager.currentAmmo[Constants.C4_TYPE]--;
                 StartCoroutine(setReadyToExplode());
             }
@@ -36,34 +36,42 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
         public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToHit)
         {
-            
-            if(Input.GetKeyDown(KeyCode.Q)){
-                if(readyToExplode){
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                if (readyToExplode)
+                {
                     Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact, layerToHit);
 
                     foreach (Collider2D obj in objects)
                     {
                         // Podemos mirar si se pueden hacer scrips para cada tipo de bloque (todos implementan explosión)
                         // 
-                        Vector2 direction = obj.transform.position - transform.position;
-                        obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
-                        if (obj.tag.Equals("BreakableTile"))
-                        {
-                            obj.GetComponent<BreakableTile>().explode = true;
+                                                    Vector2 direction = obj.transform.position - transform.position;
+                            if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D prueba))
+                            {
+                                obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
+                            }
+
+                            Debug.Log(obj.TryGetComponent<BreakableTile>(out BreakableTile hola));
+                            if (obj.TryGetComponent<BreakableTile>(out BreakableTile hola2))
+                            {
+                                obj.GetComponent<BreakableTile>().explode = true;
+                            }
                         }
-                    }   
-                    //Instanciar otro
-                    Grid.gameStateManager.hasCurrentAmmo = false;
-                    Destroy(gameObject); 
+                        //Instanciar otro
+                        Grid.gameStateManager.hasCurrentAmmo = false;
+                        Destroy(gameObject);
+                    }
                 }
             }
-        }
-        void OnDrawGizmos()
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position,2);
+            void OnDrawGizmos()
+            {
+                Gizmos.color = Color.red;
+                Gizmos.DrawWireSphere(transform.position, 2);
+            }
+
         }
 
     }
 
-}
