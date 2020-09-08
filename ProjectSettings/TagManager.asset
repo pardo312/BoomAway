@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CurrentGun
   - Explosive
+  - BreakableTile
   layers:
   - Default
   - TransparentFX
