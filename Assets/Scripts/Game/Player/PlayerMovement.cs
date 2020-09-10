@@ -29,7 +29,8 @@ namespace BoomAway.Assets.Scripts.Game.Player
         void FixedUpdate()
         {
             if(!Grid.gameStateManager.editing){
-                rb.velocity = new Vector2(horizontalInput * speed * Time.deltaTime* 100, rb.velocity.y);
+                if(horizontalInput != 0)
+                    rb.velocity = new Vector2(horizontalInput * speed * Time.deltaTime* 100, rb.velocity.y);
             }
         }
         void flipSprite()
