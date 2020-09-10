@@ -9,18 +9,6 @@ public class SpikeBehaviour : MonoBehaviour
 
     private bool alreadyLaunched = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject other = collision.gameObject;
@@ -29,7 +17,7 @@ public class SpikeBehaviour : MonoBehaviour
         bool otherIsLeft = other.transform.position.x < transform.position.x;
 
         //Si el jugador toca las puas, "saltara" en 45º hacia la direccion donde las toco
-        if(other.name.Equals("Player") && !alreadyLaunched)
+        if(other.name.Equals("Player") || other.CompareTag("Explosive")) // && !alreadyLaunched)
         {
             if (otherIsLeft)
                 other.GetComponent<Rigidbody2D>().AddForce(new Vector2(-launchForce, launchForce));

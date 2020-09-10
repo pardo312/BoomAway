@@ -22,14 +22,14 @@ namespace BoomAway.Assets.Scripts.Game.Player
         void Update()
         {
             if(!Grid.gameStateManager.editing){
-            horizontalInput = Input.GetAxis("Horizontal");
-            flipSprite();
+                horizontalInput = Input.GetAxis("Horizontal");
+                flipSprite();
             }
         }
         void FixedUpdate()
         {
             if(!Grid.gameStateManager.editing){
-                rb.velocity = new Vector2(horizontalInput * speed *Time.deltaTime*100, rb.velocity.y);
+                rb.velocity = new Vector2(horizontalInput * speed * Time.deltaTime* 100, rb.velocity.y);
             }
         }
         void flipSprite()
