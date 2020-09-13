@@ -1,14 +1,15 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BoomAway.Assets.Scripts.Game.Player.Guns
 {
     public class C4 : MonoBehaviour, IGun, IExplosive
     {
-
+        
+        [SerializeField]private LayerMask layerToStick;
         private bool alredyShoot;
         private bool readyToExplode;
+        private Rigidbody2D rb;
 
         public void shoot(float shootForce, BoxCollider2D bc, Rigidbody2D rb)
         {
@@ -21,6 +22,8 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 bc.isTrigger = false;
                 rb.isKinematic = false;
                 rb.AddForce(transform.right * (shootForce * 100) * -1);
+
+                this.rb = rb;
 
                 alredyShoot = true;
                 Grid.gameStateManager.currentAmmo[Constants.C4_TYPE]--;
@@ -36,7 +39,6 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
         public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToHit)
         {
-
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 if (readyToExplode)
@@ -46,8 +48,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                     foreach (Collider2D obj in objects)
                     {
                         // Podemos mirar si se pueden hacer scrips para cada tipo de bloque (todos implementan explosión)
-                        // 
-                                                    Vector2 direction = obj.transform.position - transform.position;
+                            Vector2 direction = obj.transform.position - transform.position;
                             if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D prueba))
                             {
                                 obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
@@ -62,7 +63,12 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                         //Instanciar otro
                         Grid.gameStateManager.hasCurrentAmmo = false;
                         Destroy(gameObject);
-                    }
+                }
+            }
+        }
+            private void OnCollisionEnter2D(Collision2D other) {
+                if(((1<<other.gameObject.layer) & layerToStick) != 0){
+                    rb.bodyType = RigidbodyType2D.Static;
                 }
             }
             void OnDrawGizmos()
@@ -70,7 +76,6 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 Gizmos.color = Color.red;
                 Gizmos.DrawWireSphere(transform.position, 2);
             }
-
         }
 
     }

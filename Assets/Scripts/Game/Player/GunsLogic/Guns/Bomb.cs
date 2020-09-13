@@ -8,9 +8,11 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
     public class Bomb : MonoBehaviour, IGun, IExplosive
     {
 
+        [SerializeField]private LayerMask layerToStick;
         [SerializeField] private int timeUntilExplode;
         private bool alredyShoot;
         private bool readyToExplode;
+        private Rigidbody2D rb;
 
         private void Awake()
         {
@@ -39,6 +41,8 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 bc.isTrigger = false;
                 rb.isKinematic = false;
                 rb.AddForce(transform.right * (shootForce * 100) * -1);
+                
+                this.rb = rb;
 
                 alredyShoot = true;
                 Grid.gameStateManager.currentAmmo[Constants.BOMB_TYPE]--;
@@ -74,17 +78,24 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                     {
                         obj.GetComponent<BreakableTile>().explode = true;
                     }
-                    Grid.gameStateManager.hasCurrentAmmo = false;
-                    Destroy(gameObject);
                 }
+                Grid.gameStateManager.hasCurrentAmmo = false;
+                Destroy(gameObject);
             }
-            void OnDrawGizmos()
-            {
-                Gizmos.color = Color.red;
-                Gizmos.DrawWireSphere(transform.position, 2);
-            }
+            
+            
 
 
+        }
+        private void OnCollisionEnter2D(Collision2D other) {
+            if(((1<<other.gameObject.layer) & layerToStick) != 0){
+                rb.bodyType = RigidbodyType2D.Static;
+            }
+        }
+        void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, 2);
         }
     }
 }

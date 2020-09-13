@@ -151,6 +151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c95691d5e72fee54fa64342a209bbc65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerToStick:
+    serializedVersion: 2
+    m_Bits: 257
   timeUntilExplode: 5
 --- !u!114 &1104176497124932282
 MonoBehaviour:
