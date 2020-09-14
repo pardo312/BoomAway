@@ -9,11 +9,15 @@ public class LoadLevelFile : MonoBehaviour
     void Start()
     {
         Grid.gameStateManager.editing = false;
+        loadLevel();
         
     }
     void loadLevel(){
-        if(needToLoadLevel)
+        if(needToLoadLevel){
+            Debug.Log("asd");
             Grid.worldSaveManager.loadWorldFromFolder(Grid.gameStateManager.currentLevel,SaveType.Story);
+        }
+           
 
     }
 }
