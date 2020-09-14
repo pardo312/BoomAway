@@ -10,7 +10,8 @@ public class EndFlag : MonoBehaviour
         Debug.Log(collision.tag);
         if (collision.CompareTag("Player"))
         {
-            if (SceneManager.GetActiveScene().Equals("StoryLevel"))
+            Debug.Log(SceneManager.GetActiveScene().name);
+            if (SceneManager.GetActiveScene().name.Equals("StoryLevel"))
             {
                 Grid.gameStateManager.currentLevel = "LVL2"; 
                 SceneManager.LoadScene("StoryLevel");
