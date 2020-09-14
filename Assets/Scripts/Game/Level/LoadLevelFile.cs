@@ -14,7 +14,6 @@ public class LoadLevelFile : MonoBehaviour
     }
     void loadLevel(){
         if(needToLoadLevel){
-            Debug.Log("asd");
             Grid.worldSaveManager.loadWorldFromFolder(Grid.gameStateManager.currentLevel,SaveType.Story);
         }
            
