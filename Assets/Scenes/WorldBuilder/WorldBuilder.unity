@@ -20511,6 +20511,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1375962450286199303, guid: a5c7111ba9b869649be344a88848b1a5, type: 3}
+      propertyPath: weaponKey
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023160271655978320, guid: a5c7111ba9b869649be344a88848b1a5, type: 3}
+      propertyPath: weaponKey
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780685480039036565, guid: a5c7111ba9b869649be344a88848b1a5, type: 3}
+      propertyPath: weaponKey
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3422991264514004405, guid: a5c7111ba9b869649be344a88848b1a5, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -20698,6 +20710,10 @@ PrefabInstance:
     - target: {fileID: 8475260650292115325, guid: a5c7111ba9b869649be344a88848b1a5, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162674640398479903, guid: a5c7111ba9b869649be344a88848b1a5, type: 3}
+      propertyPath: weaponKey
+      value: 52
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5c7111ba9b869649be344a88848b1a5, type: 3}

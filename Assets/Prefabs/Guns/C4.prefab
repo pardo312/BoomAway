@@ -154,6 +154,7 @@ MonoBehaviour:
   layerToStick:
     serializedVersion: 2
     m_Bits: 257
+  gunExplosionKeyCode: 50
 --- !u!114 &4138228319396343692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootForce: 10
+  gunKeyCode: 50
 --- !u!114 &7146129229393100444
 MonoBehaviour:
   m_ObjectHideFlags: 0

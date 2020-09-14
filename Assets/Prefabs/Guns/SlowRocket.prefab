@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootForce: 7
+  gunKeyCode: 52
 --- !u!114 &2272626729138746677
 MonoBehaviour:
   m_ObjectHideFlags: 0

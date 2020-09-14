@@ -7,6 +7,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
     {
         
         [SerializeField]private LayerMask layerToStick;
+        [SerializeField] private KeyCode gunExplosionKeyCode;
         private bool alredyShoot;
         private bool readyToExplode;
         private Rigidbody2D rb;
@@ -39,7 +40,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
         public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToHit)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(gunExplosionKeyCode))
             {
                 if (readyToExplode)
                 {

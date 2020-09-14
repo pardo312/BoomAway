@@ -6,6 +6,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
     public class Shoot : MonoBehaviour
     {
         [SerializeField] private float shootForce;
+        [SerializeField] private KeyCode gunKeyCode;
         private IGun gun;
         private Rigidbody2D rb;
         private BoxCollider2D bc;
@@ -22,7 +23,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         {
             if (!Grid.gameStateManager.editing)
             {
-                if (Input.GetKeyDown(KeyCode.Q))
+                if (Input.GetKeyDown(gunKeyCode))
                 {
                     gun.shoot(shootForce, bc, rb);
                 }
