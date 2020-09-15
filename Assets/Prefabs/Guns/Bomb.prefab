@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerToStick:
     serializedVersion: 2
-    m_Bits: 257
+    m_Bits: 4353
   timeUntilExplode: 5
 --- !u!114 &1104176497124932282
 MonoBehaviour:
@@ -185,4 +185,4 @@ MonoBehaviour:
   radiousOfImpact: 2
   layerToExplode:
     serializedVersion: 2
-    m_Bits: 2304
+    m_Bits: 6400

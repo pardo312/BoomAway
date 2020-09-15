@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4949666813981347650}
   - component: {fileID: 7346241541737261298}
   - component: {fileID: 4115245572489847699}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: BreakableTile
   m_TagString: BreakableTile
   m_Icon: {fileID: 0}
@@ -134,7 +134,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2380130089358310846}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 252f58e94454f4c40b1bbdd55a44d891, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c559463e2d576d4d98a180c9e151212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explode: 0
+  layerToExplode:
+    serializedVersion: 2
+    m_Bits: 4096
