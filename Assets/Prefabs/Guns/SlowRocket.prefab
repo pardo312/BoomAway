@@ -126,7 +126,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.06534433, y: 0.04901123}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -137,7 +137,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.68, y: 3.83}
+  m_Size: {x: 4.333458, y: 1.5102324}
   m_EdgeRadius: 0
 --- !u!114 &763927349127471799
 MonoBehaviour:
@@ -154,6 +154,7 @@ MonoBehaviour:
   layerToHit:
     serializedVersion: 2
     m_Bits: 4353
+  myCollider: {fileID: 569027041078189989}
 --- !u!114 &5028317289679234085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c78cb1cbcc6ca74db0f37d62be4195c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootForce: 7
+  shootForce: 3
   gunKeyCode: 52
 --- !u!114 &2272626729138746677
 MonoBehaviour:

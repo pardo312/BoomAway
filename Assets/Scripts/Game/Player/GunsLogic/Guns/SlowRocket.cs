@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 
 namespace BoomAway.Assets.Scripts.Game.Player.Guns
@@ -11,15 +12,18 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         private bool isShooting = false;
         private bool readyToExplode = false;
         private float shootForce;
+        public Collider2D myCollider;
 
         private Rigidbody2D rb; 
         public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToExplode)
         {
                 if (readyToExplode)
-                {
-                    Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact, layerToExplode);
-
-                    foreach (Collider2D obj in objects)
+            {
+                ContactFilter2D filter2D = new ContactFilter2D();
+                filter2D.layerMask = layerToHit;
+                List<Collider2D> objects = new List<Collider2D>();
+                Physics2D.OverlapCollider(myCollider, filter2D, objects);
+                foreach (Collider2D obj in objects)
                     {
                         Vector2 direction = obj.transform.position - transform.position;
                     if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D prueba))
@@ -64,9 +68,12 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 rb.velocity = transform.TransformDirection(locVel);
 
 
-                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 0.8f, layerToHit);
+                ContactFilter2D filter2D = new ContactFilter2D();
+                filter2D.layerMask = layerToHit;
+                List<Collider2D> objects = new List<Collider2D>();
+                Physics2D.OverlapCollider(myCollider, filter2D, objects);
 
-                if (objects.Length != 0 )
+                if (objects.Count != 0 )
                 {
                     readyToExplode = true;
                 }

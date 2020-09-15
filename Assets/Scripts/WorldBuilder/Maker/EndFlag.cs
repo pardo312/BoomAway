@@ -13,7 +13,21 @@ public class EndFlag : MonoBehaviour
             Debug.Log(SceneManager.GetActiveScene().name);
             if (SceneManager.GetActiveScene().name.Equals("StoryLevel"))
             {
-                Grid.gameStateManager.currentLevel = "LVL2"; 
+                switch (Grid.gameStateManager.currentLevel)
+                {
+                    case "LVL1":
+                        Grid.gameStateManager.currentLevel = "LVL2";
+                        break;
+
+                    case "LVL2":
+                        Grid.gameStateManager.currentLevel = "LVL3";
+                        break;
+                    case "LVL3":
+                        Grid.gameStateManager.currentLevel = "LVL1";
+                        break;
+                    default:
+                        break;
+                }
                 SceneManager.LoadScene("StoryLevel");
             }
         }
