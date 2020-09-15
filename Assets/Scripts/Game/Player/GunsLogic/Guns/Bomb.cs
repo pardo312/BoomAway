@@ -73,7 +73,6 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                         obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
                     }
 
-                    Debug.Log(obj.TryGetComponent<BreakableTile>(out BreakableTile hola));
                     if (obj.TryGetComponent<BreakableTile>(out BreakableTile hola2))
                     {
                         obj.GetComponent<BreakableTile>().explode = true;
