@@ -294,6 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: 2
+  weaponKey: 51
 --- !u!1 &4721069499505857331
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: 1
+  weaponKey: 50
 --- !u!1 &5987559712989762681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,6 +1138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: 0
+  weaponKey: 49
 --- !u!1 &6900167553817038691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,3 +1285,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: 3
+  weaponKey: 52

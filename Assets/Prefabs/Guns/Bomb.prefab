@@ -154,7 +154,7 @@ MonoBehaviour:
   layerToStick:
     serializedVersion: 2
     m_Bits: 4353
-  timeUntilExplode: 5
+  timeUntilExplode: 30
 --- !u!114 &1104176497124932282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431e70ab886ff55488c4ee1f28babc46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionForce: 350
+  explosionForce: 500
   radiousOfImpact: 2
   layerToExplode:
     serializedVersion: 2
