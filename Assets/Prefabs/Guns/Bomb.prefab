@@ -154,7 +154,7 @@ MonoBehaviour:
   layerToStick:
     serializedVersion: 2
     m_Bits: 4353
-  timeUntilExplode: 30
+  timeUntilExplode: 10
 --- !u!114 &1104176497124932282
 MonoBehaviour:
   m_ObjectHideFlags: 0
