@@ -681,10 +681,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: b3df82ff-d902-4239-8977-2fcd2d56e891
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: BoomAway
+  organizationId: boomaway-inc
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
