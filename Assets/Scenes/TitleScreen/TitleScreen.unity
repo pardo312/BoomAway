@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9917792b4ee0c274699967bf2b16620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readyToLoadScene: 1
 --- !u!114 &24221115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9917792b4ee0c274699967bf2b16620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readyToLoadScene: 1
 --- !u!114 &141122433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,6 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9917792b4ee0c274699967bf2b16620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readyToLoadScene: 1
 --- !u!1 &286662490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,6 +1659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9917792b4ee0c274699967bf2b16620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readyToLoadScene: 1
 --- !u!114 &623553489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1801,6 +1805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9917792b4ee0c274699967bf2b16620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readyToLoadScene: 1
 --- !u!114 &630929757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2593,6 +2598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9917792b4ee0c274699967bf2b16620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readyToLoadScene: 1
 --- !u!114 &1127412716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3052,6 +3058,7 @@ GameObject:
   - component: {fileID: 1431364578}
   - component: {fileID: 1431364577}
   - component: {fileID: 1431364580}
+  - component: {fileID: 1431364581}
   m_Layer: 5
   m_Name: WorldBuilderButton
   m_TagString: Untagged
@@ -3122,16 +3129,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1431364580}
-        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: loadScene
-        m_Mode: 5
+      - m_Target: {fileID: 1431364581}
+        m_TargetAssemblyTypeName: WorldBuilderUsedTimes, Assembly-CSharp
+        m_MethodName: UploadWorldBuilderUsedTimesMethod
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: WorldBuilder
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1431364578
@@ -3184,6 +3191,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9917792b4ee0c274699967bf2b16620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readyToLoadScene: 1
+--- !u!114 &1431364581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431364575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218d6c9a1216e8b46866d5afd719e8d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadSceneScript: {fileID: 1431364580}
 --- !u!1 &1483989508
 GameObject:
   m_ObjectHideFlags: 0
@@ -3236,6 +3257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9917792b4ee0c274699967bf2b16620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readyToLoadScene: 1
 --- !u!114 &1483989511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4148,6 +4170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9917792b4ee0c274699967bf2b16620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readyToLoadScene: 1
 --- !u!1 &1709905291
 GameObject:
   m_ObjectHideFlags: 0
@@ -4498,6 +4521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9917792b4ee0c274699967bf2b16620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readyToLoadScene: 1
 --- !u!114 &1914656891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4718,6 +4742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9917792b4ee0c274699967bf2b16620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readyToLoadScene: 1
 --- !u!114 &1974382537
 MonoBehaviour:
   m_ObjectHideFlags: 0

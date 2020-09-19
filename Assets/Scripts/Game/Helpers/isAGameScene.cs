@@ -8,8 +8,8 @@ public class isAGameScene : MonoBehaviour
     {
         Grid.gameStateManager.IsOnGame = isGameScene;
         
-        AnalyticsResult result = Analytics.CustomEvent("Test");
-        // This should print "Ok" if the event was sent correctly.
-        Debug.Log(result);
+        // AnalyticsResult result = Analytics.CustomEvent("Test");
+        // // This should print "Ok" if the event was sent correctly.
+        // Debug.Log(result);
     }
 }
