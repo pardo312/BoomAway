@@ -20,7 +20,6 @@ public class WorldBuilderUsedTimes : MonoBehaviour
         
         string doubleQuotation  = ('"' + "" );
         string bodyJsonString ="{"+doubleQuotation+"usedTimes"+doubleQuotation+":"+ (currentUsedTimes+1) + "}";
-        Debug.Log(bodyJsonString);
         var request = new UnityWebRequest(urlFirebaseAnalytics, "PUT");
         byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
         request.uploadHandler = (UploadHandler) new UploadHandlerRaw(bodyRaw);
@@ -45,8 +44,7 @@ public class WorldBuilderUsedTimes : MonoBehaviour
             else
             {
                 JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
-                currentUsedTimes=(int)data["usedTimes"];
-                Debug.Log(currentUsedTimes);           
+                currentUsedTimes=(int)data["usedTimes"];          
             }
         }
     }
