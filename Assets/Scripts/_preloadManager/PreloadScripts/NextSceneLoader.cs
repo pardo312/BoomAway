@@ -7,15 +7,18 @@ namespace BoomAway.Assets.Scripts.PreloadManager
 {
     public class NextSceneLoader : MonoBehaviour
     {
-        #if UNITY_EDITOR
             private void Awake()
             {
-                Grid.nextSceneLoader.SetPreload();
+                #if UNITY_EDITOR
+                    Grid.nextSceneLoader.SetPreload();
+                #endif
+                #if !UNITY_EDITOR
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                #endif
             }
             private void SetPreload()
             {
                 //nothingToDo
             }
-        #endif
     }
 }
