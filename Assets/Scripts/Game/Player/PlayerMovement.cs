@@ -31,6 +31,8 @@ namespace BoomAway.Assets.Scripts.Game.Player
             if(!Grid.gameStateManager.editing){
                 if(horizontalInput != 0)
                     rb.velocity = new Vector2(horizontalInput * speed * Time.deltaTime* 100, rb.velocity.y);
+                else
+                    rb.velocity = new Vector2(0, rb.velocity.y);
             }
         }
         void flipSprite()
