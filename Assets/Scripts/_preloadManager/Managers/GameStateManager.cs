@@ -13,13 +13,14 @@ public class GameStateManager : MonoBehaviour
     [HideInInspector]public bool IsEndLevel;
     [HideInInspector]public bool IsDead;
     [HideInInspector]public bool IsOnGame;
+    [HideInInspector]public bool IsOnStoryMode;
     [HideInInspector]public string currentLevel;
     
     void Awake()
     {
         IsOnGame=false;
         setAmmo();
-        initVariables(); 
+        initVariables();
     }
     void setAmmo(){
         ammo = new int[Constants.AMOUNT_GUNS];
@@ -44,6 +45,7 @@ public class GameStateManager : MonoBehaviour
         IsPaused = false;
         IsDead = false;
         IsEndLevel = false;
+        IsOnStoryMode = false;
     }
     public bool canPause()
     {

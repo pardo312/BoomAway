@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class EndFlag : MonoBehaviour
 {
+    [SerializeField]private TimeOnLevel timeOnLevelScript;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             if (SceneManager.GetActiveScene().name.Equals("StoryLevel"))
             {
+                timeOnLevelScript.uploadLevelCompletionTime();
                 switch (Grid.gameStateManager.currentLevel)
                 {
                     case "LVL1":

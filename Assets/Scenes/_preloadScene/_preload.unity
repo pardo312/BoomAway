@@ -217,6 +217,7 @@ MonoBehaviour:
   IsEndLevel: 0
   IsDead: 0
   IsOnGame: 0
+  IsOnStoryMode: 0
   currentLevel: 
 --- !u!114 &269602055
 MonoBehaviour:
