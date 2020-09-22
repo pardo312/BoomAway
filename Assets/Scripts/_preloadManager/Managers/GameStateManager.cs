@@ -15,6 +15,7 @@ public class GameStateManager : MonoBehaviour
     [HideInInspector]public bool IsOnGame;
     [HideInInspector]public bool IsOnStoryMode;
     [HideInInspector]public string currentLevel;
+    [SerializeField] private LastLevelPlayed lastLevel;
     
     void Awake()
     {
@@ -51,5 +52,10 @@ public class GameStateManager : MonoBehaviour
     {
         return !(IsDead || IsEndLevel || !IsOnGame);
     }
-    
+
+    private void OnApplicationQuit()
+    {
+        lastLevel.uploadLastLevel(currentLevel);
+    }
+
 }
