@@ -14,8 +14,7 @@ public class LastLevelPlayed : MonoBehaviour
         string dQ = ('"' + "");
 
         string bodyJsonString = "{" + dQ + "LVL" + dQ + ":" + dQ + lvl + dQ + "}";
-        Debug.Log(bodyJsonString);
-        var request = new UnityWebRequest(urlFirebaseAnalytics, "PUT");
+        var request = new UnityWebRequest(urlFirebaseAnalytics, "POST");
         byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
