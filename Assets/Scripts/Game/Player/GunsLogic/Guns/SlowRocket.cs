@@ -7,6 +7,8 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
     public class SlowRocket : MonoBehaviour, IGun, IExplosive
     {
 
+        
+
         [SerializeField]private LayerMask layerToHit;
         private bool waitForRocket = false;
         private bool isShooting = false;
@@ -14,7 +16,15 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         private float shootForce;
         public Collider2D myCollider;
 
-        private Rigidbody2D rb; 
+        private Rigidbody2D rb;
+        //Analytics
+        [SerializeField] private UsesPerWeapon usesPer;
+
+        private void Start()
+        {
+            usesPer = this.GetComponent<UsesPerWeapon>();
+        }
+
         public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToExplode)
         {
                 if (readyToExplode)
@@ -55,6 +65,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 bc.isTrigger = false;
                 isShooting = true;
                 Grid.gameStateManager.currentAmmo[Constants.SLOW_ROCKET_TYPE]--;
+
+                //Analytics
+                usesPer.updateUse();
             }
         }
 

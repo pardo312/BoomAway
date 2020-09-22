@@ -1,10 +1,18 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
+using System.Collections.Generic;
 
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private RetriesPerLevel retriesPer;
+
+    private void Start()
+    {
+        retriesPer = this.GetComponent<RetriesPerLevel>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -23,6 +31,7 @@ public class PauseMenu : MonoBehaviour
         if (Grid.gameStateManager.IsPaused)
         {
             Resume();
+
         }
         else
         {
@@ -48,6 +57,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void restart()
     {
+        retriesPer.UploadRetriesMethod();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         Grid.gameStateManager.initVariables();

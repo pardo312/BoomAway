@@ -10,6 +10,8 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         private IGun gun;
         private Rigidbody2D rb;
         private BoxCollider2D bc;
+
+
         // Start is called before the first frame update
         void Start()
         {

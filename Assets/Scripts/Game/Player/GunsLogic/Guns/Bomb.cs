@@ -14,6 +14,14 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         private bool readyToExplode;
         private Rigidbody2D rb;
 
+        //Analytics
+        [SerializeField] private UsesPerWeapon usesPer;
+
+        private void Start()
+        {
+            usesPer = this.GetComponent<UsesPerWeapon>();
+        }
+
         private void Awake()
         {
             readyToExplode = false;
@@ -48,6 +56,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 Grid.gameStateManager.currentAmmo[Constants.BOMB_TYPE]--;
 
                 StartCoroutine(setReadyToExplode());
+
+                //ANALYTICS
+                usesPer.updateUse();
             }
         }
 

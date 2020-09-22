@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -7886814736215132516}
   - component: {fileID: 6032754028919375799}
   - component: {fileID: 718732903929714343}
+  - component: {fileID: -7642930071501726472}
   m_Layer: 10
   m_Name: FastRocket
   m_TagString: Explosive
@@ -155,6 +156,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4353
   myCollider: {fileID: 1266946532872846391}
+  usesPer: {fileID: -7642930071501726472}
 --- !u!114 &6032754028919375799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,3 +188,15 @@ MonoBehaviour:
   layerToExplode:
     serializedVersion: 2
     m_Bits: 6400
+--- !u!114 &-7642930071501726472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880530637259964680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff3f0b3d88a5334f9e85c9fee7e4a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

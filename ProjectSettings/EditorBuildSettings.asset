@@ -5,25 +5,28 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/_preloadScene/_preload.unity
-    guid: 222f7157ba714854ebf99d4da6e5ed59
-  - enabled: 1
-    path: Assets/Scenes/TitleScreen/TitleScreen.unity
-    guid: e93bb0385ef856049abc2352447b2ec0
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/StoryLevel/StoryLevel.unity
     guid: 8056364ae6e1408429e3f9b9eadaeb32
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/WorldBuilder/WorldBuilder.unity
-    guid: e166893f6dc869349b9f905c683c9304
-  - enabled: 1
-    path: Assets/Scenes/Prototiping/AndresScene.unity
-    guid: fef94d089bd723240a3ecd20e4807a4e
-  - enabled: 1
-    path: Assets/Scenes/Prototiping/PabloScene.unity
-    guid: 2c0cabccd34816e4681295adbe7ffe25
-  - enabled: 1
-    path: Assets/Scenes/Prototiping/Daniel.unity
-    guid: 266fb35eb6ce14d429681d5c170e6128
+    path: Assets/Scenes/_preloadScene/_preload.unity
+    guid: bc593b17494d60a4fa491074ed693fc9
   m_configObjects: {}
