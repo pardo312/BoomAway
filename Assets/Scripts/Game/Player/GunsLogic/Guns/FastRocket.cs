@@ -13,6 +13,12 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         private float shootForce;
         private Rigidbody2D rb;
         public Collider2D myCollider;
+        [SerializeField] private UsesPerWeapon usesPer;
+
+        private void Start()
+        {
+            usesPer = this.GetComponent<UsesPerWeapon>();
+        }
 
         public void shoot(float shootForce, BoxCollider2D bc, Rigidbody2D rb)
         {
@@ -29,6 +35,8 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 bc.isTrigger = false;
                 isShooting = true;
                 Grid.gameStateManager.currentAmmo[Constants.FAST_ROCKET_TYPE]--;
+                //ANALYTICS
+                usesPer.updateUse();
             }
         }
 
@@ -88,6 +96,8 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(myCollider.bounds.center, myCollider.bounds.extents.x);
         }
+
+        
 
     }
 

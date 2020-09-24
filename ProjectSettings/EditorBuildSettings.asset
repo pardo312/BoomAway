@@ -5,16 +5,48 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+<<<<<<< HEAD
   - enabled: 1
     path: Assets/Scenes/_preloadScene/_preload.unity
     guid: bc593b17494d60a4fa491074ed693fc9
   - enabled: 1
     path: Assets/Scenes/TitleScreen/TitleScreen.unity
     guid: faf915f895108b445b8f530743b40a56
+=======
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+>>>>>>> b528220af05c9edc57646f6219557a55879ad355
   - enabled: 1
     path: Assets/Scenes/StoryLevel/StoryLevel.unity
     guid: 8056364ae6e1408429e3f9b9eadaeb32
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+<<<<<<< HEAD
+    path: Assets/Scenes/WorldBuilder/WorldBuilder.unity
+    guid: bdfdcab75cd17ef4cb66ea51fef83a8f
+=======
+    path: Assets/Scenes/_preloadScene/_preload.unity
+    guid: bc593b17494d60a4fa491074ed693fc9
   - enabled: 1
     path: Assets/Scenes/WorldBuilder/WorldBuilder.unity
     guid: bdfdcab75cd17ef4cb66ea51fef83a8f
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen/TitleScreen.unity
+    guid: faf915f895108b445b8f530743b40a56
+>>>>>>> b528220af05c9edc57646f6219557a55879ad355
   m_configObjects: {}
