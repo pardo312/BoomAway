@@ -195,7 +195,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 24300002, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
-  sounds: []
+  sounds:
+  - name: MainTheme
+    clip: {fileID: 8300000, guid: d157e278a669f1e4b927560b117ad5da, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 24300002, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
+    source: {fileID: 0}
 --- !u!114 &269602053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,13 +241,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   makerTilePrefab:
+  - {fileID: 788214359900698811, guid: 5713330b43e010f4595f613e648f185d, type: 3}
+  - {fileID: 1794097396082949793, guid: b0238b88263e2fc45aa7d9f61a5665f6, type: 3}
   - {fileID: 4897909208547167961, guid: 61fb4065b0e388f4e923533ae0f27b11, type: 3}
-  - {fileID: 5189228270987527219, guid: b6b5ba66fcbafe744a6acd02ebd92d6d, type: 3}
+  - {fileID: 4949666813981347650, guid: 6f01b198636bcf84fad55b438612782a, type: 3}
+  - {fileID: 7085444863271909296, guid: 5b8f67ad572fd624eb8d22556fb128ac, type: 3}
+  - {fileID: 1927090973669313435, guid: 495b8232698b9804e8e40ec738c81a1d, type: 3}
   - {fileID: -5663836299355659523, guid: c922eb460fb20d6438f2b3cc43adcd23, type: 3}
   - {fileID: -2609985946400613737, guid: 015fd97cf76b40841bc33992d10670c8, type: 3}
-  - {fileID: 1927090973669313435, guid: 495b8232698b9804e8e40ec738c81a1d, type: 3}
-  - {fileID: 4949666813981347650, guid: 6f01b198636bcf84fad55b438612782a, type: 3}
-  - {fileID: 1794097396082949793, guid: b0238b88263e2fc45aa7d9f61a5665f6, type: 3}
-  - {fileID: 7085444863271909296, guid: 5b8f67ad572fd624eb8d22556fb128ac, type: 3}
-  - {fileID: 788214359900698811, guid: 5713330b43e010f4595f613e648f185d, type: 3}
+  - {fileID: 5189228270987527219, guid: b6b5ba66fcbafe744a6acd02ebd92d6d, type: 3}
   rootPath: 

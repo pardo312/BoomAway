@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 998579447318996890, guid: 30feade28a955bd4780695ec1367349c, type: 3}
-  id: 7
+  id: 4
 --- !u!61 &4834375522817560576
 BoxCollider2D:
   m_ObjectHideFlags: 0

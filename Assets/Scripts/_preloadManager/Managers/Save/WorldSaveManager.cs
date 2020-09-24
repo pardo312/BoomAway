@@ -48,7 +48,6 @@ namespace BoomAway.Assets.Scripts.PreloadManager
                     makerTiles[i].transform.position.z,
                     makerTiles[i].id);
                 }
-
                 bf.Serialize(file, t);
                 file.Close();
                 saveState(saveName,savetype);
