@@ -215,6 +215,24 @@ MonoBehaviour:
     loop: 1
     mixerGroup: {fileID: -8297655148868887469, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
     source: {fileID: 0}
+  - name: ExplodeFX
+    clip: {fileID: 8300000, guid: 308420de67010414eb2c46aae7c1db59, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 3480899238539743041, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
+    source: {fileID: 0}
+  - name: PlatformDestroyFX
+    clip: {fileID: 8300000, guid: 513fe19b180f82c4b89b9ffba71ba6bb, type: 3}
+    volume: 0.3
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 6465062176135102413, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
+    source: {fileID: 0}
 --- !u!114 &269602053
 MonoBehaviour:
   m_ObjectHideFlags: 0

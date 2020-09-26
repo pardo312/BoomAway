@@ -67,11 +67,13 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                             
                             if (obj.TryGetComponent<BreakableTile>(out BreakableTile hola2))
                             {
+                                Grid.audioManager.Play("PlatformDestroyFX");
                                 obj.GetComponent<BreakableTile>().explode = true;
                             }
                         }
                         //Instanciar otro
                         Grid.gameStateManager.hasCurrentAmmo = false;
+                        Grid.audioManager.Play("ExplodeFX");
                         Destroy(gameObject);
                 }
             }

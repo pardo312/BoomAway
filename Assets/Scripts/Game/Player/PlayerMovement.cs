@@ -36,9 +36,7 @@ namespace BoomAway.Assets.Scripts.Game.Player
                     
                     rb.velocity = new Vector2(horizontalInput * speed * Time.deltaTime* 100, rb.velocity.y);
                     
-                    Debug.Log("velocity"+rb.velocity);
-                    Debug.Log("input"+horizontalInput);
-                    if(!isWalking)
+                    if(!isWalking && rb.velocity.y == 0)
                     {
                         Grid.audioManager.Play("WalkFX");
                         isWalking=true;

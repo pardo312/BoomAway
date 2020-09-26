@@ -8,13 +8,12 @@ public class BreakableTile : MonoBehaviour
     public bool explode;
     public LayerMask layerToExplode;
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (explode)
         {
             Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 2, layerToExplode);
-            
-            StartCoroutine(ExecuteAfterTime(0.25f, objects));
+            StartCoroutine(ExecuteAfterTime(0.5f, objects));
         }
     }
 

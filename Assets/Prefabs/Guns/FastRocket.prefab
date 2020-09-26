@@ -155,7 +155,6 @@ MonoBehaviour:
   layerToHit:
     serializedVersion: 2
     m_Bits: 4353
-  myCollider: {fileID: 1266946532872846391}
   usesPer: {fileID: -7642930071501726472}
 --- !u!114 &6032754028919375799
 MonoBehaviour:
@@ -184,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionForce: 300
-  radiousOfImpact: 2
+  radiousOfImpact: 1.5
   layerToExplode:
     serializedVersion: 2
     m_Bits: 6400
