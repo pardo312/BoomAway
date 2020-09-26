@@ -12,12 +12,13 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         private bool readyToExplode = false;
         private float shootForce;
         private Rigidbody2D rb;
-        public Collider2D myCollider;
+        private Collider2D myCollider;
         [SerializeField] private UsesPerWeapon usesPer;
 
         private void Start()
         {
             usesPer = this.GetComponent<UsesPerWeapon>();
+            myCollider=this.GetComponent<BoxCollider2D>();
         }
 
         public void shoot(float shootForce, BoxCollider2D bc, Rigidbody2D rb)
@@ -44,13 +45,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         {
                 if (readyToExplode)
                 {
-                    //Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, , layerToExplode);
-                ContactFilter2D filter2D = new ContactFilter2D();
-                filter2D.layerMask = layerToExplode;
-                List<Collider2D> results = new List<Collider2D>();
-                Physics2D.OverlapCollider(myCollider, filter2D, results);
+                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact , layerToExplode);
                 
-                foreach (Collider2D obj in results)
+                foreach (Collider2D obj in objects)
                 {
                     Vector2 direction = obj.transform.position - transform.position;
                     if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D prueba))
@@ -94,7 +91,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(myCollider.bounds.center, myCollider.bounds.extents.x);
+            Gizmos.DrawWireCube(myCollider.bounds.center, myCollider.bounds.size);
         }
 
         

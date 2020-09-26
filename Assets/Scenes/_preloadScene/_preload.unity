@@ -199,12 +199,21 @@ MonoBehaviour:
   sounds:
   - name: MainTheme
     clip: {fileID: 8300000, guid: d157e278a669f1e4b927560b117ad5da, type: 3}
-    volume: 1
+    volume: 0.2
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
     loop: 1
-    mixerGroup: {fileID: 24300002, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
+    mixerGroup: {fileID: -8297655148868887469, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
+    source: {fileID: 0}
+  - name: WalkFX
+    clip: {fileID: 8300000, guid: eb8817ff9ba715643aa0b8d84c78f46c, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: -8297655148868887469, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
     source: {fileID: 0}
 --- !u!114 &269602053
 MonoBehaviour:

@@ -14,7 +14,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         private bool isShooting = false;
         private bool readyToExplode = false;
         private float shootForce;
-        public Collider2D myCollider;
+        private Collider2D myCollider;
 
         private Rigidbody2D rb;
         //Analytics
@@ -23,6 +23,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         private void Start()
         {
             usesPer = this.GetComponent<UsesPerWeapon>();
+            myCollider=this.GetComponent<BoxCollider2D>();
         }
 
         public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToExplode)
