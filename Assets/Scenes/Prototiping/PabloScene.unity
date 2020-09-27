@@ -252,10 +252,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6194631137193918775, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 8224566630245887564, guid: cb3a2acf0d429a4479ddd45f4291ccb6, type: 3}
       propertyPath: m_Name
       value: Player

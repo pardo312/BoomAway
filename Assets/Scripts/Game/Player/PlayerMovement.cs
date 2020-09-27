@@ -13,11 +13,13 @@ namespace BoomAway.Assets.Scripts.Game.Player
         private Rigidbody2D rb;
         private SpriteRenderer sr;
         private bool isWalking;
+        private Animator anim;
         void Start()
         {
             isWalking =false;
             rb = GetComponent<Rigidbody2D>();
             sr = GetComponent<SpriteRenderer>();
+            anim = GetComponent<Animator>();
         }
 
         // Update is called once per frame
@@ -25,6 +27,14 @@ namespace BoomAway.Assets.Scripts.Game.Player
         {
             if(!Grid.gameStateManager.editing){
                 horizontalInput = Input.GetAxis("Horizontal");
+                if(horizontalInput != 0)
+                {
+                    anim.SetBool("walking", true);
+                }
+                else
+                {
+                    anim.SetBool("walking", false);
+                }
                 flipSprite();
             }
         }
