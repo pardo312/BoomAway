@@ -155,7 +155,7 @@ MonoBehaviour:
   layerToStick:
     serializedVersion: 2
     m_Bits: 4353
-  timeUntilExplode: 10
+  timeUntilExplode: 3
   usesPer: {fileID: 5536584560881962711}
 --- !u!114 &1104176497124932282
 MonoBehaviour:
