@@ -8,6 +8,6 @@ public class StopMusic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Grid.audioManager.StopPlaying(MusicName);
+        Grid.audioManager.StopPlayingAll();
     }
 }
