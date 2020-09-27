@@ -2871,6 +2871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1303789383}
   - component: {fileID: 1303789382}
+  - component: {fileID: 1303789384}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -2905,6 +2906,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1303789384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303789381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f0ecc2167e834488811ae324c5112f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MusicName: MainTheme
 --- !u!1 &1380292521
 GameObject:
   m_ObjectHideFlags: 0
@@ -4655,7 +4669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4339623, g: 0.42372733, b: 0.42372733, a: 1}
+  m_Color: {r: 0.1792453, g: 0.094519, b: 0.056648273, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4977,8 +4991,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.000015259, y: 253}
-  m_SizeDelta: {x: 401.5006, y: 112.00015}
+  m_AnchoredPosition: {x: 0.0000076294, y: 248.2}
+  m_SizeDelta: {x: 558.2395, y: 122.951355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1986370476
 MonoBehaviour:
@@ -5000,7 +5014,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Start!
+  m_text: Click Anywhere!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
