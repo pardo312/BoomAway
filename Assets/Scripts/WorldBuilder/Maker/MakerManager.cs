@@ -58,12 +58,15 @@ public class MakerManager : MonoBehaviour
         {
             if(c.collider == null )
             {
-                if(id == 0)
-                {
+                if(id == 0){
                     if(GameObject.Find("SpawnPoint(Clone)") == null){             
                         Instantiate(tiles[id].gameObject,pos,Quaternion.identity);
                     }
-
+                }
+                else if(id==1){
+                    if(GameObject.Find("End(Clone)") == null){             
+                        Instantiate(tiles[id].gameObject,pos,Quaternion.identity);
+                    }
                 }
                 else{
                     Instantiate(tiles[id].gameObject,pos,Quaternion.identity);
