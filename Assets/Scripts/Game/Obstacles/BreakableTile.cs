@@ -24,7 +24,7 @@ public class BreakableTile : MonoBehaviour
         {
             obj.GetComponent<BreakableTile>().explode = true;
         }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
 }
