@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MakerManager : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class MakerManager : MonoBehaviour
         {
             int u = i;
             var t = Instantiate(buttonPrefab, layout);
+            Transform trans = t.transform;
+            Transform childTrans = trans.Find("TextTileButton");
+            if (childTrans != null) {
+                childTrans.GetComponent<TextMeshProUGUI>().text =tiles[u].nameTile; 
+            }
             t.GetComponent<Image>().sprite = tiles[u].sprite;
             t.GetComponent<Button>().onClick.AddListener(()=>
             {

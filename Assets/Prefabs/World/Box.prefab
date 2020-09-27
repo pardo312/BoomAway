@@ -125,6 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: -6707830161266923281, guid: e255b82985c5db74bbb932b43a685f8b, type: 3}
   id: 6
+  nameTile: Box
 --- !u!50 &-5344999863415988061
 Rigidbody2D:
   serializedVersion: 4

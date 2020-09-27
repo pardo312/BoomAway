@@ -21,20 +21,25 @@ public class SpawnPoint : MonoBehaviour
 
     private void Update()
     {
-        bool editing = Grid.gameStateManager.editing;
-        if (!editing){
-            if(!alredyTransformPlayerPos){
-                player.transform.position = gameObject.transform.position;
-                sr.enabled =false;
-                bc.enabled = false;
-                alredyTransformPlayerPos= true;
+        if(GameObject.Find("SpawnPoint(Clone)") == null)
+        {
+            bool editing = Grid.gameStateManager.editing;
+            if (!editing){
+                if(!alredyTransformPlayerPos){
+                    player.transform.position = gameObject.transform.position;
+                    sr.enabled =false;
+                    bc.enabled = false;
+                    alredyTransformPlayerPos= true;
+                }
+            } 
+            else{
+                alredyTransformPlayerPos= false;
+                sr.enabled =true;
+                bc.enabled = true;
             }
-        } 
-        else{
-            alredyTransformPlayerPos= false;
-            sr.enabled =true;
-            bc.enabled = true;
+
         }
+       
     }
 
 }

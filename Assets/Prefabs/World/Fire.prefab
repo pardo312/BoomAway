@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 1547121754583534390, guid: e255b82985c5db74bbb932b43a685f8b, type: 3}
   id: 8
+  nameTile: Fire
 --- !u!61 &8738601457666201634
 BoxCollider2D:
   m_ObjectHideFlags: 0

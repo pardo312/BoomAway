@@ -6,5 +6,6 @@ public class MakerTile : MonoBehaviour
 {
     public Sprite sprite;
     public int id;
+    public string nameTile;
 
 }

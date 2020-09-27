@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: db16abd64669cdb449e98e27b3d304a4, type: 3}
   id: 5
+  nameTile: Spike
 --- !u!60 &2420670157495536665
 PolygonCollider2D:
   m_ObjectHideFlags: 0
