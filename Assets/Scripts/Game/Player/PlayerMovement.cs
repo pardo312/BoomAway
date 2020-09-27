@@ -13,10 +13,12 @@ namespace BoomAway.Assets.Scripts.Game.Player
         private Rigidbody2D rb;
         private SpriteRenderer sr;
         private bool isWalking;
+        private bool initEndWalk;
         private Animator anim;
         void Start()
         {
             isWalking =false;
+            initEndWalk=false;
             rb = GetComponent<Rigidbody2D>();
             sr = GetComponent<SpriteRenderer>();
             anim = GetComponent<Animator>();
@@ -43,7 +45,7 @@ namespace BoomAway.Assets.Scripts.Game.Player
             if(!Grid.gameStateManager.editing){
                 
                 if(horizontalInput != 0){
-                    
+                    initEndWalk=true;
                     rb.velocity = new Vector2(horizontalInput * speed * Time.deltaTime* 100, rb.velocity.y);
                     
                     if(!isWalking && rb.velocity.y == 0)
@@ -53,9 +55,13 @@ namespace BoomAway.Assets.Scripts.Game.Player
                     }
                 }
                 else{
-                    rb.velocity = new Vector2(0, rb.velocity.y);
-                    Grid.audioManager.StopPlaying("WalkFX");
-                    isWalking=false;
+                    if(initEndWalk){
+                        rb.velocity = new Vector2(0, rb.velocity.y);
+                        Grid.audioManager.StopPlaying("WalkFX");
+                        isWalking=false;
+                        initEndWalk=false;
+                    }
+                    
                 }
             }
         }

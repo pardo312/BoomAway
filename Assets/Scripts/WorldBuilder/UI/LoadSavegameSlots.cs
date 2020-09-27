@@ -36,7 +36,7 @@ public class LoadSavegameSlots : MonoBehaviour
             });
             
             buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[index].Replace(
-                Application.persistentDataPath + "/saved_worlds/",""
+                Grid.worldSaveManager.rootPath + "/saved_worlds/",""
             ).Replace(".save",""); 
         }
     }

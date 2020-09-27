@@ -78,12 +78,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 rb.velocity = transform.TransformDirection(locVel);
 
 
-                ContactFilter2D filter2D = new ContactFilter2D();
-                filter2D.layerMask = layerToHit;
-                List<Collider2D> objects = new List<Collider2D>();
-                Physics2D.OverlapCollider(myCollider, filter2D, objects);
+                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 0.5f , layerToHit);
 
-                if (objects.Count != 0 )
+                if (objects.Length != 0 )
                 {
                     readyToExplode = true;
                 }
@@ -93,7 +90,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(myCollider.bounds.center, myCollider.bounds.size);
+            Gizmos.DrawWireSphere(transform.position, 0.5f);
         }
 
         
