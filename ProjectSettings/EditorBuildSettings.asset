@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WorldBuilder/WorldBuilder.unity
     guid: bdfdcab75cd17ef4cb66ea51fef83a8f
+  - enabled: 1
+    path: Assets/Scenes/Prototiping/PabloScene.unity
+    guid: 0744b74f409543147ab8e87195c01b8f
   m_configObjects: {}

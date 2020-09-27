@@ -13,7 +13,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager
 
         private void Awake()
         {
-            rootPath = Application.persistentDataPath;
+            rootPath = "./data";
         }
         #region Save
             #region World
