@@ -67,7 +67,6 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 explosion.transform.localScale = gameObject.transform.localScale;
                 explosion.transform.localPosition = gameObject.transform.localPosition;
                 Instantiate(explosion);
-                Destroy(explosion, 1f);
                 Grid.audioManager.Play("ExplodeFX");
                     Destroy(gameObject);
                 }
