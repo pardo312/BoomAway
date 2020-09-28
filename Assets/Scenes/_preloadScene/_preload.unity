@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 269602053}
   - component: {fileID: 269602055}
   - component: {fileID: 269602054}
+  - component: {fileID: 269602056}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -196,7 +197,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 24300002, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
-  sounds: []
+  sounds:
+  - name: MainTheme
+    clip: {fileID: 8300000, guid: d157e278a669f1e4b927560b117ad5da, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: -8297655148868887469, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
+    source: {fileID: 0}
+  - name: WalkFX
+    clip: {fileID: 8300000, guid: eb8817ff9ba715643aa0b8d84c78f46c, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: -8297655148868887469, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
+    source: {fileID: 0}
+  - name: ExplodeFX
+    clip: {fileID: 8300000, guid: 308420de67010414eb2c46aae7c1db59, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 3480899238539743041, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
+    source: {fileID: 0}
+  - name: PlatformDestroyFX
+    clip: {fileID: 8300000, guid: 513fe19b180f82c4b89b9ffba71ba6bb, type: 3}
+    volume: 0.3
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 6465062176135102413, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
+    source: {fileID: 0}
 --- !u!114 &269602053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +258,7 @@ MonoBehaviour:
   IsOnStoryMode: 0
   currentLevel: 
   lastLevel: {fileID: 269602054}
+  deaths: {fileID: 269602056}
 --- !u!114 &269602054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,13 +284,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   makerTilePrefab:
+  - {fileID: 788214359900698811, guid: 5713330b43e010f4595f613e648f185d, type: 3}
+  - {fileID: 1794097396082949793, guid: b0238b88263e2fc45aa7d9f61a5665f6, type: 3}
   - {fileID: 4897909208547167961, guid: 61fb4065b0e388f4e923533ae0f27b11, type: 3}
-  - {fileID: 5189228270987527219, guid: b6b5ba66fcbafe744a6acd02ebd92d6d, type: 3}
+  - {fileID: 4949666813981347650, guid: 6f01b198636bcf84fad55b438612782a, type: 3}
+  - {fileID: 7085444863271909296, guid: 5b8f67ad572fd624eb8d22556fb128ac, type: 3}
+  - {fileID: 1927090973669313435, guid: 495b8232698b9804e8e40ec738c81a1d, type: 3}
   - {fileID: -5663836299355659523, guid: c922eb460fb20d6438f2b3cc43adcd23, type: 3}
   - {fileID: -2609985946400613737, guid: 015fd97cf76b40841bc33992d10670c8, type: 3}
-  - {fileID: 1927090973669313435, guid: 495b8232698b9804e8e40ec738c81a1d, type: 3}
-  - {fileID: 4949666813981347650, guid: 6f01b198636bcf84fad55b438612782a, type: 3}
-  - {fileID: 1794097396082949793, guid: b0238b88263e2fc45aa7d9f61a5665f6, type: 3}
-  - {fileID: 7085444863271909296, guid: 5b8f67ad572fd624eb8d22556fb128ac, type: 3}
-  - {fileID: 788214359900698811, guid: 5713330b43e010f4595f613e648f185d, type: 3}
+  - {fileID: 5189228270987527219, guid: b6b5ba66fcbafe744a6acd02ebd92d6d, type: 3}
   rootPath: 
+--- !u!114 &269602056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269602048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946ad53e2536bdd41a3e8a189471628e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

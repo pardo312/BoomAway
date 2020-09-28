@@ -13,7 +13,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager
 
         private void Awake()
         {
-            rootPath = Application.persistentDataPath;
+            rootPath = "./data";
         }
         #region Save
             #region World
@@ -48,7 +48,6 @@ namespace BoomAway.Assets.Scripts.PreloadManager
                     makerTiles[i].transform.position.z,
                     makerTiles[i].id);
                 }
-
                 bf.Serialize(file, t);
                 file.Close();
                 saveState(saveName,savetype);

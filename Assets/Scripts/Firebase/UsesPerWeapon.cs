@@ -7,6 +7,7 @@ using UnityEngine.Networking;
 
 public class UsesPerWeapon : MonoBehaviour
 {
+    [Header("ANALYTIC COMPONENT")]
     string urlFirebaseAnalytics = "https://boomaway-10de3.firebaseio.com/Analytics/UsesPerWeapon";
 
     public void updateUse()

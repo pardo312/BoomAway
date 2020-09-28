@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MakerManager : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class MakerManager : MonoBehaviour
         {
             int u = i;
             var t = Instantiate(buttonPrefab, layout);
+            Transform trans = t.transform;
+            Transform childTrans = trans.Find("TextTileButton");
+            if (childTrans != null) {
+                childTrans.GetComponent<TextMeshProUGUI>().text =tiles[u].nameTile; 
+            }
             t.GetComponent<Image>().sprite = tiles[u].sprite;
             t.GetComponent<Button>().onClick.AddListener(()=>
             {
@@ -51,7 +57,22 @@ public class MakerManager : MonoBehaviour
         if(Input.GetKey(KeyCode.Mouse0))
         {
             if(c.collider == null )
-                Instantiate(tiles[id].gameObject,pos,Quaternion.identity);      
+            {
+                if(id == 0){
+                    if(GameObject.Find("SpawnPoint(Clone)") == null){             
+                        Instantiate(tiles[id].gameObject,pos,Quaternion.identity);
+                    }
+                }
+                else if(id==1){
+                    if(GameObject.Find("End(Clone)") == null){             
+                        Instantiate(tiles[id].gameObject,pos,Quaternion.identity);
+                    }
+                }
+                else{
+                    Instantiate(tiles[id].gameObject,pos,Quaternion.identity);
+                }
+            }
+                      
         }
         if(Input.GetKey(KeyCode.Mouse1))
         {

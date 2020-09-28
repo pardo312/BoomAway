@@ -15,7 +15,10 @@ public class GameStateManager : MonoBehaviour
     [HideInInspector]public bool IsOnGame;
     [HideInInspector]public bool IsOnStoryMode;
     [HideInInspector]public string currentLevel;
+    //Analytics
+    [HideInInspector] public int currentDeaths;
     [SerializeField] private LastLevelPlayed lastLevel;
+    [SerializeField] private DeathsPerSession deaths;
     
     void Awake()
     {
@@ -47,15 +50,21 @@ public class GameStateManager : MonoBehaviour
         IsDead = false;
         IsEndLevel = false;
         IsOnStoryMode = false;
+        currentDeaths = 0;
     }
     public bool canPause()
     {
         return !(IsDead || IsEndLevel || !IsOnGame);
     }
 
+    //TODO  Aumentar el número de muertes cada vez que el personaje se cae del mundo
+    //      Para esto, primero hay que implementar la mecánica de muerte (i.e. un reinicio forzado al tocar
+    //      un trigger debajo del nivel
+
     private void OnApplicationQuit()
     {
         lastLevel.uploadLastLevel(currentLevel);
+        deaths.uploadDeaths(currentDeaths);
     }
 
 }

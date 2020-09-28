@@ -34,9 +34,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
                 this.rb = rb;
 
-                alredyShoot = true;
-                Grid.gameStateManager.currentAmmo[Constants.C4_TYPE]--;
                 StartCoroutine(setReadyToExplode());
+                Grid.gameStateManager.currentAmmo[Constants.C4_TYPE]--;
+                alredyShoot = true;
                 //ANALYTICS
                 usesPer.updateUse();
             }
@@ -64,14 +64,16 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                             {
                                 obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
                             }
-
+                            
                             if (obj.TryGetComponent<BreakableTile>(out BreakableTile hola2))
                             {
+                                Grid.audioManager.Play("PlatformDestroyFX");
                                 obj.GetComponent<BreakableTile>().explode = true;
                             }
                         }
                         //Instanciar otro
                         Grid.gameStateManager.hasCurrentAmmo = false;
+                        Grid.audioManager.Play("ExplodeFX");
                         Destroy(gameObject);
                 }
             }

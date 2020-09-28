@@ -9,9 +9,11 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
     {
 
         [SerializeField]private LayerMask layerToStick;
-        [SerializeField] private int timeUntilExplode;
+        [SerializeField] private float timeUntilExplode;
         private bool alredyShoot;
         private bool readyToExplode;
+        
+        private bool initExplosion;
         private Rigidbody2D rb;
 
         //Analytics
@@ -24,19 +26,23 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
         private void Awake()
         {
+            initExplosion = false;
             readyToExplode = false;
-            timeUntilExplode *= 100;
         }
         private void Update()
         {
-            if (timeUntilExplode > 0 && readyToExplode)
-            {
-                if (timeUntilExplode % 100 == 0)
+            if(readyToExplode){
+                if (timeUntilExplode > 0 )
                 {
-                    Debug.Log("Tiempo Restante: " + timeUntilExplode / 100);
+                    Debug.Log("Tiempo Restante: " + ((int)(timeUntilExplode)));
+                    timeUntilExplode -= Time.deltaTime;
                 }
-                timeUntilExplode--;
+                else
+                {
+                    initExplosion=true;
+                }
             }
+            
         }
         public void shoot(float shootForce, BoxCollider2D bc, Rigidbody2D rb)
         {
@@ -71,25 +77,26 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToHit)
         {
 
-            if (timeUntilExplode == 0)
+            if(initExplosion)
             {
-
                 Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact, layerToHit);
 
                 foreach (Collider2D obj in objects)
                 {
-                    Vector2 direction = obj.transform.position - transform.position;
-                    if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D prueba))
-                    {
-                        obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
-                    }
+                        Vector2 direction = obj.transform.position - transform.position;
+                        if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D prueba))
+                        {
+                            obj.GetComponent<Rigidbody2D>().AddForce(direction * explosionForce);
+                        }
 
-                    if (obj.TryGetComponent<BreakableTile>(out BreakableTile hola2))
-                    {
-                        obj.GetComponent<BreakableTile>().explode = true;
-                    }
+                        if (obj.TryGetComponent<BreakableTile>(out BreakableTile hola2))
+                        {
+                            Grid.audioManager.Play("PlatformDestroyFX");
+                            obj.GetComponent<BreakableTile>().explode = true;
+                        }
                 }
                 Grid.gameStateManager.hasCurrentAmmo = false;
+                Grid.audioManager.Play("ExplodeFX");
                 Destroy(gameObject);
             }
             

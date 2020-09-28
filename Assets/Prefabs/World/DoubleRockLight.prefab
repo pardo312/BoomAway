@@ -97,7 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 4755184066016001568, guid: c12f52bb4fb36914d956a7409a971b1f, type: 3}
-  id: 0
+  id: 2
+  nameTile: Rock
 --- !u!61 &7114409800863312233
 BoxCollider2D:
   m_ObjectHideFlags: 0

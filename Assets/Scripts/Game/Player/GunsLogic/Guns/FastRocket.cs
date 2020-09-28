@@ -12,12 +12,13 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         private bool readyToExplode = false;
         private float shootForce;
         private Rigidbody2D rb;
-        public Collider2D myCollider;
+        private Collider2D myCollider;
         [SerializeField] private UsesPerWeapon usesPer;
 
         private void Start()
         {
             usesPer = this.GetComponent<UsesPerWeapon>();
+            myCollider=this.GetComponent<BoxCollider2D>();
         }
 
         public void shoot(float shootForce, BoxCollider2D bc, Rigidbody2D rb)
@@ -44,13 +45,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         {
                 if (readyToExplode)
                 {
-                    //Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, , layerToExplode);
-                ContactFilter2D filter2D = new ContactFilter2D();
-                filter2D.layerMask = layerToExplode;
-                List<Collider2D> results = new List<Collider2D>();
-                Physics2D.OverlapCollider(myCollider, filter2D, results);
+                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact , layerToExplode);
                 
-                foreach (Collider2D obj in results)
+                foreach (Collider2D obj in objects)
                 {
                     Vector2 direction = obj.transform.position - transform.position;
                     if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D prueba))
@@ -60,10 +57,12 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
 
                     if (obj.TryGetComponent<BreakableTile>(out BreakableTile hola2))
                     {
+                        Grid.audioManager.Play("PlatformDestroyFX");
                         obj.GetComponent<BreakableTile>().explode = true;
                     }
                 }
                     Grid.gameStateManager.hasCurrentAmmo = false;
+                    Grid.audioManager.Play("ExplodeFX");
                     Destroy(gameObject);
                 }
         }
@@ -79,12 +78,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 rb.velocity = transform.TransformDirection(locVel);
 
 
-                ContactFilter2D filter2D = new ContactFilter2D();
-                filter2D.layerMask = layerToHit;
-                List<Collider2D> objects = new List<Collider2D>();
-                Physics2D.OverlapCollider(myCollider, filter2D, objects);
+                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 0.5f , layerToHit);
 
-                if (objects.Count != 0 )
+                if (objects.Length != 0 )
                 {
                     readyToExplode = true;
                 }
@@ -94,7 +90,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(myCollider.bounds.center, myCollider.bounds.extents.x);
+            Gizmos.DrawWireSphere(transform.position, 0.5f);
         }
 
         
