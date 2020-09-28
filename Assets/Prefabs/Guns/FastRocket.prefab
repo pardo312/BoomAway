@@ -155,6 +155,7 @@ MonoBehaviour:
   layerToHit:
     serializedVersion: 2
     m_Bits: 4353
+  explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
   usesPer: {fileID: -7642930071501726472}
 --- !u!114 &6032754028919375799
 MonoBehaviour:

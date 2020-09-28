@@ -12,7 +12,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         [SerializeField] private float timeUntilExplode;
         private bool alredyShoot;
         private bool readyToExplode;
-        
+
+        [SerializeField] private GameObject explosion;
+
         private bool initExplosion;
         private Rigidbody2D rb;
 
@@ -96,6 +98,11 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                         }
                 }
                 Grid.gameStateManager.hasCurrentAmmo = false;
+                explosion.transform.position = gameObject.transform.position;
+                explosion.transform.localScale = gameObject.transform.localScale;
+                explosion.transform.localPosition = gameObject.transform.localPosition;
+                Instantiate(explosion);
+                Destroy(explosion, 1f);
                 Grid.audioManager.Play("ExplodeFX");
                 Destroy(gameObject);
             }

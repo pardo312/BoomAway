@@ -6,8 +6,11 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
     public class C4 : MonoBehaviour, IGun, IExplosive
     {
         
-        [SerializeField]private LayerMask layerToStick;
+        [SerializeField] private LayerMask layerToStick;
         [SerializeField] private KeyCode gunExplosionKeyCode;
+
+        [SerializeField] private GameObject explosion;
+
         private bool alredyShoot;
         private bool readyToExplode;
         private Rigidbody2D rb;
@@ -73,7 +76,11 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                         }
                         //Instanciar otro
                         Grid.gameStateManager.hasCurrentAmmo = false;
-                        Grid.audioManager.Play("ExplodeFX");
+                    explosion.transform.position = gameObject.transform.position;
+                    explosion.transform.localScale = gameObject.transform.localScale;
+                    explosion.transform.localPosition = gameObject.transform.localPosition;
+                    Instantiate(explosion);
+                    Grid.audioManager.Play("ExplodeFX");
                         Destroy(gameObject);
                 }
             }
