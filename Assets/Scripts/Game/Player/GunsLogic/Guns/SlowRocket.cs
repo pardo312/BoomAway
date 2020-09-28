@@ -16,6 +16,8 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         private float shootForce;
         private Collider2D myCollider;
 
+        public GameObject explosion;
+
         private Rigidbody2D rb;
         //Analytics
         [SerializeField] private UsesPerWeapon usesPer;
@@ -47,6 +49,11 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 }
             }
                 Grid.gameStateManager.hasCurrentAmmo = false;
+                explosion.transform.position = gameObject.transform.position;
+                explosion.transform.localScale = gameObject.transform.localScale;
+                explosion.transform.localPosition = gameObject.transform.localPosition;
+                Instantiate(explosion);
+                Destroy(explosion, 1f);
                 Grid.audioManager.Play("ExplodeFX");
                 Destroy(gameObject);
             }

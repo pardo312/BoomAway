@@ -156,6 +156,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4353
   timeUntilExplode: 2
+  explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
   usesPer: {fileID: 5536584560881962711}
 --- !u!114 &1104176497124932282
 MonoBehaviour:
