@@ -37,7 +37,7 @@ public class UsesPerWeapon : MonoBehaviour
 
         string bodyJsonString = "{" + dQ + ammoType + dQ + ":" + (int)(1) + "}";
 
-        var request = new UnityWebRequest(urlFirebaseAnalytics + "/" + ammoType + ".json", "POST");
+        var request = new UnityWebRequest(urlFirebaseAnalytics + ".json", "POST");
         byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
