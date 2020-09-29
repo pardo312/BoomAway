@@ -60,6 +60,19 @@ public class GameStateManager : MonoBehaviour
         currentDeaths = 0;
         health= 1;
     }
+
+    public void initRestart()
+    {
+        //temporal, cambiar luego
+        currentAmmoType = Constants.BOMB_TYPE;
+        hasCurrentAmmo = false;
+        editing = false;
+        IsPaused = false;
+        IsDead = false;
+        IsEndLevel = false;
+        IsOnStoryMode = false;
+        currentDeaths = 0;
+    }
     public bool canPause()
     {
         return !(IsDead || IsEndLevel || !IsOnGame);
