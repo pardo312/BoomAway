@@ -155,7 +155,7 @@ MonoBehaviour:
   layerToStick:
     serializedVersion: 2
     m_Bits: 4353
-  gunExplosionKeyCode: 50
+  gunExplosionKeyCode: 113
   explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
   usesPer: {fileID: 6983198394984125420}
 --- !u!114 &4138228319396343692
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootForce: 10
-  gunKeyCode: 50
+  gunKeyCode: 323
 --- !u!114 &7146129229393100444
 MonoBehaviour:
   m_ObjectHideFlags: 0
