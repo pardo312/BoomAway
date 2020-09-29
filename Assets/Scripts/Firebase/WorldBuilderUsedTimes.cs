@@ -17,7 +17,6 @@ public class WorldBuilderUsedTimes : MonoBehaviour
     }
     IEnumerator UploadWorldBuilderUsedTimes()
     {
-        
         string doubleQuotation  = ('"' + "" );
         string bodyJsonString ="{"+doubleQuotation+"usedTimes"+doubleQuotation+":"+ (currentUsedTimes+1) + "}";
         var request = new UnityWebRequest(urlFirebaseAnalytics, "PUT");

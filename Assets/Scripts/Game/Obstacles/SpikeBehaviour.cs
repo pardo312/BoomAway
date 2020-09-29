@@ -16,7 +16,7 @@ public class SpikeBehaviour : MonoBehaviour
         //Determina si la colisión vino de la derecha o de la izquierda
         bool otherIsLeft = other.transform.position.x < transform.position.x;
 
-        //Si el jugador toca las puas, "saltara" en 45º hacia la direccion donde las toco
+        //Si rel jugador toca las puas, "saltara" en 45º hacia la dieccion donde las toco
         if(other.name.Equals("Player") || other.CompareTag("Explosive")) // && !alreadyLaunched)
         {
             if (otherIsLeft)
@@ -25,6 +25,7 @@ public class SpikeBehaviour : MonoBehaviour
                 other.GetComponent<Rigidbody2D>().AddForce(new Vector2(launchForce, launchForce));
 
             alreadyLaunched = true;
+            Grid.gameStateManager.health -= 0.2f;
         }
     }
 

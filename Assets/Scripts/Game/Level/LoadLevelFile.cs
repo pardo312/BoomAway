@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LoadLevelFile : MonoBehaviour
 {
@@ -14,9 +12,10 @@ public class LoadLevelFile : MonoBehaviour
     }
     void loadLevel(){
         if(needToLoadLevel){
-            Grid.worldSaveManager.loadWorldFromFolder(Grid.gameStateManager.currentLevel,SaveType.Story);
+            Grid.worldSaveManager.loadWorldFromFirebase(Grid.gameStateManager.currentLevel,SaveType.Story);
         }
            
 
     }
+   
 }

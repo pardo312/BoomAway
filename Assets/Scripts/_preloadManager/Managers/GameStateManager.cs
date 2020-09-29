@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
+    //Ammo
     [HideInInspector]public int[] ammo;
     [HideInInspector]public int[] currentAmmo;
     [HideInInspector]public int currentAmmoType ;
     [HideInInspector]public bool hasCurrentAmmo;
+
+    //bools
     [HideInInspector]public bool editing;
     [HideInInspector]public bool IsPaused;
     [HideInInspector]public bool IsEndLevel;
     [HideInInspector]public bool IsDead;
     [HideInInspector]public bool IsOnGame;
     [HideInInspector]public bool IsOnStoryMode;
+
+    //StateOfGame
     [HideInInspector]public string currentLevel;
+    [HideInInspector]public float health;
+
     //Analytics
     [HideInInspector] public int currentDeaths;
     [SerializeField] private LastLevelPlayed lastLevel;
@@ -51,6 +58,7 @@ public class GameStateManager : MonoBehaviour
         IsEndLevel = false;
         IsOnStoryMode = false;
         currentDeaths = 0;
+        health= 1;
     }
     public bool canPause()
     {
