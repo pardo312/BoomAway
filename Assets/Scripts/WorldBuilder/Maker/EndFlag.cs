@@ -37,6 +37,12 @@ public class EndFlag : MonoBehaviour
                     case "LVL7":
                         Grid.gameStateManager.currentLevel = "LVL8";
                         break;
+                    case "LVL8":
+                        Grid.gameStateManager.currentLevel = "LVL9";
+                        break;
+                    case "LVL9":
+                        Grid.gameStateManager.currentLevel = "LVL1";
+                        break;
                     default:
                         break;
                 }
