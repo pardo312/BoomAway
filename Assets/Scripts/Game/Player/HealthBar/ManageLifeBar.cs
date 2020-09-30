@@ -15,6 +15,6 @@ public class ManageLifeBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     //   lifeBarValueImg.fillAmount = Grid.gameStateManager.health;
+        lifeBarValueImg.fillAmount = Grid.gameStateManager.health;
     }
 }

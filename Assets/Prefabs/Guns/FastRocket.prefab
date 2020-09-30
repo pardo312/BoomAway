@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionForce: 170
-  radiousOfImpact: 1.5
+  radiousOfImpact: 5
   layerToExplode:
     serializedVersion: 2
     m_Bits: 6400

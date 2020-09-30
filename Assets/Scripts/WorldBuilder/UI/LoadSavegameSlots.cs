@@ -58,14 +58,16 @@ public class LoadSavegameSlots : MonoBehaviour
             buttonObject.transform.SetParent(loadArea.transform,false);
             
             int index= i;
+            string nameLevel = saveFiles[index].Replace(
+            Grid.worldSaveManager.rootPath + "/saved_worlds/",""
+            ).Replace(".save",""); 
             buttonObject.GetComponent<Button>().onClick.AddListener(()=>
             {
+                Grid.gameStateManager.currentWorldBuilderLevel = nameLevel;
                 Grid.worldSaveManager.loadWorldFromFirebase(saveFiles[index],SaveType.Builder);
             });
-            
-            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[index].Replace(
-                Grid.worldSaveManager.rootPath + "/saved_worlds/",""
-            ).Replace(".save",""); 
+            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = nameLevel;
         }
+        
     }
 }

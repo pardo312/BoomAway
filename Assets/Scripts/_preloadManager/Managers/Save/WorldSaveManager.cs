@@ -101,12 +101,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager
                                 queryResultSAVE = (string)player["SAVE"];
                                 queryResultSTATE = (string)player["STATE"];
                                 break;
-                            }
-                            else
-                            {
-                                Debug.Log("LevelNotFoundOnline:" + name);
-                            }
-
+                            }   
                         }
                     }
                 }
@@ -213,7 +208,6 @@ namespace BoomAway.Assets.Scripts.PreloadManager
             string dq = ('"' + "");
             string bodyJsonString = "{" + dq + "LevelName" + dq + ":" + dq + (levelName) + dq + "," + dq + "SAVE" + dq + ":" + dq + (dataSAVE) + dq + "," + dq + "STATE" + dq + ":" + dq + (dataSTATE) + dq + "}";
 
-            Debug.Log(bodyJsonString);
             var request = new UnityWebRequest(urlFirebaseOnline + ".json", "POST");
             byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
             request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);

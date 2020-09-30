@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private GameObject deathMenuUI;
     [SerializeField] private RetriesPerLevel retriesPer;
 
     private void Start()
@@ -23,6 +24,9 @@ public class PauseMenu : MonoBehaviour
             {
                 managePause();
             }
+        }
+        if(Grid.gameStateManager.health<0.1f){
+            Die();
         }
 
     }
@@ -62,6 +66,28 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         Grid.gameStateManager.initRestart();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+    }
+    //Tener un modo de de creador de mundos y uno de juegar online
+    //Worldbuilder
+    private void Die()
+    {
+        deathMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        Grid.gameStateManager.IsPaused = true;
+    }
+    public void restartWorldBuilder()
+    {
+        deathMenuUI.SetActive(false);
+        Grid.gameStateManager.initRestart();
+        Time.timeScale = 1f;
+        StartCoroutine(unPause());
+        Grid.gameStateManager.editing = true;
+        StartCoroutine(changeEditing());
+    }
+    IEnumerator changeEditing()
+    {
+        yield return new WaitForSeconds(0.2f);
+        Grid.gameStateManager.editing = false;
     }
     public void goToMainMenu()
     {

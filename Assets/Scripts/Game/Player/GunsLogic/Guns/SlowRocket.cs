@@ -32,13 +32,13 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         {
             if (readyToExplode)
             {
-            //Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact , layerToExplode);
+            Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact , layerToExplode);
 
-                ContactFilter2D filter2D = new ContactFilter2D();
-                filter2D.layerMask = layerToExplode;
-                List<Collider2D> results = new List<Collider2D>();
-                Physics2D.OverlapCollider(myCollider, filter2D, results);
-                foreach (Collider2D obj in results)
+            // ContactFilter2D filter2D = new ContactFilter2D();
+            // filter2D.layerMask = layerToExplode;
+            // List<Collider2D> results = new List<Collider2D>();
+            // Physics2D.OverlapCollider(myCollider, filter2D, results);
+            foreach (Collider2D obj in objects)
             {
                 Vector2 direction = obj.transform.position - transform.position;
                 if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D prueba))

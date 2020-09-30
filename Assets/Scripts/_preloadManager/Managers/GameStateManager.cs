@@ -20,6 +20,7 @@ public class GameStateManager : MonoBehaviour
 
     //StateOfGame
     [HideInInspector]public string currentLevel;
+    [HideInInspector]public string currentWorldBuilderLevel;
     [HideInInspector]public float health;
 
     //Analytics
@@ -50,6 +51,7 @@ public class GameStateManager : MonoBehaviour
     { 
         //temporal, cambiar luego
         currentLevel = "LVL1";
+        currentWorldBuilderLevel = "";
         currentAmmoType = Constants.BOMB_TYPE;
         hasCurrentAmmo = false;
         editing=false;
@@ -72,6 +74,7 @@ public class GameStateManager : MonoBehaviour
         IsEndLevel = false;
         IsOnStoryMode = false;
         currentDeaths = 0;
+        health= 1;
     }
     public bool canPause()
     {
