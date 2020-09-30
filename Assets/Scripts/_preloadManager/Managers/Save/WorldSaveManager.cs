@@ -22,8 +22,6 @@ namespace BoomAway.Assets.Scripts.PreloadManager
         private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/OnlineLevels/";
         private string urlFirebaseStory = "https://boomaway-10de3.firebaseio.com/StoryLevels/";
 
-        private List<string> onlineLevelsNames;
-
 
         #region Save
             public bool saveWorld(string saveName)
@@ -132,22 +130,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager
                 }
                 //LEVEL STATE
                 byte[] bytesNewSTATE = System.Convert.FromBase64String(queryResultSTATE);
-                loadStateOnline(bytesNewSTATE);
-            }
-            public bool loadStateOnline(byte[] bytesNewSTATE)
-            {
-                var state = Deserialize<State>(bytesNewSTATE);
-                try
-                {
-                    Grid.gameStateManager.ammo = state.ammo;
-                    Grid.gameStateManager.currentAmmo = state.ammo;
-                    return true;
-                }
-                catch
-                {
-                    Debug.LogError($"Fallo Al Cargar Estado del Nivel");
-                    return false;
-                }
+                loadState(bytesNewSTATE);
             }
             IEnumerator UnityRequestLevelStory(string url)
             {
@@ -166,11 +149,41 @@ namespace BoomAway.Assets.Scripts.PreloadManager
                     }
                 }
                 byte[] bytesNewSAVE = System.Convert.FromBase64String(queryResultSAVE);
-                File.WriteAllBytes(rootPath + "/story_worlds/temp_level.save", bytesNewSAVE);
 
+                try
+                {
+                    var obj = Deserialize<Tile[]>(bytesNewSAVE);
+                    Clear();
+
+                    for (int i = 0; i < obj.Length; i++)
+                    {
+                        Instantiate(makerTilePrefab[obj[i].id],
+                        new Vector3(obj[i].x, obj[i].y, obj[i].z),
+                        Quaternion.identity);
+                    }
+                }
+                catch
+                {
+                    Debug.LogError($"Fallo Al Cargar Nivel");
+                }
+                //LEVEL STATE
                 byte[] bytesNewSTATE = System.Convert.FromBase64String(queryResultSTATE);
-                File.WriteAllBytes(rootPath + "/story_worlds/temp_level.state", bytesNewSTATE);
-
+                loadState(bytesNewSTATE);
+            }
+            public bool loadState(byte[] bytesNewSTATE)
+            {
+                var state = Deserialize<State>(bytesNewSTATE);
+                try
+                {
+                    Grid.gameStateManager.ammo = state.ammo;
+                    Grid.gameStateManager.currentAmmo = state.ammo;
+                    return true;
+                }
+                catch
+                {
+                    Debug.LogError($"Fallo Al Cargar Estado del Nivel");
+                    return false;
+                }
             }
             #endregion
             #region Save
