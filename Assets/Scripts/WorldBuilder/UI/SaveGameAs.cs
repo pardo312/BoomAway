@@ -8,6 +8,6 @@ public class SaveGameAs : MonoBehaviour
     public void saveGameAs(){
 
         var savemanager = Grid.worldSaveManager;
-        savemanager.saveWorld(saveName.text,SaveType.Builder);
+        savemanager.saveWorld(saveName.text);
     }
 }
