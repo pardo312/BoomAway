@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 1d596d385fac6a140b6271336d18a514, type: 3}
   id: 0
-  nameTile: Start Flag
+  nameTile: inicio
 --- !u!114 &1928873406344048359
 MonoBehaviour:
   m_ObjectHideFlags: 0

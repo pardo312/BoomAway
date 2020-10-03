@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2420670157495536664}
   - component: {fileID: 1927090973669313435}
   - component: {fileID: 2420670157495536665}
-  - component: {fileID: 2420670157495536666}
   - component: {fileID: 2420670157495536669}
+  - component: {fileID: 561751999492965356}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: db16abd64669cdb449e98e27b3d304a4, type: 3}
   id: 5
-  nameTile: Spike
+  nameTile: puas
 --- !u!60 &2420670157495536665
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -132,19 +132,6 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.4034996, y: -0.115799904}
       - {x: 0.27390015, y: 0.30745018}
---- !u!114 &2420670157495536666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2420670157495536646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccfc397c472706c498fcd70509cb1d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  launchForce: 300
 --- !u!50 &2420670157495536669
 Rigidbody2D:
   serializedVersion: 4
@@ -166,3 +153,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &561751999492965356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2420670157495536646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac01194c29849b249b759ee8f9156c36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchForce: 300

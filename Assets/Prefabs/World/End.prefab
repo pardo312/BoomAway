@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 9156b917a848a76479faaf0a743726de, type: 3}
   id: 1
-  nameTile: End Flag
+  nameTile: fin nivel
 --- !u!61 &4599832803806359401
 BoxCollider2D:
   m_ObjectHideFlags: 0

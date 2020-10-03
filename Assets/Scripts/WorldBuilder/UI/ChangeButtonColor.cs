@@ -21,11 +21,11 @@ public class ChangeButtonColor : MonoBehaviour
     {
         if(Grid.gameStateManager.editing){
             btn.color = Color.cyan;
-            tmp.text = "Editing";
+            tmp.text = "EDITANDO";
         }
         else{
             btn.color = Color.green;
-            tmp.text = "Playing";
+            tmp.text = "JUGANDO";
         }
     }
 }
