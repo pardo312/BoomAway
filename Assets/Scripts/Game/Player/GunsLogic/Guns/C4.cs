@@ -77,7 +77,6 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                         //Instanciar otro
                         Grid.gameStateManager.hasCurrentAmmo = false;
                     explosion.transform.position = gameObject.transform.position;
-                    explosion.transform.localScale = gameObject.transform.localScale;
                     explosion.transform.localPosition = gameObject.transform.localPosition;
                     Instantiate(explosion);
                     Grid.audioManager.Play("ExplodeFX");

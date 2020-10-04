@@ -71,7 +71,6 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
             }
                 Grid.gameStateManager.hasCurrentAmmo = false;
                 explosion.transform.position = gameObject.transform.position;
-                explosion.transform.localScale = gameObject.transform.localScale;
                 explosion.transform.localPosition = gameObject.transform.localPosition;
                 Instantiate(explosion);
                 Grid.audioManager.Play("ExplodeFX");
@@ -87,7 +86,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 locVel.x = shootForce;
                 rb.velocity = transform.TransformDirection(locVel);
 
-                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 1.5f , layerToHit);
+                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 1f , layerToHit);
 
                 if (objects.Length != 0 )
                 {
