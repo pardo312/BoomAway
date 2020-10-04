@@ -6,14 +6,15 @@ public class GridMovement : MonoBehaviour
 {
     [SerializeField] private Transform playerTransform;
     [SerializeField] private GameObject GridLayout;
-    private bool alredyChange;
-   [SerializeField] private int lenghtOfGrid = 37;
-    
-    [SerializeField]private int moveGridBy;
+    private bool alredyChangeHorizontal;
+    private bool alredyChangeVertical;
+   [SerializeField] private int lenghtOfGrid;
+   [SerializeField] private int heightOfGrid;
     // Start is called before the first frame update
     void Awake()
     {
-        alredyChange = false;
+        alredyChangeHorizontal = false;
+        alredyChangeVertical = false;
     }
 
     // Update is called once per frame
@@ -24,16 +25,21 @@ public class GridMovement : MonoBehaviour
         else
             GridLayout.SetActive(true);
 
-        
+        //Horizontal Movement
         if((int)playerTransform.position.x % lenghtOfGrid != 0)
-            alredyChange = false;
+            alredyChangeHorizontal = false;
 
-        if(((int)playerTransform.position.x % lenghtOfGrid) == 0 && !alredyChange){
-            alredyChange = true;
-            if(playerTransform.position.x>0)
-                transform.position = (Vector3)new Vector2( moveGridBy*(int)(playerTransform.position.x/lenghtOfGrid),0);
-            else
-                transform.position -= (Vector3)new Vector2( moveGridBy*(int)(playerTransform.position.x/lenghtOfGrid),0);
+        if(((int)playerTransform.position.x % lenghtOfGrid) == 0 && !alredyChangeHorizontal){
+            alredyChangeHorizontal = true;
+            transform.position = (Vector3)new Vector2( lenghtOfGrid*(int)(playerTransform.position.x/lenghtOfGrid),transform.position.y);
+        }
+        //Vertical Movement
+        if((int)playerTransform.position.y % heightOfGrid != 0)
+            alredyChangeVertical = false;
+
+        if(((int)playerTransform.position.y % heightOfGrid) == 0 && !alredyChangeVertical){
+            alredyChangeVertical = true;
+            transform.position = (Vector3)new Vector2(transform.position.x, heightOfGrid*(int)(playerTransform.position.y/heightOfGrid));
         }
     }
 }
