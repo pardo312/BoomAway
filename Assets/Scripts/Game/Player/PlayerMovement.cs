@@ -47,7 +47,6 @@ namespace BoomAway.Assets.Scripts.Game.Player
                 if(horizontalInput != 0){
                     initEndWalk=true;
                     rb.velocity = new Vector2(horizontalInput * speed * Time.deltaTime* 100, rb.velocity.y);
-                    
                     if(!isWalking && rb.velocity.y == 0)
                     {
                         Grid.audioManager.Play("WalkFX");
@@ -60,8 +59,7 @@ namespace BoomAway.Assets.Scripts.Game.Player
                         Grid.audioManager.StopPlaying("WalkFX");
                         isWalking=false;
                         initEndWalk=false;
-                    }
-                    
+                    }                
                 }
             }
         }

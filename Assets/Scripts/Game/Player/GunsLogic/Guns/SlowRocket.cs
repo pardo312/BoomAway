@@ -28,16 +28,33 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
             myCollider=this.GetComponent<BoxCollider2D>();
         }
 
+        public void shoot(float shootForce, BoxCollider2D bc, Rigidbody2D rb)
+        {
+            if(!isShooting)
+            {
+                Vector3 tempPosition = transform.position;
+                transform.SetParent(null);
+                transform.position = tempPosition;
+
+                this.shootForce = shootForce;
+                this.rb = rb;
+
+                bc.isTrigger = false;
+                isShooting = true;
+                Grid.gameStateManager.currentAmmo[Constants.SLOW_ROCKET_TYPE]--;
+
+                //Analytics
+                usesPer.updateUse();
+                Destroy(gameObject, 10);
+            }
+        }
+        
         public void explode(float radiousOfImpact, float explosionForce, LayerMask layerToExplode)
         {
             if (readyToExplode)
             {
             Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radiousOfImpact , layerToExplode);
 
-            // ContactFilter2D filter2D = new ContactFilter2D();
-            // filter2D.layerMask = layerToExplode;
-            // List<Collider2D> results = new List<Collider2D>();
-            // Physics2D.OverlapCollider(myCollider, filter2D, results);
             foreach (Collider2D obj in objects)
             {
                 Vector2 direction = obj.transform.position - transform.position;
@@ -62,43 +79,17 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
             }
         }
 
-        public void shoot(float shootForce, BoxCollider2D bc, Rigidbody2D rb)
-        {
-            if(!isShooting)
-            {
-                Vector3 tempPosition = transform.position;
-                transform.SetParent(null);
-                transform.position = tempPosition;
-
-                this.shootForce = shootForce;
-                this.rb = rb;
-
-                bc.isTrigger = false;
-                isShooting = true;
-                Grid.gameStateManager.currentAmmo[Constants.SLOW_ROCKET_TYPE]--;
-
-                //Analytics
-                usesPer.updateUse();
-            }
-        }
-
         private void FixedUpdate()
         {
             if (isShooting)
-            {
+            {      
                 var locVel = transform.InverseTransformDirection(rb.velocity);
-
                 locVel.x = shootForce;
                 rb.velocity = transform.TransformDirection(locVel);
 
-                
+                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 1.5f , layerToHit);
 
-                ContactFilter2D filter2D = new ContactFilter2D();
-                filter2D.layerMask = layerToHit;
-                List<Collider2D> results = new List<Collider2D>();
-                Physics2D.OverlapCollider(myCollider, filter2D, results);
-
-                if (results.Count != 0 )
+                if (objects.Length != 0 )
                 {
                     readyToExplode = true;
                 }

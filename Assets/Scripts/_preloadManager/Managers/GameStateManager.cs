@@ -42,10 +42,10 @@ public class GameStateManager : MonoBehaviour
         ammo[Constants.FAST_ROCKET_TYPE] = 5;
         ammo[Constants.SLOW_ROCKET_TYPE] = 5;
 
-        ammo[Constants.BOMB_TYPE] = 3;
-        ammo[Constants.C4_TYPE] = 4;
-        ammo[Constants.FAST_ROCKET_TYPE] = 5;
-        ammo[Constants.SLOW_ROCKET_TYPE] = 5;
+        currentAmmo[Constants.BOMB_TYPE] = 3;
+        currentAmmo[Constants.C4_TYPE] = 4;
+        currentAmmo[Constants.FAST_ROCKET_TYPE] = 5;
+        currentAmmo[Constants.SLOW_ROCKET_TYPE] = 5;
     }
     public void initVariables()
     { 
