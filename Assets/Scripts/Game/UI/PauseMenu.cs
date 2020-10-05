@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private GameObject deathMenuUI;
+    [SerializeField] private GameObject tutorialUI;
     [SerializeField] private RetriesPerLevel retriesPer;
 
     private void Start()
@@ -67,6 +68,12 @@ public class PauseMenu : MonoBehaviour
         Grid.gameStateManager.initRestart();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
+
+    public void tutorial()
+    {
+        tutorialUI.SetActive(true);
+    }
+
     //Tener un modo de de creador de mundos y uno de juegar online
     //Worldbuilder
     private void Die()
