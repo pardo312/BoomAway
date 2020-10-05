@@ -30,6 +30,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                     gun.shoot(shootForce, bc, rb);
                 }
             }
+            
         }
     }
 

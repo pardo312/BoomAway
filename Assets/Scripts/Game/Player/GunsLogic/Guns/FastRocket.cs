@@ -39,6 +39,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 Grid.gameStateManager.currentAmmo[Constants.FAST_ROCKET_TYPE]--;
                 //ANALYTICS
                 usesPer.updateUse();
+                Destroy(gameObject, 10);
             }
         }
 
@@ -88,12 +89,13 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 rb.velocity = transform.TransformDirection(locVel);
 
 
-                ContactFilter2D filter2D = new ContactFilter2D();
-                filter2D.layerMask = layerToHit;
-                List<Collider2D> results = new List<Collider2D>();
-                Physics2D.OverlapCollider(myCollider, filter2D, results);
+                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 1.5f , layerToHit);
+                // ContactFilter2D filter2D = new ContactFilter2D();
+                // filter2D.layerMask = layerToHit;
+                // List<Collider2D> results = new List<Collider2D>();
+                // Physics2D.OverlapCollider(myCollider, filter2D, results);
 
-                if (results.Count != 0 )
+                if (objects.Length != 0 )
                 {
                     readyToExplode = true;
                 }
