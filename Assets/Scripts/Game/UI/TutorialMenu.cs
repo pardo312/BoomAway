@@ -19,8 +19,8 @@ public class TutorialMenu : MonoBehaviour
         
     }
 
-    void onMouseDown()
+    public void onMouseDown()
     {
-        Destroy(tutorial);
+        tutorial.SetActive(false);
     }
 }
