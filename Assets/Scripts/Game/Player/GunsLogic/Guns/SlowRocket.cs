@@ -86,7 +86,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 locVel.x = shootForce;
                 rb.velocity = transform.TransformDirection(locVel);
 
-                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 1f , layerToHit);
+                Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, 0.1f , layerToHit);
 
                 if (objects.Length != 0 )
                 {

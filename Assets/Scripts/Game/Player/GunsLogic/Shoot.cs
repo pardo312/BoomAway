@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 namespace BoomAway.Assets.Scripts.Game.Player.Guns
 {
     public class Shoot : MonoBehaviour
@@ -25,9 +24,11 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         {
             if (!Grid.gameStateManager.editing)
             {
-                if (Input.GetKeyDown(gunKeyCode))
-                {
-                    gun.shoot(shootForce, bc, rb);
+                if(EventSystem.current.currentSelectedGameObject == null){
+                    if (Input.GetKeyDown(gunKeyCode))
+                    {
+                        gun.shoot(shootForce, bc, rb);
+                    }
                 }
             }
             

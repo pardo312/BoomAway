@@ -2711,7 +2711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 545412554}
   m_Layer: 5
-  m_Name: DownInterface
+  m_Name: EditingInterface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2730,8 +2730,10 @@ RectTransform:
   m_Children:
   - {fileID: 530409452}
   - {fileID: 445441198}
+  - {fileID: 1247267313}
+  - {fileID: 2137463194}
   m_Father: {fileID: 1206349715}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -6279,8 +6281,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1616173692}
-  - {fileID: 2137463194}
-  - {fileID: 1247267313}
   - {fileID: 545412554}
   m_Father: {fileID: 753876822}
   m_RootOrder: 3
@@ -6404,7 +6404,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1330359540}
-  m_Father: {fileID: 1206349715}
+  m_Father: {fileID: 545412554}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
@@ -9210,6 +9210,7 @@ GameObject:
   - component: {fileID: 1616173694}
   - component: {fileID: 1616173693}
   - component: {fileID: 1616173697}
+  - component: {fileID: 1616173696}
   m_Layer: 5
   m_Name: Play/Editor Button
   m_TagString: Untagged
@@ -9292,6 +9293,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1616173696}
+        m_TargetAssemblyTypeName: DeleteAllGuns, Assembly-CSharp
+        m_MethodName: deleteAllGuns
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1616173694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9330,6 +9343,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616173691}
   m_CullTransparentMesh: 0
+--- !u!114 &1616173696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616173691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9537ae320d1ad41a88808bf043bb23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1616173697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12107,8 +12132,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 437916807}
-  m_Father: {fileID: 1206349715}
-  m_RootOrder: 1
+  m_Father: {fileID: 545412554}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}

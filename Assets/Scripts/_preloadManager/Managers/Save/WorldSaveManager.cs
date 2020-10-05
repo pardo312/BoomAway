@@ -24,29 +24,29 @@ namespace BoomAway.Assets.Scripts.PreloadManager
 
 
         #region Save
-            public bool saveWorld(string saveName)
-            {
-                StartCoroutine(saveWorldToFireBase(saveName));
-                return true;
-            }
+        public bool saveWorld(string saveName)
+        {
+            StartCoroutine(saveWorldToFireBase(saveName));
+            return true;
+        }
         #endregion
 
         #region Load
-            public void loadWorldFromFirebase(string name, SaveType savetype)
+        public void loadWorldFromFirebase(string name, SaveType savetype)
+        {
+            string url = "";
+            switch (savetype)
             {
-                string url = "";
-                switch (savetype)
-                {
-                    case SaveType.Builder:
-                        StartCoroutine(UnityRequestLevelOnline(name));
-                        break;
-                    case SaveType.Story:
-                        url = urlFirebaseStory + name + ".json";
-                        StartCoroutine(UnityRequestLevelStory(url));
-                        break;
-                }
-
+                case SaveType.Builder:
+                    StartCoroutine(UnityRequestLevelOnline(name));
+                    break;
+                case SaveType.Story:
+                    url = urlFirebaseStory + name + ".json";
+                    StartCoroutine(UnityRequestLevelStory(url));
+                    break;
             }
+
+        }
         #endregion
 
         #region Helpers
@@ -81,107 +81,107 @@ namespace BoomAway.Assets.Scripts.PreloadManager
 
 
         #region Firebase
-            #region Load
-            IEnumerator UnityRequestLevelOnline(string name)
+        #region Load
+        IEnumerator UnityRequestLevelOnline(string name)
+        {
+            using (UnityWebRequest webRequest = UnityWebRequest.Get(urlFirebaseOnline + ".json"))
             {
-                using (UnityWebRequest webRequest = UnityWebRequest.Get(urlFirebaseOnline + ".json"))
+                yield return webRequest.SendWebRequest();
+                if (webRequest.isNetworkError)
                 {
-                    yield return webRequest.SendWebRequest();
-                    if (webRequest.isNetworkError)
+                    Debug.LogError("Error: " + webRequest.error);
+                }
+                else
+                {
+                    JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
+                    foreach (JSONNode player in data)
                     {
-                        Debug.LogError("Error: " + webRequest.error);
-                    }
-                    else
-                    {
-                        JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
-                        foreach (JSONNode player in data)
+                        if (name == player["LevelName"])
                         {
-                            if (name == player["LevelName"])
-                            {
-                                queryResultSAVE = (string)player["SAVE"];
-                                queryResultSTATE = (string)player["STATE"];
-                                break;
-                            }   
+                            queryResultSAVE = (string)player["SAVE"];
+                            queryResultSTATE = (string)player["STATE"];
+                            break;
                         }
                     }
                 }
-                byte[] bytesNewSAVE = System.Convert.FromBase64String(queryResultSAVE);
-
-                try
-                {
-                    var obj = Deserialize<Tile[]>(bytesNewSAVE);
-                    Clear();
-
-                    for (int i = 0; i < obj.Length; i++)
-                    {
-                        Instantiate(makerTilePrefab[obj[i].id],
-                        new Vector3(obj[i].x, obj[i].y, obj[i].z),
-                        Quaternion.identity);
-                    }
-                }
-                catch
-                {
-                    Debug.LogError($"Fallo Al Cargar Nivel");
-                }
-                //LEVEL STATE
-                byte[] bytesNewSTATE = System.Convert.FromBase64String(queryResultSTATE);
-                loadState(bytesNewSTATE);
             }
-            IEnumerator UnityRequestLevelStory(string url)
+            byte[] bytesNewSAVE = System.Convert.FromBase64String(queryResultSAVE);
+
+            try
             {
-                using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
-                {
-                    yield return webRequest.SendWebRequest();
-                    if (webRequest.isNetworkError)
-                    {
-                        Debug.LogError("Error: " + webRequest.error);
-                    }
-                    else
-                    {
-                        JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
-                        queryResultSAVE = (string)data["SAVE"];
-                        queryResultSTATE = (string)data["STATE"];
-                    }
-                }
-                byte[] bytesNewSAVE = System.Convert.FromBase64String(queryResultSAVE);
+                var obj = Deserialize<Tile[]>(bytesNewSAVE);
+                Clear();
 
-                try
+                for (int i = 0; i < obj.Length; i++)
                 {
-                    var obj = Deserialize<Tile[]>(bytesNewSAVE);
-                    Clear();
-
-                    for (int i = 0; i < obj.Length; i++)
-                    {
-                        Instantiate(makerTilePrefab[obj[i].id],
-                        new Vector3(obj[i].x, obj[i].y, obj[i].z),
-                        Quaternion.identity);
-                    }
+                    Instantiate(makerTilePrefab[obj[i].id],
+                    new Vector3(obj[i].x, obj[i].y, obj[i].z),
+                    Quaternion.identity);
                 }
-                catch
-                {
-                    Debug.LogError($"Fallo Al Cargar Nivel");
-                }
-                //LEVEL STATE
-                byte[] bytesNewSTATE = System.Convert.FromBase64String(queryResultSTATE);
-                loadState(bytesNewSTATE);
             }
-            public bool loadState(byte[] bytesNewSTATE)
+            catch
             {
-                var state = Deserialize<State>(bytesNewSTATE);
-                try
+                Debug.LogError($"Fallo Al Cargar Nivel");
+            }
+            //LEVEL STATE
+            byte[] bytesNewSTATE = System.Convert.FromBase64String(queryResultSTATE);
+            loadState(bytesNewSTATE);
+        }
+        IEnumerator UnityRequestLevelStory(string url)
+        {
+            using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
+            {
+                yield return webRequest.SendWebRequest();
+                if (webRequest.isNetworkError)
                 {
-                    Grid.gameStateManager.ammo = state.ammo;
-                    Grid.gameStateManager.currentAmmo = state.ammo;
-                    return true;
+                    Debug.LogError("Error: " + webRequest.error);
                 }
-                catch
+                else
                 {
-                    Debug.LogError($"Fallo Al Cargar Estado del Nivel");
-                    return false;
+                    JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
+                    queryResultSAVE = (string)data["SAVE"];
+                    queryResultSTATE = (string)data["STATE"];
                 }
             }
-            #endregion
-            #region Save
+            byte[] bytesNewSAVE = System.Convert.FromBase64String(queryResultSAVE);
+
+            try
+            {
+                var obj = Deserialize<Tile[]>(bytesNewSAVE);
+                Clear();
+
+                for (int i = 0; i < obj.Length; i++)
+                {
+                    Instantiate(makerTilePrefab[obj[i].id],
+                    new Vector3(obj[i].x, obj[i].y, obj[i].z),
+                    Quaternion.identity);
+                }
+            }
+            catch
+            {
+                Debug.LogError($"Fallo Al Cargar Nivel");
+            }
+            //LEVEL STATE
+            byte[] bytesNewSTATE = System.Convert.FromBase64String(queryResultSTATE);
+            loadState(bytesNewSTATE);
+        }
+        public bool loadState(byte[] bytesNewSTATE)
+        {
+            var state = Deserialize<State>(bytesNewSTATE);
+            try
+            {
+                Grid.gameStateManager.ammo = state.ammo;
+                Grid.gameStateManager.currentAmmo = state.ammo;
+                return true;
+            }
+            catch
+            {
+                Debug.LogError($"Fallo Al Cargar Estado del Nivel");
+                return false;
+            }
+        }
+        #endregion
+        #region Save
         IEnumerator saveWorldToFireBase(string levelName)
         {
 
