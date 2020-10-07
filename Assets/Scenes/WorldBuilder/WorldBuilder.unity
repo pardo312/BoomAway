@@ -9294,8 +9294,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1616173696}
-        m_TargetAssemblyTypeName: DeleteAllGuns, Assembly-CSharp
-        m_MethodName: deleteAllGuns
+        m_TargetAssemblyTypeName: DestroyAllLeftOverAmmo, Assembly-CSharp
+        m_MethodName: destroyAllLeftoverAmoo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9352,7 +9352,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1616173691}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9537ae320d1ad41a88808bf043bb23, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d26e4fe4e4cbc0478453e0c28854ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1616173697
