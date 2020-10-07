@@ -230,6 +230,18 @@ MonoBehaviour:
           m_StringArgument: LVL8
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 985836660}
+        m_TargetAssemblyTypeName: AddLevelPlay, Assembly-CSharp
+        m_MethodName: addToLVL
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LVL8
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &24221116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,6 +535,18 @@ MonoBehaviour:
       - m_Target: {fileID: 141122432}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
         m_MethodName: loadSceneStory
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LVL7
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 985836660}
+        m_TargetAssemblyTypeName: AddLevelPlay, Assembly-CSharp
+        m_MethodName: addToLVL
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1918,6 +1942,18 @@ MonoBehaviour:
           m_StringArgument: LVL5
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 985836660}
+        m_TargetAssemblyTypeName: AddLevelPlay, Assembly-CSharp
+        m_MethodName: addToLVL
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LVL5
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &623553490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2054,6 +2090,18 @@ MonoBehaviour:
       - m_Target: {fileID: 630929756}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
         m_MethodName: loadSceneStory
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LVL4
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 985836660}
+        m_TargetAssemblyTypeName: AddLevelPlay, Assembly-CSharp
+        m_MethodName: addToLVL
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2639,6 +2687,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907971882}
   m_CullTransparentMesh: 0
+--- !u!1 &985836659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 985836661}
+  - component: {fileID: 985836660}
+  m_Layer: 0
+  m_Name: LVLFrequency
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &985836660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985836659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3824034a2c1f145bb73e9db43c9cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &985836661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985836659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 944.8004, y: 554.6063, z: -75.2439}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &989660803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3116,6 +3207,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1127412715}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
         m_MethodName: loadSceneStory
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LVL2
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 985836660}
+        m_TargetAssemblyTypeName: AddLevelPlay, Assembly-CSharp
+        m_MethodName: addToLVL
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3787,6 +3890,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1483989510}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
         m_MethodName: loadSceneStory
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LVL6
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 985836660}
+        m_TargetAssemblyTypeName: AddLevelPlay, Assembly-CSharp
+        m_MethodName: addToLVL
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5058,6 +5173,18 @@ MonoBehaviour:
           m_StringArgument: LVL3
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 985836660}
+        m_TargetAssemblyTypeName: AddLevelPlay, Assembly-CSharp
+        m_MethodName: addToLVL
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LVL3
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1914656892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5276,6 +5403,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Tutorial
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 985836660}
+        m_TargetAssemblyTypeName: AddLevelPlay, Assembly-CSharp
+        m_MethodName: addToLVL
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LVL1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1974382538

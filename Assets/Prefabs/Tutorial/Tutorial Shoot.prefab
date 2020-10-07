@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1289655422217426636}
   - component: {fileID: 1289655422217426637}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7977117494770323666}
   - component: {fileID: 4965831784691366826}
   - component: {fileID: 1289655423643322884}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Tutorial Shoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 8.4, y: 1.56}
+  m_Offset: {x: 5.55, y: 0.45}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -163,7 +163,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 22, y: 23.36}
+  m_Size: {x: 17.23, y: 4.62}
   m_EdgeRadius: 0
 --- !u!50 &4965831784691366826
 Rigidbody2D:
@@ -208,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1289655422759773942}
   - component: {fileID: 1289655422759773937}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: MouseClick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1289655423654060978}
   - component: {fileID: 1289655423654060979}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Rocketlauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1289655423748811064}
   - component: {fileID: 1289655423748811065}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: WASD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
