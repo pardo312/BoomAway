@@ -51,7 +51,7 @@ public class GameStateManager : MonoBehaviour
     public void initVariables()
     { 
         //temporal, cambiar luego
-        currentLevel = "LVL1";
+        currentLevel = "LVL2";
         currentWorldBuilderLevel = "";
         currentAmmoType = Constants.BOMB_TYPE;
         hasCurrentAmmo = false;
