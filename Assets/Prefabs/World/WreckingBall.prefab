@@ -516,6 +516,7 @@ GameObject:
   - component: {fileID: -2609985946400613737}
   - component: {fileID: 536265414071519985}
   - component: {fileID: 2662744350771022225}
+  - component: {fileID: -6830573616550716701}
   m_Layer: 0
   m_Name: WreckingBall
   m_TagString: Untagged
@@ -651,6 +652,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-6830573616550716701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2450057968013971551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac01194c29849b249b759ee8f9156c36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchForce: 300
 --- !u!1 &2450057968626626179
 GameObject:
   m_ObjectHideFlags: 0

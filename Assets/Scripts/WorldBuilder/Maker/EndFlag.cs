@@ -10,15 +10,14 @@ public class EndFlag : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (SceneManager.GetActiveScene().name.Equals("StoryLevel"))
+            if (SceneManager.GetActiveScene().name.Equals("StoryLevel") || SceneManager.GetActiveScene().name.Equals("Tutorial"))
             {
                 timeOnLevelScript.uploadLevelCompletionTime();
                 switch (Grid.gameStateManager.currentLevel)
                 {
-                    case "LVL1":
+                    default:
                         Grid.gameStateManager.currentLevel = "LVL2";
                         break;
-
                     case "LVL2":
                         Grid.gameStateManager.currentLevel = "LVL3";
                         break;
@@ -41,10 +40,9 @@ public class EndFlag : MonoBehaviour
                         Grid.gameStateManager.currentLevel = "LVL9";
                         break;
                     case "LVL9":
-                        Grid.gameStateManager.currentLevel = "LVL1";
+                        SceneManager.LoadScene("TitleScreen");
                         break;
-                    default:
-                        break;
+                    
                 }
                 SceneManager.LoadScene("StoryLevel");
             }
