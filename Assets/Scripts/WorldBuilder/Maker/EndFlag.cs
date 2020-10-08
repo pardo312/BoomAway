@@ -41,9 +41,7 @@ public class EndFlag : MonoBehaviour
                         Grid.gameStateManager.currentLevel = "LVL9";
                         break;
                     case "LVL9":
-                        Grid.gameStateManager.currentLevel = "LVL1";
-                        break;
-                    default:
+                        SceneManager.LoadScene("TitleScreen");
                         break;
                 }
                 SceneManager.LoadScene("StoryLevel");
