@@ -29,27 +29,29 @@ public class LevelsPlayed : MonoBehaviour
 
     public void uploadLevelFrequency()
     {
-        string bodyJsonString = "{";
+        #if !UNITY_EDITOR
+            string bodyJsonString = "{";
 
-        foreach(string key in lvlFrequency.Keys)
-        {
-            if(!key.Equals("LVL" + numberOfLevels.ToString()))
+            foreach(string key in lvlFrequency.Keys)
             {
-                bodyJsonString += "\"" + key + "\": " + lvlFrequency[key].ToString() + ",";
+                if(!key.Equals("LVL" + numberOfLevels.ToString()))
+                {
+                    bodyJsonString += "\"" + key + "\": " + lvlFrequency[key].ToString() + ",";
+                }
+                else
+                {
+                    bodyJsonString += "\"" + key + "\": " + lvlFrequency[key].ToString();       //No se le pone "," al último valor en la lista
+                }
             }
-            else
-            {
-                bodyJsonString += "\"" + key + "\": " + lvlFrequency[key].ToString();       //No se le pone "," al último valor en la lista
-            }
-        }
 
-        bodyJsonString += "}";
+            bodyJsonString += "}";
 
-        var request = new UnityWebRequest(urlFirebaseAnalytics, "POST");
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
-        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-        request.SendWebRequest();
+            var request = new UnityWebRequest(urlFirebaseAnalytics, "POST");
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
+            request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SendWebRequest();
+        #endif
     }
 }

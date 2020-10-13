@@ -15,7 +15,9 @@ public class RetriesPerLevel : MonoBehaviour
     }
     public void UploadRetriesMethod()
     {
+        #if !UNITY_EDITOR
         StartCoroutine(UploadRetries());
+        #endif
     }
     IEnumerator UploadRetries()
     {
@@ -32,7 +34,9 @@ public class RetriesPerLevel : MonoBehaviour
 
     private void GetRetriesOfLevelMethod()
     {
-        StartCoroutine(GetRetriesOfLevel());
+        #if !UNITY_EDITOR
+            StartCoroutine(GetRetriesOfLevel());
+        #endif
     }
     IEnumerator GetRetriesOfLevel()
     {

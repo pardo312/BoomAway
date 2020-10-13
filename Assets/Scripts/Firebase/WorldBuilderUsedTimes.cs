@@ -13,7 +13,9 @@ public class WorldBuilderUsedTimes : MonoBehaviour
         GetWorldBuilderUsedTimesMethod();
     }
     public void UploadWorldBuilderUsedTimesMethod(){
-        StartCoroutine(UploadWorldBuilderUsedTimes());
+        #if !UNITY_EDITOR
+            StartCoroutine(UploadWorldBuilderUsedTimes());
+        #endif
     }
     IEnumerator UploadWorldBuilderUsedTimes()
     {
@@ -29,7 +31,9 @@ public class WorldBuilderUsedTimes : MonoBehaviour
     }
 
     private void GetWorldBuilderUsedTimesMethod(){
-        StartCoroutine(GetWorldBuilderUsedTimes());
+        #if !UNITY_EDITOR
+            StartCoroutine(GetWorldBuilderUsedTimes());
+        #endif
     }
     IEnumerator GetWorldBuilderUsedTimes()
     {

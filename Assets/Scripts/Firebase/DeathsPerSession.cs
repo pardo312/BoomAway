@@ -10,12 +10,14 @@ public class DeathsPerSession : MonoBehaviour
 
     public void uploadDeaths(int numDeaths)
     {
-        string bodyJsonString = "{\"" + "Deaths" + "\":" + numDeaths + "}";
-        var request = new UnityWebRequest(urlFirebaseAnalytics, "POST");
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
-        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-        request.SendWebRequest();
+        #if !UNITY_EDITOR
+            string bodyJsonString = "{\"" + "Deaths" + "\":" + numDeaths + "}";
+            var request = new UnityWebRequest(urlFirebaseAnalytics, "POST");
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
+            request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SendWebRequest();
+        #endif
     }
 }

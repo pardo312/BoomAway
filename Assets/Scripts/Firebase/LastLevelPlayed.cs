@@ -10,15 +10,17 @@ public class LastLevelPlayed : MonoBehaviour
 
     public void uploadLastLevel(string lvl)
     {
-        //Double Quotation
-        string dQ = ('"' + "");
+        #if !UNITY_EDITOR
+            //Double Quotation
+            string dQ = ('"' + "");
 
-        string bodyJsonString = "{" + dQ + "LVL" + dQ + ":" + dQ + lvl + dQ + "}";
-        var request = new UnityWebRequest(urlFirebaseAnalytics, "POST");
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
-        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-        request.SendWebRequest();
+            string bodyJsonString = "{" + dQ + "LVL" + dQ + ":" + dQ + lvl + dQ + "}";
+            var request = new UnityWebRequest(urlFirebaseAnalytics, "POST");
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
+            request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SendWebRequest();
+        #endif
     }
 }

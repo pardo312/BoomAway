@@ -13,15 +13,17 @@ public class TimeOnLevel : MonoBehaviour
      }
     public void uploadLevelCompletionTime()
     {
-        //Double Quotation
-        string dQ  = ('"' + "" );
+        #if !UNITY_EDITOR
+            //Double Quotation
+            string dQ  = ('"' + "" );
 
-        string bodyJsonString ="{"+dQ+ Grid.gameStateManager.currentLevel + dQ +":"+ (int) timer + "}";
-        var request = new UnityWebRequest(urlFirebaseAnalytics, "POST");
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
-        request.uploadHandler = (UploadHandler) new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = (DownloadHandler) new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-        request.SendWebRequest(); 
+            string bodyJsonString ="{"+dQ+ Grid.gameStateManager.currentLevel + dQ +":"+ (int) timer + "}";
+            var request = new UnityWebRequest(urlFirebaseAnalytics, "POST");
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
+            request.uploadHandler = (UploadHandler) new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = (DownloadHandler) new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SendWebRequest();
+        #endif
     }
 }
