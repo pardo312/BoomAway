@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChangeAmmo : MonoBehaviour
 {
     public void addAmmoOfType(int indexOfBomb){
-        if(Grid.gameStateManager.ammo[indexOfBomb]<5)
+        if(Grid.gameStateManager.ammo[indexOfBomb]<Constants.MAX_AMMO)
             Grid.gameStateManager.ammo[indexOfBomb] ++;       
     }
     public void removeAmmoOfType(int indexOfBomb){

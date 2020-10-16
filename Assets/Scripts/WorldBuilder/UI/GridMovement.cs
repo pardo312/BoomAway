@@ -20,11 +20,6 @@ public class GridMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!Grid.gameStateManager.editing)
-            GridLayout.SetActive(false);
-        else
-            GridLayout.SetActive(true);
-
         //Horizontal Movement
         if((int)playerTransform.position.x % lenghtOfGrid != 0)
             alredyChangeHorizontal = false;

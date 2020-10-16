@@ -6,4 +6,6 @@
     public const int C4_TYPE = 1;
     public const int FAST_ROCKET_TYPE = 2;
     public const int SLOW_ROCKET_TYPE = 3;
+    
+    public const int MAX_AMMO = 5;
 }
