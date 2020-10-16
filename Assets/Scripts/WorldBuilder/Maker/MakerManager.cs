@@ -27,8 +27,8 @@ public class MakerManager : MonoBehaviour
             if (childTrans != null) {
                 childTrans.GetComponent<TextMeshProUGUI>().text =tiles[u].nameTile; 
             }
+            //Box --> ChangeAmmoType
             if(u == 6){
-                Debug.Log("Hi");
                 Instantiate(changeTileTypeUI,t.transform);
             }
             t.GetComponent<Image>().sprite = tiles[u].sprite;
