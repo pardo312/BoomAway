@@ -8,6 +8,7 @@ public class GameStateManager : MonoBehaviour
     [HideInInspector]public int[] ammo;
     [HideInInspector]public int[] currentAmmo;
     [HideInInspector]public int currentAmmoType ;
+    [HideInInspector]public int currentBoxAmmoType;
     [HideInInspector]public bool hasCurrentAmmo;
 
     //bools
@@ -27,6 +28,7 @@ public class GameStateManager : MonoBehaviour
     [HideInInspector] public int currentDeaths;
     [SerializeField] private LastLevelPlayed lastLevel;
     [SerializeField] private DeathsPerSession deaths;
+    [SerializeField] public List<Sprite> ammoTypeSprites;
     public LevelsPlayed frequency;
     
     void Awake()
@@ -36,6 +38,8 @@ public class GameStateManager : MonoBehaviour
         initVariables();
     }
     void setAmmo(){
+        currentBoxAmmoType= 0;
+
         ammo = new int[Constants.AMOUNT_GUNS];
         currentAmmo = new int[Constants.AMOUNT_GUNS];
         ammo[Constants.BOMB_TYPE] = 3;
@@ -65,7 +69,8 @@ public class GameStateManager : MonoBehaviour
 
     public void initRestart()
     {
-         ammo[Constants.BOMB_TYPE] = 3;
+        currentBoxAmmoType = 0;
+        ammo[Constants.BOMB_TYPE] = 3;
         ammo[Constants.C4_TYPE] = 4;
         ammo[Constants.FAST_ROCKET_TYPE] = 5;
         ammo[Constants.SLOW_ROCKET_TYPE] = 5;

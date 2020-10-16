@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 8342696696925141132}
   m_Layer: 8
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: WBChangeableTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

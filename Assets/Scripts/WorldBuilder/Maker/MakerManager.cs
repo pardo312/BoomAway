@@ -8,6 +8,7 @@ public class MakerManager : MonoBehaviour
 {
     private MakerTile[] tiles;
     [SerializeField]private GameObject buttonPrefab;
+    [SerializeField]private GameObject changeTileTypeUI;
     [SerializeField]private Transform layout;
     [SerializeField]private SpriteRenderer preview;
     [SerializeField]private GameObject[] hideOnEditObjects;
@@ -25,6 +26,10 @@ public class MakerManager : MonoBehaviour
             Transform childTrans = trans.Find("TextTileButton");
             if (childTrans != null) {
                 childTrans.GetComponent<TextMeshProUGUI>().text =tiles[u].nameTile; 
+            }
+            if(u == 6){
+                Debug.Log("Hi");
+                Instantiate(changeTileTypeUI,t.transform);
             }
             t.GetComponent<Image>().sprite = tiles[u].sprite;
             t.GetComponent<Button>().onClick.AddListener(()=>

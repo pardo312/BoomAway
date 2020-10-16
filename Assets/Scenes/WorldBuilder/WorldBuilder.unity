@@ -6059,6 +6059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonPrefab: {fileID: 4631206793173353807, guid: 45d50294b9526ea4e91cdf208d9b2b67, type: 3}
+  changeTileTypeUI: {fileID: 1487936148534923384, guid: 04f07c4b415646f448b5da9184abc0ab, type: 3}
   layout: {fileID: 834920686}
   preview: {fileID: 196609312919007954}
   hideOnEditObjects:
