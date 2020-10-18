@@ -8,4 +8,5 @@
     public const int SLOW_ROCKET_TYPE = 3;
     
     public const int MAX_AMMO = 5;
+    public const int BOMB_MAX_TIME = 5;
 }

@@ -9,9 +9,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
     {
 
         [SerializeField]private LayerMask layerToStick;
-        [SerializeField] private float timeUntilExplode;
+        public float timeUntilExplode;
         private bool alredyShoot;
-        private bool readyToExplode;
+        [HideInInspector]public bool readyToExplode;
 
         [SerializeField] private GameObject explosion;
 
@@ -36,7 +36,6 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
             if(readyToExplode){
                 if (timeUntilExplode > 0 )
                 {
-                    Debug.Log("Tiempo Restante: " + ((int)(timeUntilExplode)));
                     timeUntilExplode -= Time.deltaTime;
                 }
                 else
