@@ -10,9 +10,13 @@ public class GetTimeLeftBomb : MonoBehaviour
     void Update()
     {
         if (GameObject.Find("Bomb(Clone)") != null)
+        {
+            bombScript = GameObject.Find("Bomb(Clone)").GetComponent<BoomAway.Assets.Scripts.Game.Player.Guns.Bomb>();
+            if(!bombScript.readyToExplode)
             {
-                bombScript = GameObject.Find("Bomb(Clone)").GetComponent<BoomAway.Assets.Scripts.Game.Player.Guns.Bomb>();
+                
                 GetComponent<TextMeshProUGUI>().text = Mathf.Ceil(bombScript.timeUntilExplode).ToString();
             }
+        }
     }
 }
