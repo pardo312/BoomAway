@@ -235,8 +235,8 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 6465062176135102413, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
     source: {fileID: 0}
-  - name: TitleScreen
-    clip: {fileID: 8300000, guid: bb34bab94e62f894080a2d80d3f6d8e3, type: 3}
+  - name: TitleTheme
+    clip: {fileID: 8300000, guid: d906fd04c49df69bfa6fd02b19537287, type: 3}
     volume: 0.3
     volumeVariance: 0
     pitch: 1
