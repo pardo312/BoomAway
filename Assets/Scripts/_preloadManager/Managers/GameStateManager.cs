@@ -30,7 +30,10 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private DeathsPerSession deaths;
     [SerializeField] public List<Sprite> ammoTypeSprites;
     public LevelsPlayed frequency;
-    
+
+    //Points
+    public float points;
+
     void Awake()
     {
         IsOnGame=false;
@@ -65,6 +68,7 @@ public class GameStateManager : MonoBehaviour
         IsEndLevel = false;
         IsOnStoryMode = false;
         health= 1;
+        points = 999f;
     }
 
     public void initRestart()
@@ -88,6 +92,7 @@ public class GameStateManager : MonoBehaviour
         IsEndLevel = false;
         IsOnStoryMode = false;
         health= 1;
+        points = 999f;
     }
     public bool canPause()
     {
