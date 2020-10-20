@@ -6,8 +6,7 @@ namespace BoomAway.Assets.Scripts.Game.Player
 {
     public class PlayerMovement : MonoBehaviour
     {
-        [Header("Controls")]
-        [SerializeField] private float speed;
+        [HideInInspector]public float speed = Constants.PLAYER_SPEED;
 
         private float horizontalInput;
         private Rigidbody2D rb;

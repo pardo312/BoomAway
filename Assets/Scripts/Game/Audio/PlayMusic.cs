@@ -8,6 +8,7 @@ public class PlayMusic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Grid.audioManager.StopPlayingAll();
         Grid.audioManager.Play(MusicName);
     }
 

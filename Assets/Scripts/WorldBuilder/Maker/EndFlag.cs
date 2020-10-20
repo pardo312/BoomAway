@@ -1,12 +1,19 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using BoomAway.Assets.Scripts.Game.Player;
 
 public class EndFlag : MonoBehaviour
 {
     [SerializeField] private TimeOnLevel timeOnLevelScript;
     private bool alredyLoading = false;
+    private Animator animator;
+    private GameObject player;
+    private bool initFadeIn;
+    void Awake()
+    {
+        animator = GameObject.Find("FadeEffect").GetComponent<Animator>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!alredyLoading)
@@ -42,14 +49,32 @@ public class EndFlag : MonoBehaviour
                             break;
                         case "LVL8":
                             Grid.gameStateManager.currentLevel = "LVL1";
-                            SceneManager.LoadScene("TitleScreen");
+                            StartCoroutine(fadeIn("TitleScreen"));
                             break;
 
                     }
-                    SceneManager.LoadScene("StoryLevel");
+                    initFadeIn = true;
+                    player = collision.gameObject;
+                    StartCoroutine(fadeIn("StoryLevel"));
                 }
             }
         }
 
+    }
+    void Update(){
+        if(initFadeIn){
+            player.GetComponent<PlayerMovement>().speed -= 3*Time.deltaTime;
+            player.GetComponent<Animator>().speed -= Time.deltaTime*0.5f;
+        }
+    }
+    IEnumerator fadeIn(string sceneName){    
+        animator.SetBool("FadeIn",true);
+        animator.SetBool("FadeOut",false);
+        yield return new WaitForSeconds(2);
+        initFadeIn = false;
+        player.GetComponent<PlayerMovement>().speed = Constants.PLAYER_SPEED;
+        player.GetComponent<Animator>().speed =1;
+        Time.timeScale = 1;
+        SceneManager.LoadScene(sceneName);
     }
 }

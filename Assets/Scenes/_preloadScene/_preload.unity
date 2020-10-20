@@ -235,6 +235,15 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 6465062176135102413, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
     source: {fileID: 0}
+  - name: TitleTheme
+    clip: {fileID: 8300000, guid: a7f8332858cf082b5a96b0fc76d047ee, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: -6442177787591585716, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
+    source: {fileID: 0}
 --- !u!114 &269602053
 MonoBehaviour:
   m_ObjectHideFlags: 0
