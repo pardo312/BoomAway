@@ -22,7 +22,7 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         // Update is called once per frame
         void Update()
         {
-            if (!Grid.gameStateManager.editing)
+            if (!Grid.gameStateManager.editing && !Grid.gameStateManager.IsPaused)
             {
                 if(EventSystem.current.currentSelectedGameObject == null){
                     if (Input.GetKeyDown(gunKeyCode))
