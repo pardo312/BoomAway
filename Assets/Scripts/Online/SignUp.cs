@@ -28,8 +28,12 @@ public class SignUp : MonoBehaviour
         }
     }
     IEnumerator UnityRequestSingUp(){
+
+        byte[] bytesPassword = Serialize(passwordTextField.text);
+        string dataPassword = System.Convert.ToBase64String(bytesPassword);
+
         string dq = ('"' + "");
-        string bodyJsonString = "{" + dq + "user" + dq + ":" + dq + (userTextField.text) + dq + "," + dq + "password" + dq + ":" + dq + (passwordTextField.text) + dq + "}";
+        string bodyJsonString = "{" + dq + "user" + dq + ":" + dq + (userTextField.text) + dq + "," + dq + "password" + dq + ":" + dq + (dataPassword) + dq + "}";
 
         var request = new UnityWebRequest(urlFirebaseOnline + ".json", "POST");
         byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
@@ -39,6 +43,18 @@ public class SignUp : MonoBehaviour
         yield return request.SendWebRequest();
         onlineMenu.SetActive(true);
         transform.parent.gameObject.SetActive(false);
+        Grid.gameStateManager.usernameOnline = userTextField.text;
+    }
+    private byte[] Serialize<T>(T obj)
+    {
+        using (MemoryStream ms = new MemoryStream())
+        {
+            BinaryFormatter br = new BinaryFormatter();
+            br.Serialize(ms, obj);
+            ms.Position = 0;
+            byte[] content = ms.GetBuffer();
+            return content;
+        }
     }
     IEnumerator disableFailText()
     {

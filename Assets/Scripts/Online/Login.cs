@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 using System.Collections.Generic;
 using SimpleJSON;
 using UnityEngine.Networking;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public class Login : MonoBehaviour
 {
@@ -44,7 +45,12 @@ public class Login : MonoBehaviour
         bool found = false;
         for (int i = 0; i < users.Count; i++)
         {
-            if(users[i][0].Equals(userTextField.text) && users[i][1].Equals(passwordTextField.text)){
+            //Deserializado de password
+            string password = users[i][1];
+            byte[] bytesPassword = System.Convert.FromBase64String(password);
+            string psw = Deserialize<string>(bytesPassword);
+
+            if(users[i][0].Equals(userTextField.text) && psw.Equals(passwordTextField.text)){
                 onlineMenu.SetActive(true);
                 transform.parent.gameObject.SetActive(false);
                 found = true;
@@ -54,6 +60,14 @@ public class Login : MonoBehaviour
         if(!found){
             failedLoginMessage.SetText("usuario o contraseña incorrecta");
             StartCoroutine(disableFailText());
+        }
+    }
+    private T Deserialize<T>(byte[] param)
+    {
+        using (MemoryStream ms = new MemoryStream(param))
+        {
+            BinaryFormatter br = new BinaryFormatter();
+            return (T)br.Deserialize(ms);
         }
     }
     IEnumerator disableFailText()

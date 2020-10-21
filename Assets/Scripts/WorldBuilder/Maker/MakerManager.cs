@@ -88,7 +88,6 @@ public class MakerManager : MonoBehaviour
                 }
                 //Box
                 else if(id==8){      
-                    Debug.Log(id+Grid.gameStateManager.currentBoxAmmoType);
                     Instantiate(tiles[id+Grid.gameStateManager.currentBoxAmmoType].gameObject,pos,Quaternion.identity);
                 }
                 else{
