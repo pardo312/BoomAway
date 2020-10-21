@@ -28,15 +28,10 @@ namespace BoomAway.Assets.Scripts.Game.Player
         {
             if(!Grid.gameStateManager.editing){
                 horizontalInput = Input.GetAxis("Horizontal");
-                if(horizontalInput != 0)
-                {
-                    anim.SetBool("walking", true);
-                }
-                else
-                {
-                    anim.SetBool("walking", false);
-                }
+
+                anim.SetBool("walking", horizontalInput != 0);
                 flipSprite();
+                anim.SetBool("damaged", Grid.gameStateManager.damaged);
             }
         }
         void FixedUpdate()
