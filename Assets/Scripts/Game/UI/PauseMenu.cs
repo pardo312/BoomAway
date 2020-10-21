@@ -83,15 +83,6 @@ public class PauseMenu : MonoBehaviour
         Grid.gameStateManager.IsPaused = true;
         Grid.gameStateManager.currentDeaths++;
     }
-    public void restartWorldBuilder()
-    {
-        deathMenuUI.SetActive(false);
-        Grid.gameStateManager.initRestart();
-        Time.timeScale = 1f;
-        StartCoroutine(unPause());
-        Grid.gameStateManager.editing = true;
-        StartCoroutine(changeEditing());
-    }
     IEnumerator changeEditing()
     {
         yield return new WaitForSeconds(0.2f);

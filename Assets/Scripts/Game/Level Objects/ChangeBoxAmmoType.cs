@@ -7,6 +7,7 @@ public class ChangeBoxAmmoType : MonoBehaviour
        if(Grid.gameStateManager.currentBoxAmmoType < Constants.MAX_AMMO-2){
            Grid.gameStateManager.currentBoxAmmoType++;
            transform.parent.GetComponent<Image>().sprite = Grid.gameStateManager.ammoTypeSprites[Grid.gameStateManager.currentBoxAmmoType];
+           
        }
    }
    public void ChangeBoxAmmoTypeDown(){

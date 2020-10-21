@@ -111,6 +111,9 @@ public class LoadSavegameSlots : MonoBehaviour
             int index = i;
             buttonObject.GetComponent<Button>().onClick.AddListener(()=>
             {   
+                //Deshabilita el boton de back
+                
+                GameObject.Find("BackButtonLoadWorld").SetActive(false);
                 Grid.gameStateManager.currentWorldBuilderLevel = saveFiles[index];
                 Time.timeScale=1;
                 loadSceneScript.loadScene("WorldBuilder");

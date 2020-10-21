@@ -20,6 +20,7 @@ public class LoadScene : MonoBehaviour
     public void loadScene(string sceneName){
         StartCoroutine(fadeIn(sceneName));
     }
+    
     public void loadSceneStory(string currentStoryLevel){
         Grid.gameStateManager.currentLevel = currentStoryLevel;
         StartCoroutine(fadeIn("StoryLevel"));
