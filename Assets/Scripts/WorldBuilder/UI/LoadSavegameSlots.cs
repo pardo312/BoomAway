@@ -28,12 +28,26 @@ public class LoadSavegameSlots : MonoBehaviour
         
         GetLoadFiles();        
     }
+    public void showUserWorldsLoadScreen()
+    {
 
+        saveFiles=new List<string>();
+        for(int i = 0; i < loadArea.transform.childCount; i++)
+        {
+            Transform button = loadArea.transform.GetChild(i);
+            Destroy(button.gameObject);
+        }
+        
+        GetUserWorldsLoadFiles();        
+    }
     public void GetLoadFiles()
     {
         StartCoroutine(UnityRequestLevelOnline());
     }
-    
+    public void GetUserWorldsLoadFiles()
+    {
+        StartCoroutine(UnityRequestUserLevelsOnline());
+    }
 
     IEnumerator UnityRequestLevelOnline()
     {
@@ -57,17 +71,49 @@ public class LoadSavegameSlots : MonoBehaviour
         {
             GameObject buttonObject = Instantiate(loadButtonPrefab);
             buttonObject.transform.SetParent(loadArea.transform,false);
+            LoadScene loadSceneScript = buttonObject.AddComponent<LoadScene>();
             
-            int index= i;
-            string nameLevel = saveFiles[index].Replace(
-            Grid.worldSaveManager.rootPath + "/saved_worlds/",""
-            ).Replace(".save",""); 
             buttonObject.GetComponent<Button>().onClick.AddListener(()=>
-            {
-                Grid.gameStateManager.currentWorldBuilderLevel = nameLevel;
-                Grid.worldSaveManager.loadWorldFromFirebase(saveFiles[index],SaveType.Builder);
+            {   
+                loadSceneScript.loadScene("OnlineLevel");
+                Grid.gameStateManager.currentOnlineLevel = saveFiles[i];
             });
-            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = nameLevel;
+            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[i];
+        }
+        
+    }
+
+    IEnumerator UnityRequestUserLevelsOnline()
+    {
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(urlFirebaseOnline + ".json"))
+        {
+            yield return webRequest.SendWebRequest();
+            if (webRequest.isNetworkError)
+            {
+                Debug.LogError("Error: " + webRequest.error);
+            }
+            else
+            {
+                JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
+                foreach(JSONNode player in data)
+                {
+                    if(player["user"].Equals(Grid.gameStateManager.usernameOnline))
+                        saveFiles.Add(player["LevelName"]);
+                }
+            }
+        }
+        for (int i = 0; i < saveFiles.Count; i++)
+        {
+            GameObject buttonObject = Instantiate(loadButtonPrefab);
+            buttonObject.transform.SetParent(loadArea.transform,false);
+            LoadScene loadSceneScript = buttonObject.AddComponent<LoadScene>();
+            
+            buttonObject.GetComponent<Button>().onClick.AddListener(()=>
+            {   
+                loadSceneScript.loadScene("OnlineLevel");
+                Grid.gameStateManager.currentOnlineLevel = saveFiles[i];
+            });
+            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[i];
         }
         
     }
