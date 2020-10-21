@@ -649,7 +649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3688307599628343349, guid: 2c86cca20bdef3b4eaf38bf4778188f6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: restartWorldBuilder
+      value: restart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c86cca20bdef3b4eaf38bf4778188f6, type: 3}
@@ -6623,7 +6623,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 753876823}
         m_TargetAssemblyTypeName: LoadSavegameSlots, Assembly-CSharp
-        m_MethodName: showLoadScreen
+        m_MethodName: showUserWorldsLoadScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7986,7 +7986,7 @@ GameObject:
   - component: {fileID: 1414278382}
   - component: {fileID: 1414278380}
   m_Layer: 5
-  m_Name: BackButton
+  m_Name: BackButtonLoadWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
