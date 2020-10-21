@@ -21,7 +21,7 @@ public class MakerManager : MonoBehaviour
        
         tiles= Grid.worldSaveManager.makerTilePrefab;
         Grid.gameStateManager.editing = true;
-        for (int i = 0; i < tiles.Length; i++)
+        for (int i = 0; i < tiles.Length-3; i++)
         {
             int u = i;
             var t = Instantiate(buttonPrefab, layout);
@@ -30,16 +30,24 @@ public class MakerManager : MonoBehaviour
             if (childTrans != null) {
                 childTrans.GetComponent<TextMeshProUGUI>().text =tiles[u].nameTile; 
             }
-            //Box --> ChangeAmmoType
-            if(u == 6){
-                Instantiate(changeTileTypeUI,t.transform);
-            }
             t.GetComponent<Image>().sprite = tiles[u].sprite;
-            t.GetComponent<Button>().onClick.AddListener(()=>
-            {
-                id = u;
-                preview.sprite = tiles[u].sprite;
-            });
+
+            //Box --> ChangeAmmoType
+            if(u == 8){
+                Instantiate(changeTileTypeUI,t.transform);
+                t.GetComponent<Button>().onClick.AddListener(()=>
+                {
+                    id=u;
+                    preview.sprite = tiles[u].sprite;
+                });
+            }
+            else{
+                t.GetComponent<Button>().onClick.AddListener(()=>
+                {
+                    id = u;
+                    preview.sprite = tiles[u].sprite;
+                });
+            }
         }
     }
     
@@ -66,15 +74,22 @@ public class MakerManager : MonoBehaviour
         {
             if(c.collider == null )
             {
+                //Spawn
                 if(id == 0){
                     if(GameObject.Find("SpawnPoint(Clone)") == null){             
                         Instantiate(tiles[id].gameObject,pos,Quaternion.identity);
                     }
                 }
+                //End
                 else if(id==1){
                     if(GameObject.Find("End(Clone)") == null){             
                         Instantiate(tiles[id].gameObject,pos,Quaternion.identity);
                     }
+                }
+                //Box
+                else if(id==8){      
+                    Debug.Log(id+Grid.gameStateManager.currentBoxAmmoType);
+                    Instantiate(tiles[id+Grid.gameStateManager.currentBoxAmmoType].gameObject,pos,Quaternion.identity);
                 }
                 else{
                     Instantiate(tiles[id].gameObject,pos,Quaternion.identity);
@@ -83,8 +98,7 @@ public class MakerManager : MonoBehaviour
                       
         }
         if(Input.GetKey(KeyCode.Mouse1))
-        {
-            
+        {           
             if(c.collider != null )
             {
                 c.collider.gameObject.TryGetComponent<MakerTile>(out MakerTile mk);

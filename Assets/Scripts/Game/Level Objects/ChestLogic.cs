@@ -7,7 +7,6 @@ public class ChestLogic : MonoBehaviour
     [SerializeField]private GameObject AddAmmoAnimation;
 
     void Start() {
-        typeOfammoToGive=Grid.gameStateManager.currentBoxAmmoType;
         if(typeOfammoToGive<Grid.gameStateManager.ammoTypeSprites.Count)
             transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Grid.gameStateManager.ammoTypeSprites[typeOfammoToGive];
     }
