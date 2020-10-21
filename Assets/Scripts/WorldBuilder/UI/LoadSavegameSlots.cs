@@ -72,13 +72,13 @@ public class LoadSavegameSlots : MonoBehaviour
             GameObject buttonObject = Instantiate(loadButtonPrefab);
             buttonObject.transform.SetParent(loadArea.transform,false);
             LoadScene loadSceneScript = buttonObject.AddComponent<LoadScene>();
-            
+            int index = i;
             buttonObject.GetComponent<Button>().onClick.AddListener(()=>
             {   
+                Grid.gameStateManager.currentOnlineLevel = saveFiles[index];
                 loadSceneScript.loadScene("OnlineLevel");
-                Grid.gameStateManager.currentOnlineLevel = saveFiles[i];
             });
-            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[i];
+            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[index];
         }
         
     }
@@ -108,12 +108,14 @@ public class LoadSavegameSlots : MonoBehaviour
             buttonObject.transform.SetParent(loadArea.transform,false);
             LoadScene loadSceneScript = buttonObject.AddComponent<LoadScene>();
             
+            int index = i;
             buttonObject.GetComponent<Button>().onClick.AddListener(()=>
             {   
-                loadSceneScript.loadScene("OnlineLevel");
-                Grid.gameStateManager.currentOnlineLevel = saveFiles[i];
+                Grid.gameStateManager.currentWorldBuilderLevel = saveFiles[index];
+                Time.timeScale=1;
+                loadSceneScript.loadScene("WorldBuilder");
             });
-            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[i];
+            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[index];
         }
         
     }
