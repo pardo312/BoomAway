@@ -244,6 +244,15 @@ MonoBehaviour:
     loop: 1
     mixerGroup: {fileID: -6442177787591585716, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
     source: {fileID: 0}
+  - name: PlayerDamage
+    clip: {fileID: 8300000, guid: d84cf1456afb4e848a3a739df88837f2, type: 3}
+    volume: 0.75
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: -8297655148868887469, guid: 1cce3075ab802a248bbfa9acf63da2ce, type: 2}
+    source: {fileID: 0}
 --- !u!114 &269602053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +281,7 @@ MonoBehaviour:
   currentOnlineLevel: 
   currentWorldBuilderLevel: 
   health: 0
+  damaged: 0
   currentDeaths: 0
   lastLevel: {fileID: 269602054}
   deaths: {fileID: 269602056}

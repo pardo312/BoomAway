@@ -1,14 +1,16 @@
-﻿using System.Collections;
+﻿using BoomAway.Assets.Scripts.Game.Player;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour
 {
+    //For editor purposes
     public float launchForce = 20f;
+    private float invulnerableTime = 3f;    //Changing this will desync the damage animation
 
-    private bool alreadyLaunched = false;
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if(Grid.gameStateManager.editing == false)
         {
@@ -17,16 +19,18 @@ public class DamagePlayer : MonoBehaviour
             //Determina si la colisión vino de la derecha o de la izquierda
             bool otherIsLeft = other.transform.position.x < transform.position.x;
 
-            //Si rel jugador toca las puas, "saltara" en 45º hacia la dieccion donde las toco
-            if((other.name.Equals("Player") || other.CompareTag("Explosive") )) 
+            //Si el jugador toca las puas, "salta" en 45º hacia la dieccion donde las toco
+            if(other.name.Equals("Player") && !(Grid.gameStateManager.damaged)) 
             {
+                Debug.Log("Took damage when bool damaged=" + Grid.gameStateManager.damaged);
                 if (otherIsLeft)
                     other.GetComponent<Rigidbody2D>().AddForce(new Vector2(-launchForce, launchForce));
                 else
                     other.GetComponent<Rigidbody2D>().AddForce(new Vector2(launchForce, launchForce));
 
-                alreadyLaunched = true;
                 Grid.gameStateManager.health -= 0.2f;
+                Grid.gameStateManager.damaged = true;
+                Grid.audioManager.Play("PlayerDamage");
             }
         }
 
@@ -34,8 +38,14 @@ public class DamagePlayer : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        //Garantiza la fuerza se aplique una sola vez
-        if (collision.gameObject.name.Equals("Player"))
-            alreadyLaunched = false;
+        if (collision.gameObject.name.Equals("Player") && Grid.gameStateManager.damaged)
+            Invoke("resetDamage", invulnerableTime);
+    }
+
+    //After taking damage, the Player will have some time where they take no damage
+    //This countdown starts the moment the player leaves
+    private void resetDamage()
+    {
+        Grid.gameStateManager.damaged = false;
     }
 }

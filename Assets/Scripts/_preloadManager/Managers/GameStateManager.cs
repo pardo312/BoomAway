@@ -26,6 +26,7 @@ public class GameStateManager : MonoBehaviour
     [HideInInspector]public string currentOnlineLevel;
     [HideInInspector]public string currentWorldBuilderLevel;
     [HideInInspector]public float health;
+    [HideInInspector]public bool damaged;
 
     //Analytics
     [HideInInspector] public int currentDeaths;
@@ -73,6 +74,7 @@ public class GameStateManager : MonoBehaviour
         IsOnStoryMode = false;
         health= 1;
         points = 999f;
+        damaged = false;
     }
 
     public void initRestart()
@@ -97,6 +99,7 @@ public class GameStateManager : MonoBehaviour
         IsOnStoryMode = false;
         health= 1;
         points = 999f;
+        damaged = false;
     }
     public bool canPause()
     {
