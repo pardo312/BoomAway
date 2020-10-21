@@ -256,6 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec969da038d0b764e85201a4ad7e6e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usernameOnline: 
   ammo: 0000000000000000
   currentAmmo: 0000000000000000
   currentAmmoType: 0
@@ -268,6 +269,7 @@ MonoBehaviour:
   IsOnGame: 0
   IsOnStoryMode: 0
   currentLevel: 
+  currentOnlineLevel: 
   currentWorldBuilderLevel: 
   health: 0
   currentDeaths: 0
@@ -279,6 +281,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9f42dcc06ba174c418861dfd5d409154, type: 3}
   - {fileID: 21300000, guid: 835a5b31e0d6e1e41901252dc2328d9e, type: 3}
   frequency: {fileID: 269602057}
+  points: 0
 --- !u!114 &269602054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,9 +313,12 @@ MonoBehaviour:
   - {fileID: 4949666813981347650, guid: 6f01b198636bcf84fad55b438612782a, type: 3}
   - {fileID: 7085444863271909296, guid: 5b8f67ad572fd624eb8d22556fb128ac, type: 3}
   - {fileID: 1927090973669313435, guid: 495b8232698b9804e8e40ec738c81a1d, type: 3}
-  - {fileID: -5663836299355659523, guid: c922eb460fb20d6438f2b3cc43adcd23, type: 3}
-  - {fileID: -2609985946400613737, guid: 015fd97cf76b40841bc33992d10670c8, type: 3}
   - {fileID: 5189228270987527219, guid: b6b5ba66fcbafe744a6acd02ebd92d6d, type: 3}
+  - {fileID: -2609985946400613737, guid: 015fd97cf76b40841bc33992d10670c8, type: 3}
+  - {fileID: -5663836299355659523, guid: c922eb460fb20d6438f2b3cc43adcd23, type: 3}
+  - {fileID: -5663836299355659523, guid: 3024b2ce1c7df6049b6a629a08953b2b, type: 3}
+  - {fileID: -5663836299355659523, guid: 186d092368375b843848dca94d3eb6f2, type: 3}
+  - {fileID: -5663836299355659523, guid: dcff926f7ca8e1241b0d3fd14a9b8504, type: 3}
   rootPath: 
 --- !u!114 &269602056
 MonoBehaviour:
