@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
+    
+    [HideInInspector]public string usernameOnline = "";
     //Ammo
     [HideInInspector]public int[] ammo;
     [HideInInspector]public int[] currentAmmo;
@@ -21,6 +23,7 @@ public class GameStateManager : MonoBehaviour
 
     //StateOfGame
     [HideInInspector]public string currentLevel;
+    [HideInInspector]public string currentOnlineLevel;
     [HideInInspector]public string currentWorldBuilderLevel;
     [HideInInspector]public float health;
 
@@ -59,7 +62,8 @@ public class GameStateManager : MonoBehaviour
     { 
         //temporal, cambiar luego
         currentLevel = "LVL2";
-        currentWorldBuilderLevel = "";
+        currentOnlineLevel = "";
+        currentWorldBuilderLevel="";
         currentAmmoType = Constants.BOMB_TYPE;
         hasCurrentAmmo = false;
         editing=false;

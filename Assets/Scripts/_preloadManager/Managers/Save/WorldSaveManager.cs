@@ -26,8 +26,46 @@ namespace BoomAway.Assets.Scripts.PreloadManager
         #region Save
         public bool saveWorld(string saveName)
         {
-            StartCoroutine(saveWorldToFireBase(saveName));
+            urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/OnlineLevels/"; 
+            StartCoroutine(FindOnlineLevelWithSameNameToSave(saveName));
             return true;
+        }
+         IEnumerator FindOnlineLevelWithSameNameToSave(string name)
+        {
+            using (UnityWebRequest webRequest = UnityWebRequest.Get(urlFirebaseOnline + ".json"))
+            {
+                yield return webRequest.SendWebRequest();
+                if (webRequest.isNetworkError)
+                {
+                    Debug.LogError("Error: " + webRequest.error);
+                }
+                else
+                {
+                    JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
+                    int indexOfLevel = 0;
+                    foreach (JSONNode player in data)
+                    {
+                        if (name == player["LevelName"] && player["user"].Equals(Grid.gameStateManager.usernameOnline))
+                        {
+                            int j = 0;
+                            foreach (var key in data.Keys)
+                            {
+                                if(j == indexOfLevel)
+                                {
+                                    StartCoroutine(deleteWorldToFireBase(urlFirebaseOnline + key));
+                                    break;
+                                }
+                                j++;
+                            }
+                            
+                            
+                        }
+                        
+                        indexOfLevel++;
+                    }
+                }
+            }
+            StartCoroutine(saveWorldToFireBase(name));
         }
         #endregion
 
@@ -206,12 +244,19 @@ namespace BoomAway.Assets.Scripts.PreloadManager
             string dataSTATE = System.Convert.ToBase64String(bytesSTATE);
 
             string dq = ('"' + "");
-            string bodyJsonString = "{" + dq + "LevelName" + dq + ":" + dq + (levelName) + dq + "," + dq + "SAVE" + dq + ":" + dq + (dataSAVE) + dq + "," + dq + "STATE" + dq + ":" + dq + (dataSTATE) + dq + "}";
+            string bodyJsonString = "{" + dq + "LevelName" + dq + ":" + dq + (levelName) + dq + "," + dq + "SAVE" + dq + ":" + dq + (dataSAVE) + dq + "," + dq + "STATE" + dq + ":" + dq + (dataSTATE) + dq +"," + dq + "user" + dq + ":" + dq + (Grid.gameStateManager.usernameOnline) + dq + "}";
 
             var request = new UnityWebRequest(urlFirebaseOnline + ".json", "POST");
             byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
             request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
             request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            yield return request.SendWebRequest();
+        }
+        
+        IEnumerator deleteWorldToFireBase(string urlFirebase)
+        {
+            var request = new UnityWebRequest(urlFirebase + ".json", "DELETE");
             request.SetRequestHeader("Content-Type", "application/json");
             yield return request.SendWebRequest();
         }
