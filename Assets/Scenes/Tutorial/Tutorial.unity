@@ -2263,7 +2263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218935436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.961111, y: -5.530001, z: -10}
+  m_LocalPosition: {x: -8.890136, y: -5.530001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1043228260}
@@ -9633,7 +9633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982774630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.961111, y: -5.530001, z: -10}
+  m_LocalPosition: {x: -8.890136, y: -5.530001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1705657431}
@@ -12719,6 +12719,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1865780764}
     m_Modifications:
+    - target: {fileID: 1176079922, guid: 2c86cca20bdef3b4eaf38bf4778188f6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: restart
+      objectReference: {fileID: 0}
     - target: {fileID: 1162610696682262536, guid: 2c86cca20bdef3b4eaf38bf4778188f6, type: 3}
       propertyPath: m_Color.r
       value: 1

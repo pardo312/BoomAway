@@ -571,6 +571,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 753876822}
     m_Modifications:
+    - target: {fileID: 1176079922, guid: 2c86cca20bdef3b4eaf38bf4778188f6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: restart
+      objectReference: {fileID: 0}
     - target: {fileID: 2311899669732503333, guid: 2c86cca20bdef3b4eaf38bf4778188f6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -4228,6 +4232,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadButtonPrefab: {fileID: 1354645189535672842, guid: 740b02db125aafc4c9e33a9a72d67fb8, type: 3}
   loadArea: {fileID: 1267689422}
+  commentPrefab: {fileID: 0}
+  loadCommentArea: {fileID: 0}
+  commentMenu: {fileID: 0}
+  onlineMenu: {fileID: 0}
 --- !u!114 &753876824
 MonoBehaviour:
   m_ObjectHideFlags: 0

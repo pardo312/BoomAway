@@ -55,6 +55,7 @@ public class EndFlag : MonoBehaviour
                     }
                     initFadeIn = true;
                     player = collision.gameObject;
+                    Grid.gameStateManager.initRestart();
                     StartCoroutine(fadeIn("StoryLevel"));
                 }
             }

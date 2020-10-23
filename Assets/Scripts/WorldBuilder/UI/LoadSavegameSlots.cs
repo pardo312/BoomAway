@@ -6,7 +6,6 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 using SimpleJSON;
-using UnityEditor.Events;
 
 public class LoadSavegameSlots : MonoBehaviour
 {
