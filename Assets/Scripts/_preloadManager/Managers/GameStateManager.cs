@@ -106,6 +106,15 @@ public class GameStateManager : MonoBehaviour
         return !(IsDead || IsEndLevel || !IsOnGame);
     }
 
+    private void OnApplicationFocus(bool isFocused)
+    {
+        if(!isFocused)
+        {
+            lastLevel.uploadLastLevel(currentLevel);
+            deaths.uploadDeaths(currentDeaths);
+            frequency.uploadLevelFrequency();
+        }
+    }
     private void OnApplicationQuit()
     {
         lastLevel.uploadLastLevel(currentLevel);

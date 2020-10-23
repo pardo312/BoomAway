@@ -4735,6 +4735,7 @@ MonoBehaviour:
   passwordTextField: {fileID: 287260725}
   onlineMenu: {fileID: 464007312}
   failSingupText: {fileID: 298518233}
+  userExist: 0
 --- !u!114 &882185130
 MonoBehaviour:
   m_ObjectHideFlags: 0
