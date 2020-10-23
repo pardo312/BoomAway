@@ -14,15 +14,15 @@ public class SignUp : MonoBehaviour
     [SerializeField]private TMP_InputField passwordTextField;
     [SerializeField]private GameObject onlineMenu;
     [SerializeField]private TextMeshProUGUI failSingupText;
-    [SerializeField]private bool userExist;
+    private bool userExist = false;
     private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/Users/";
 
     // Update is called once per frame
     public void SignUpRequest()
     {
         if(userTextField.text != "" && passwordTextField.text != ""){
-            StartCoroutine(UnityWebRequestCheckIfUserExist(userTextField.text));
-            if(userExist){
+            UnityWebRequestCheckIfUserExist(userTextField.text);
+            if(!userExist){
                 StartCoroutine(UnityRequestSingUp());
                 userExist=false;
             }
@@ -74,12 +74,12 @@ public class SignUp : MonoBehaviour
 
     #region CheckIfUserExist
     
-    IEnumerator UnityWebRequestCheckIfUserExist(string userName)
+    private void UnityWebRequestCheckIfUserExist(string userName)
     {
         List<string[]> users = new List<string[]>();
         using (UnityWebRequest webRequest = UnityWebRequest.Get(urlFirebaseOnline + ".json"))
         {
-            yield return webRequest.SendWebRequest();
+            webRequest.SendWebRequest();
             if (webRequest.isNetworkError)
             {
                 Debug.LogError("Error: " + webRequest.error);
