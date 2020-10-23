@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class OpenComments : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public string level;
+    public GameObject commentMenu;
+    public GameObject onlineMenu;
+
+    public void showHide()
     {
-        
+        commentMenu.SetActive(true);
+        onlineMenu.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
