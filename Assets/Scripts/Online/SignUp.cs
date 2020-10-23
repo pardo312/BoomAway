@@ -14,13 +14,23 @@ public class SignUp : MonoBehaviour
     [SerializeField]private TMP_InputField passwordTextField;
     [SerializeField]private GameObject onlineMenu;
     [SerializeField]private TextMeshProUGUI failSingupText;
+    [SerializeField]private bool userExist;
     private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/Users/";
 
     // Update is called once per frame
     public void SignUpRequest()
     {
-        if(userTextField.text != "" && passwordTextField.text != "")
-            StartCoroutine(UnityRequestSingUp());
+        if(userTextField.text != "" && passwordTextField.text != ""){
+            StartCoroutine(UnityWebRequestCheckIfUserExist(userTextField.text));
+            if(userExist){
+                StartCoroutine(UnityRequestSingUp());
+                userExist=false;
+            }
+            else{
+                failSingupText.text = "el nombre de usuario ya existe, prueba con otro.";
+                StartCoroutine(disableFailText());
+            }
+        }
         else
         {
             failSingupText.text = "no puedes registrate con campos vacios";
@@ -61,4 +71,30 @@ public class SignUp : MonoBehaviour
         yield return new WaitForSeconds(3);
         failSingupText.SetText("");
     }
+
+    #region CheckIfUserExist
+    
+    IEnumerator UnityWebRequestCheckIfUserExist(string userName)
+    {
+        List<string[]> users = new List<string[]>();
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(urlFirebaseOnline + ".json"))
+        {
+            yield return webRequest.SendWebRequest();
+            if (webRequest.isNetworkError)
+            {
+                Debug.LogError("Error: " + webRequest.error);
+            }
+            else
+            {
+                JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
+                foreach(JSONNode player in data)
+                {
+                    if(userName.Equals(player["user"])){
+                        userExist = true;
+                    }
+                }
+            }
+        }
+    }
+    #endregion
 }
