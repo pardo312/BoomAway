@@ -12839,6 +12839,10 @@ PrefabInstance:
       propertyPath: retriesPer
       value: 
       objectReference: {fileID: 1347840658}
+    - target: {fileID: 3688307599628343349, guid: 2c86cca20bdef3b4eaf38bf4778188f6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: restartTutorial
+      objectReference: {fileID: 0}
     - target: {fileID: 4965043010437947828, guid: 2c86cca20bdef3b4eaf38bf4778188f6, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0

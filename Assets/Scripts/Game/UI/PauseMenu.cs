@@ -68,6 +68,14 @@ public class PauseMenu : MonoBehaviour
         Grid.gameStateManager.initRestart();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
+     public void restartTutorial()
+    {
+        retriesPer.UploadRetriesMethod();
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        Grid.gameStateManager.initRestartTutorial();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+    }
 
     public void tutorial()
     {

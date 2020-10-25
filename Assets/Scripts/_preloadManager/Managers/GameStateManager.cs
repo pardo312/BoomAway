@@ -79,18 +79,29 @@ public class GameStateManager : MonoBehaviour
 
     public void initRestart()
     {
-        // currentBoxAmmoType = 0;
-        // ammo[Constants.BOMB_TYPE] = 3;
-        // ammo[Constants.C4_TYPE] = 4;
-        // ammo[Constants.FAST_ROCKET_TYPE] = 5;
-        // ammo[Constants.SLOW_ROCKET_TYPE] = 5;
+        hasCurrentAmmo = false;
+        editing = false;
+        IsPaused = false;
+        IsDead = false;
+        IsEndLevel = false;
+        IsOnStoryMode = false;
+        health= 1;
+        points = 999f;
+        damaged = false;
+    }
+    public void initRestartTutorial()
+    {
+        ammo[Constants.BOMB_TYPE] = 3;
+        ammo[Constants.C4_TYPE] = 4;
+        ammo[Constants.FAST_ROCKET_TYPE] = 5;
+        ammo[Constants.SLOW_ROCKET_TYPE] = 5;
 
-        // //temporal, cambiar luego
-        // currentAmmo[Constants.BOMB_TYPE] =  ammo[Constants.BOMB_TYPE];
-        // currentAmmo[Constants.C4_TYPE] =  ammo[Constants.C4_TYPE];
-        // currentAmmo[Constants.FAST_ROCKET_TYPE] =  ammo[Constants.FAST_ROCKET_TYPE];
-        // currentAmmo[Constants.SLOW_ROCKET_TYPE] =  ammo[Constants.SLOW_ROCKET_TYPE];
-        // currentAmmoType = Constants.BOMB_TYPE;
+        //temporal, cambiar luego
+        currentAmmo[Constants.BOMB_TYPE] =  ammo[Constants.BOMB_TYPE];
+        currentAmmo[Constants.C4_TYPE] =  ammo[Constants.C4_TYPE];
+        currentAmmo[Constants.FAST_ROCKET_TYPE] =  ammo[Constants.FAST_ROCKET_TYPE];
+        currentAmmo[Constants.SLOW_ROCKET_TYPE] =  ammo[Constants.SLOW_ROCKET_TYPE];
+        currentAmmoType = Constants.BOMB_TYPE;
         hasCurrentAmmo = false;
         editing = false;
         IsPaused = false;
