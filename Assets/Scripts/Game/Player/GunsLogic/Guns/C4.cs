@@ -74,8 +74,8 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                                 obj.GetComponent<BreakableTile>().explode = true;
                             }
                         }
-                        //Instanciar otro
-                        Grid.gameStateManager.hasCurrentAmmo = false;
+                    //Instanciar otro
+                    Grid.gameStateManager.hasCurrentAmmo = false;
                     explosion.transform.position = gameObject.transform.position;
                     Instantiate(explosion);
                     Grid.audioManager.Play("ExplodeFX");
