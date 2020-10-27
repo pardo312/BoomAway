@@ -10,26 +10,19 @@ using TMPro;
 
 public class SignUp : MonoBehaviour
 {
-    [SerializeField]private TMP_InputField userTextField;
-    [SerializeField]private TMP_InputField passwordTextField;
-    [SerializeField]private GameObject onlineMenu;
-    [SerializeField]private TextMeshProUGUI failSingupText;
+    [SerializeField] private TMP_InputField userTextField;
+    [SerializeField] private TMP_InputField passwordTextField;
+    [SerializeField] private GameObject onlineMenu;
+    [SerializeField] private TextMeshProUGUI failSingupText;
     private bool userExist = false;
     private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/Users/";
 
     // Update is called once per frame
     public void SignUpRequest()
     {
-        if(userTextField.text != "" && passwordTextField.text != ""){
-            UnityWebRequestCheckIfUserExist(userTextField.text);
-            if(!userExist){
-                StartCoroutine(UnityRequestSingUp());
-                userExist=false;
-            }
-            else{
-                failSingupText.text = "el nombre de usuario ya existe, prueba con otro.";
-                StartCoroutine(disableFailText());
-            }
+        if (userTextField.text != "" && passwordTextField.text != "")
+        {
+            StartCoroutine(UnityWebRequestCheckIfUserExist(userTextField.text));
         }
         else
         {
@@ -37,7 +30,49 @@ public class SignUp : MonoBehaviour
             StartCoroutine(disableFailText());
         }
     }
-    IEnumerator UnityRequestSingUp(){
+    #region CheckIfUserExist
+
+    IEnumerator UnityWebRequestCheckIfUserExist(string userName)
+    {
+        List<string[]> users = new List<string[]>();
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(urlFirebaseOnline + ".json"))
+        {
+            yield return webRequest.SendWebRequest();
+            if (webRequest.isNetworkError)
+            {
+                Debug.LogError("Error: " + webRequest.error);
+            }
+            else
+            {
+                JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
+                foreach (JSONNode player in data)
+                {
+                    if (userName.Equals(player["user"]))
+                    {
+                        userExist = true;
+                    }
+                }
+                singUpLogic();
+            }
+        }
+    }
+    #endregion
+
+    private void singUpLogic()
+    {
+        if (!userExist)
+        {
+            StartCoroutine(UnityRequestSingUp());
+            userExist = false;
+        }
+        else
+        {
+            failSingupText.text = "el nombre de usuario ya existe, prueba con otro.";
+            StartCoroutine(disableFailText());
+        }
+    }
+    IEnumerator UnityRequestSingUp()
+    {
 
         byte[] bytesPassword = Serialize(passwordTextField.text);
         string dataPassword = System.Convert.ToBase64String(bytesPassword);
@@ -72,29 +107,4 @@ public class SignUp : MonoBehaviour
         failSingupText.SetText("");
     }
 
-    #region CheckIfUserExist
-    
-    private void UnityWebRequestCheckIfUserExist(string userName)
-    {
-        List<string[]> users = new List<string[]>();
-        using (UnityWebRequest webRequest = UnityWebRequest.Get(urlFirebaseOnline + ".json"))
-        {
-            webRequest.SendWebRequest();
-            if (webRequest.isNetworkError)
-            {
-                Debug.LogError("Error: " + webRequest.error);
-            }
-            else
-            {
-                JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
-                foreach(JSONNode player in data)
-                {
-                    if(userName.Equals(player["user"])){
-                        userExist = true;
-                    }
-                }
-            }
-        }
-    }
-    #endregion
 }
