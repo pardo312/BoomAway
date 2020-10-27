@@ -96,7 +96,8 @@ public class LoadSavegameSlots : MonoBehaviour
                 JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
                 foreach (JSONNode comment in data)
                 {
-                    savedComments.Add(comment);
+                    foreach (JSONNode com in comment)
+                        { savedComments.Add(com); }
                 }
             }
         }
@@ -143,6 +144,14 @@ public class LoadSavegameSlots : MonoBehaviour
                         upvotes.Add(0);
                         downvotes.Add(0);
                     }
+                    try
+                    {
+                        author.Add(player["user"]);
+                    }
+                    catch
+                    {
+                        author.Add("Author");
+                    }
                 }
             }
         }
@@ -163,9 +172,12 @@ public class LoadSavegameSlots : MonoBehaviour
                 showCommentScreen(templevel);
             });
 
+            GameObject authors = buttonObject.transform.GetChild(1).gameObject;
+            authors.GetComponent<TextMeshProUGUI>().text = author[i];
 
             GameObject upVoteButton = buttonObject.transform.GetChild(3).gameObject;
             upVoteButton.GetComponent<TextMeshProUGUI>().text = upvotes[i].ToString();
+
             GameObject downVoteButton = buttonObject.transform.GetChild(4).gameObject;
             downVoteButton.GetComponent<TextMeshProUGUI>().text = downvotes[i].ToString();
             if (votedUp[i] == 0 && votedDown[i] == 0)
@@ -215,7 +227,6 @@ public class LoadSavegameSlots : MonoBehaviour
             }
 
             
-
             int index = i;
             buttonObject.GetComponent<Button>().onClick.AddListener(() =>
             {

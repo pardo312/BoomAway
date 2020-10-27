@@ -11,15 +11,15 @@ public class CreateComment : MonoBehaviour
 
 
 
-    void enviarComentario(string level)
+    public void enviarComentario()
     {
-        StartCoroutine(sendComment(level));
+        StartCoroutine(sendComment(comentario.text));
 
     }
 
     IEnumerator sendComment(string level)
     {
-        using (UnityWebRequest webRequest = UnityWebRequest.Post(urlFirebaseOnline + '/' + level + '/' + "Comments" + ".json", comentario.text))
+        using (UnityWebRequest webRequest = UnityWebRequest.Post(urlFirebaseOnline + '/' + level + '/' + "Comments" + ".json", "Comment: "+ '"' + comentario.text + '"' ))
         {
             yield return webRequest.SendWebRequest();
         }
