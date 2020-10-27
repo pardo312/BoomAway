@@ -98,7 +98,6 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                 }
                 Grid.gameStateManager.hasCurrentAmmo = false;
                 explosion.transform.position = gameObject.transform.position;
-                explosion.transform.localPosition = gameObject.transform.localPosition;
                 Instantiate(explosion);
                 Grid.audioManager.Play("ExplodeFX");
                 Destroy(gameObject);
@@ -110,7 +109,9 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
         }
         private void OnCollisionEnter2D(Collision2D other) {
             if(((1<<other.gameObject.layer) & layerToStick) != 0){
-                rb.bodyType = RigidbodyType2D.Static;
+                Destroy(rb);
+                transform.SetParent(other.transform);
+                
             }
         }
         void OnDrawGizmos()
