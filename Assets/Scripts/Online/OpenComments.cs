@@ -12,7 +12,8 @@ public class OpenComments : MonoBehaviour
     public void showHide()
     {
         commentMenu.SetActive(true);
-        onlineMenu.SetActive(false);
+        if(onlineMenu!= null)
+            onlineMenu.SetActive(false);
     }
 
 }

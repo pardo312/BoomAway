@@ -22,7 +22,6 @@ public class DamagePlayer : MonoBehaviour
             //Si el jugador toca las puas, "salta" en 45º hacia la dieccion donde las toco
             if(other.name.Equals("Player") && !(Grid.gameStateManager.damaged)) 
             {
-                Debug.Log("Took damage when bool damaged=" + Grid.gameStateManager.damaged);
                 if (otherIsLeft)
                     other.GetComponent<Rigidbody2D>().AddForce(new Vector2(-launchForce, launchForce));
                 else

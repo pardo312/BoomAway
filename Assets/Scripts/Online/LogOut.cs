@@ -9,7 +9,7 @@ public class LogOut : MonoBehaviour
     // Start is called before the first frame update
     public void logOutOnline()
     {
-        Grid.gameStateManager.usernameOnline = "";
+        Grid.gameStateManager.usernameOnline = "Anonymous";
         transform.parent.gameObject.SetActive(false);
         onlineLoginMenu.SetActive(true);
     }

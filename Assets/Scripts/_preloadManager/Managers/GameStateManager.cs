@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameStateManager : MonoBehaviour
 {
     
-    [HideInInspector]public string usernameOnline = "";
+    [HideInInspector]public string usernameOnline ;
     //Ammo
     [HideInInspector]public int[] ammo;
     [HideInInspector]public int[] currentAmmo;
@@ -40,6 +40,7 @@ public class GameStateManager : MonoBehaviour
 
     void Awake()
     {
+        usernameOnline = "Anonymous";
         IsOnGame=false;
         setAmmo();
         initVariables();

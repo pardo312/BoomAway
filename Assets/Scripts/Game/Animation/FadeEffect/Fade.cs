@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Fade : MonoBehaviour
@@ -11,5 +10,10 @@ public class Fade : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetBool("FadeIn",false);
         animator.SetBool("FadeOut",true);
+        GUI.enabled = false;
+    }
+    IEnumerator waitTillEndOfFade(){
+        yield return new WaitForSecondsRealtime(2);
+        GUI.enabled = true;
     }
 }
