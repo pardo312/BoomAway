@@ -2,6 +2,7 @@
 {
 
     public const int PLAYER_SPEED = 7;
+    public const int PLAYER_MAX_SPEED = 7;
 
 
     public const int AMOUNT_GUNS = 4;

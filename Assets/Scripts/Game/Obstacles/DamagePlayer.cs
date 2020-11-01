@@ -10,6 +10,7 @@ public class DamagePlayer : MonoBehaviour
     public float launchForce = 20f;
     private float invulnerableTime = 3f;    //Changing this will desync the damage animation
 
+    [SerializeField] private float damage; 
     private void OnCollisionStay2D(Collision2D collision)
     {
         if(Grid.gameStateManager.editing == false)
@@ -27,7 +28,7 @@ public class DamagePlayer : MonoBehaviour
                 else
                     other.GetComponent<Rigidbody2D>().AddForce(new Vector2(launchForce, launchForce));
 
-                Grid.gameStateManager.health -= 0.2f;
+                Grid.gameStateManager.health -= damage;
                 Grid.gameStateManager.damaged = true;
                 Grid.audioManager.Play("PlayerDamage");
             }

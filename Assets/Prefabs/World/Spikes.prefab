@@ -166,4 +166,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launchForce: 300
-  invulnerableTime: 5
+  damage: 0.2
