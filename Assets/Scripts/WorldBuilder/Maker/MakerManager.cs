@@ -16,8 +16,10 @@ public class MakerManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if(Grid.gameStateManager.currentWorldBuilderLevel != "")
+        if(Grid.gameStateManager.currentWorldBuilderLevel != ""){
             Grid.worldSaveManager.loadWorldFromFirebase(Grid.gameStateManager.currentWorldBuilderLevel, SaveType.Builder);
+            
+        }
        
         tiles= Grid.worldSaveManager.makerTilePrefab;
         Grid.gameStateManager.editing = true;

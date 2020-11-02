@@ -17,6 +17,9 @@ public class LoadSavegameSlots : MonoBehaviour
     public GameObject commentMenu;
     public GameObject onlineMenu;
 
+    
+    public GameObject loadingText;
+
     private List<string> author = new List<string>();
     private List<string> saveFiles = new List<string>();
     private List<string> saveUserOfFile = new List<string>();
@@ -25,20 +28,20 @@ public class LoadSavegameSlots : MonoBehaviour
     private List<int> downvotes = new List<int>();
     private List<int> votedUp = new List<int>();
     private List<int> votedDown = new List<int>();
+    
+    private List<string> thumbnail = new List<string>();
 
     private string templevel;
 
     private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/OnlineLevels";
     public void showLoadScreen()
     {
-
         saveFiles = new List<string>();
         for (int i = 0; i < loadArea.transform.childCount; i++)
         {
             Transform button = loadArea.transform.GetChild(i);
             Destroy(button.gameObject);
         }
-        
         GetLoadFiles();
     }
 
@@ -50,21 +53,17 @@ public class LoadSavegameSlots : MonoBehaviour
             Transform button = loadCommentArea.transform.GetChild(i);
             Destroy(button.gameObject);
         }
-
-
         GetLoadComments(level);
     }
 
     public void showUserWorldsLoadScreen()
     {
-
         saveFiles = new List<string>();
         for (int i = 0; i < loadArea.transform.childCount; i++)
         {
             Transform button = loadArea.transform.GetChild(i);
             Destroy(button.gameObject);
         }
-
         GetUserWorldsLoadFiles();
     }
 
@@ -152,29 +151,116 @@ public class LoadSavegameSlots : MonoBehaviour
                     {
                         author.Add("Author");
                     }
+                    StartCoroutine(addThumbnailToList(player["Thumbnail"]));
                 }
             }
         }
-        for (int i = 0; i < saveFiles.Count; i++)
+        instatiateButton(false);
+    }
+    IEnumerator UnityRequestUserLevelsOnline() 
+    {
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(urlFirebaseOnline + ".json"))
         {
-            GameObject buttonObject = Instantiate(loadButtonPrefab);
-            buttonObject.transform.SetParent(loadArea.transform, false);
-            LoadScene loadSceneScript = buttonObject.AddComponent<LoadScene>();
+            yield return webRequest.SendWebRequest();
+            if (webRequest.isNetworkError)
+            {
+                Debug.LogError("Error: " + webRequest.error);
+            }
+            else
+            {
+                JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
+                foreach (KeyValuePair<string, JSONNode> kvp in (JSONObject)data)
+                {
+                    saveUserOfFile.Add(kvp.Key);
+                }
+                foreach(JSONNode player in data)
+                {
+                    if(player["user"].Equals(Grid.gameStateManager.usernameOnline))
+                    {
+                        saveFiles.Add(player["LevelName"]);
+                        try
+                        {
+                            votedUp.Add(player["VotedUp"]);
+                            votedDown.Add(player["VotedDown"]);
+                            upvotes.Add(player["Upvotes"]);
+                            downvotes.Add(player["Downvotes"]);
+                        }
+                        catch
+                        {
+                            upvotes.Add(0);
+                            downvotes.Add(0);
+                        }
+                        try
+                        {
+                            author.Add(player["user"]);
+                        }
+                        catch
+                        {
+                            author.Add("Author");
+                        }
+                        StartCoroutine(addThumbnailToList(player["Thumbnail"]));
+                        }
+                }
+            }      
+        }  
+        instatiateButton(true);      
+    }
+    IEnumerator addThumbnailToList(string thumbnailFirebase){
+            yield return null;
+            thumbnail.Add(thumbnailFirebase);
+    }
+    IEnumerator loadThumbnail(GameObject buttonObject, int index){
+            yield return null;
+            GameObject thumbnailImage = buttonObject.transform.GetChild(5).gameObject;
+            Texture2D thumbnailTexture = new Texture2D(4, 2);
+            byte[] thumbnailByte = System.Convert.FromBase64String(thumbnail[index]);
+            thumbnailTexture.LoadImage(thumbnailByte);
+            thumbnailTexture.Apply();
+            thumbnailImage.GetComponent<RawImage>().texture =thumbnailTexture;
+    }
 
+    IEnumerator sendUpvote(OpenComments openCommentScript, string upvotes)
+    {
+        using (UnityWebRequest webRequest = UnityWebRequest.Put(urlFirebaseOnline + '/' + openCommentScript.level + '/' + "Upvotes.json", upvotes)) 
+        {
+            yield return webRequest.SendWebRequest();
+        }
+    }
+    
+    IEnumerator sendDownvote(OpenComments openCommentScript, string downvotes)
+    {
+        using (UnityWebRequest webRequest = UnityWebRequest.Put(urlFirebaseOnline + '/' + openCommentScript.level + '/' + "Downvotes.json", downvotes))
+        {
+            yield return webRequest.SendWebRequest();
+        }
+    }
+
+    private void instatiateButton(bool isWorldBuilder)
+    {
+            for (int i = 0; i < saveFiles.Count; i++)
+            {
+            GameObject buttonObject = Instantiate(loadButtonPrefab);
+            buttonObject.transform.SetParent(loadArea.transform,false);
+            LoadScene loadSceneScript = buttonObject.AddComponent<LoadScene>();
+            
+            //Comments
             GameObject commentButton = buttonObject.transform.GetChild(2).gameObject;
             OpenComments openCommentScript = commentButton.GetComponent<OpenComments>();
             string templevel = saveUserOfFile[i];
             openCommentScript.level = templevel;
             openCommentScript.commentMenu = commentMenu;
-            openCommentScript.onlineMenu = onlineMenu;
+            if(onlineMenu!= null)
+                openCommentScript.onlineMenu = onlineMenu;
+
             commentButton.GetComponent<Button>().onClick.AddListener(openCommentScript.showHide);
             commentButton.GetComponent<Button>().onClick.AddListener(delegate {
                 showCommentScreen(templevel);
             });
-
+            //Author
             GameObject authors = buttonObject.transform.GetChild(1).gameObject;
             authors.GetComponent<TextMeshProUGUI>().text = author[i];
 
+            //Votes
             GameObject upVoteButton = buttonObject.transform.GetChild(3).gameObject;
             upVoteButton.GetComponent<TextMeshProUGUI>().text = upvotes[i].ToString();
 
@@ -225,72 +311,31 @@ public class LoadSavegameSlots : MonoBehaviour
                 downVoteButton.GetComponent<TextMeshProUGUI>().text = downvotes[i].ToString();
                 downVoteButton.GetComponent<Button>().onClick.AddListener(delegate { StartCoroutine(sendDownvote(openCommentScript, downvote)); }) ;
             }
-
-            
+            //Thumbnail
+            StartCoroutine(loadThumbnail(buttonObject,i));
+            //OnClickButton
             int index = i;
-            buttonObject.GetComponent<Button>().onClick.AddListener(() =>
+            if(isWorldBuilder)
             {
-                Grid.gameStateManager.currentOnlineLevel = saveFiles[index];
-                loadSceneScript.loadScene("OnlineLevel");
-            });
-            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[index];
-        }
-
-    }
-
-    IEnumerator sendUpvote(OpenComments openCommentScript, string upvotes)
-    {
-        using (UnityWebRequest webRequest = UnityWebRequest.Put(urlFirebaseOnline + '/' + openCommentScript.level + '/' + "Upvotes.json", upvotes)) 
-        {
-            yield return webRequest.SendWebRequest();
-        }
-    }
-    
-    IEnumerator sendDownvote(OpenComments openCommentScript, string downvotes)
-    {
-        using (UnityWebRequest webRequest = UnityWebRequest.Put(urlFirebaseOnline + '/' + openCommentScript.level + '/' + "Downvotes.json", downvotes))
-        {
-            yield return webRequest.SendWebRequest();
-        }
-    }
-
-    IEnumerator UnityRequestUserLevelsOnline() 
-    {
-        using (UnityWebRequest webRequest = UnityWebRequest.Get(urlFirebaseOnline + ".json"))
-        {
-            yield return webRequest.SendWebRequest();
-            if (webRequest.isNetworkError)
-            {
-                Debug.LogError("Error: " + webRequest.error);
+                buttonObject.GetComponent<Button>().onClick.AddListener(()=>
+                {   
+                    //Deshabilita el boton de back
+                    GameObject.Find("BackButtonLoadWorld").SetActive(false);
+                    Grid.gameStateManager.currentWorldBuilderLevel = saveFiles[index];
+                    Time.timeScale=1;
+                    loadSceneScript.loadScene("WorldBuilder");
+                });
             }
-            else
-            {
-                JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
-                foreach(JSONNode player in data)
+            else{
+                buttonObject.GetComponent<Button>().onClick.AddListener(() =>
                 {
-                    if(player["user"].Equals(Grid.gameStateManager.usernameOnline))
-                        saveFiles.Add(player["LevelName"]);
-                }
+                    Grid.gameStateManager.currentOnlineLevel = saveFiles[index];
+                    loadSceneScript.loadScene("OnlineLevel");
+                });
             }
+            //Button Text
+            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[i];
+            loadingText.SetActive(false);
         }
-        for (int i = 0; i < saveFiles.Count; i++)
-        {
-            GameObject buttonObject = Instantiate(loadButtonPrefab);
-            buttonObject.transform.SetParent(loadArea.transform,false);
-            LoadScene loadSceneScript = buttonObject.AddComponent<LoadScene>();
-            
-            int index = i;
-            buttonObject.GetComponent<Button>().onClick.AddListener(()=>
-            {   
-                //Deshabilita el boton de back
-                
-                GameObject.Find("BackButtonLoadWorld").SetActive(false);
-                Grid.gameStateManager.currentWorldBuilderLevel = saveFiles[index];
-                Time.timeScale=1;
-                loadSceneScript.loadScene("WorldBuilder");
-            });
-            buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = saveFiles[index];
-        }
-        
     }
 }

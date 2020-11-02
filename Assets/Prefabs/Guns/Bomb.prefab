@@ -182,8 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2af32387344ea074a8a2504ef0bc56f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombScript: {fileID: 4295435146365775203}
-  bombLogicGameObject: {fileID: 3658173121980457282}
 --- !u!1 &4253079745285633796
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +341,7 @@ MonoBehaviour:
   timeUntilExplode: 2
   readyToExplode: 0
   explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
-  usesPer: {fileID: 0}
+  usesPer: {fileID: 4279720032406392472}
 --- !u!114 &6677206435837295226
 MonoBehaviour:
   m_ObjectHideFlags: 0

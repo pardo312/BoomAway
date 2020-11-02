@@ -74,27 +74,28 @@ namespace BoomAway.Assets.Scripts.Game.Player.Guns
                                 obj.GetComponent<BreakableTile>().explode = true;
                             }
                         }
-                        //Instanciar otro
-                        Grid.gameStateManager.hasCurrentAmmo = false;
+                    //Instanciar otro
+                    Grid.gameStateManager.hasCurrentAmmo = false;
                     explosion.transform.position = gameObject.transform.position;
-                    explosion.transform.localPosition = gameObject.transform.localPosition;
                     Instantiate(explosion);
                     Grid.audioManager.Play("ExplodeFX");
                     Destroy(gameObject);
                 }
             }
         }
-            private void OnCollisionEnter2D(Collision2D other) {
-                if(((1<<other.gameObject.layer) & layerToStick) != 0){
-                    rb.bodyType = RigidbodyType2D.Static;
-                }
-            }
-            void OnDrawGizmos()
-            {
-                Gizmos.color = Color.red;
-                Gizmos.DrawWireSphere(transform.position, 2);
+        private void OnCollisionEnter2D(Collision2D other) {
+            if(((1<<other.gameObject.layer) & layerToStick) != 0){
+                Destroy(rb);
+                transform.SetParent(other.transform);
+                
             }
         }
-
+        void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, 2);
+        }
+        
     }
+}
 

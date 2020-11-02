@@ -24,13 +24,14 @@ namespace BoomAway.Assets.Scripts.PreloadManager
 
 
         #region Save
-        public bool saveWorld(string saveName)
+        public bool saveWorld(string saveName,byte[] imageBytes)
         {
             urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/OnlineLevels/"; 
-            StartCoroutine(FindOnlineLevelWithSameNameToSave(saveName));
+            StartCoroutine(FindOnlineLevelWithSameNameToSave(saveName,imageBytes));
             return true;
         }
-         IEnumerator FindOnlineLevelWithSameNameToSave(string name)
+
+         IEnumerator FindOnlineLevelWithSameNameToSave(string name,byte[] imageBytes)
         {
             using (UnityWebRequest webRequest = UnityWebRequest.Get(urlFirebaseOnline + ".json"))
             {
@@ -65,7 +66,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager
                     }
                 }
             }
-            StartCoroutine(saveWorldToFireBase(name));
+            StartCoroutine(saveWorldToFireBase(name,imageBytes));
         }
         #endregion
 
@@ -220,7 +221,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager
         }
         #endregion
         #region Save
-        IEnumerator saveWorldToFireBase(string levelName)
+        IEnumerator saveWorldToFireBase(string levelName,byte[] imageBytes)
         {
 
             makerTiles = GameObject.FindObjectsOfType<MakerTile>();
@@ -242,9 +243,12 @@ namespace BoomAway.Assets.Scripts.PreloadManager
 
             byte[] bytesSTATE = Serialize(state);
             string dataSTATE = System.Convert.ToBase64String(bytesSTATE);
+            
+            string levelThumbnail = System.Convert.ToBase64String(imageBytes);
 
             string dq = ('"' + "");
-            string bodyJsonString = "{" + dq + "LevelName" + dq + ":" + dq + (levelName) + dq + "," + dq + "SAVE" + dq + ":" + dq + (dataSAVE) + dq + "," + dq + "STATE" + dq + ":" + dq + (dataSTATE) + dq +"," + dq + "user" + dq + ":" + dq + (Grid.gameStateManager.usernameOnline) + dq + "}";
+            string bodyJsonString = "{" + dq + "LevelName" + dq + ":" + dq + (levelName) + dq + "," + dq + "SAVE" + dq + ":" + dq + (dataSAVE) + dq + "," + dq + "STATE" + dq + ":" + dq + (dataSTATE) + dq +"," + dq + "user" + dq + ":" + dq + (Grid.gameStateManager.usernameOnline) + dq + "," + dq + "Thumbnail" + dq + ":" + dq + (levelThumbnail) + dq +"}";
+              
 
             var request = new UnityWebRequest(urlFirebaseOnline + ".json", "POST");
             byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);

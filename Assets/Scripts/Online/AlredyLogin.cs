@@ -8,7 +8,7 @@ public class AlredyLogin : MonoBehaviour
     [SerializeField]private GameObject onlineMenu;
     void Start()
     {
-        if(Grid.gameStateManager.usernameOnline!= "")
+        if(Grid.gameStateManager.usernameOnline!= "Anonymous")
         {
             onlineMenu.SetActive(true);
             gameObject.SetActive(false);

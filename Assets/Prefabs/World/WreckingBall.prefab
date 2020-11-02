@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 7808721395703088476}
   - component: {fileID: 1011144839036122061}
   - component: {fileID: 3332954893008188064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chain4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 2450057967270398469}
   - component: {fileID: 2450057967270398470}
   - component: {fileID: 2450057967270398471}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chain3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 2450057967418062136}
   - component: {fileID: 2450057967418062137}
   - component: {fileID: 2450057967418062142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chain2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2450057968013971551}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c7e4914da0510e14e835e3adea0a43b5, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -771,7 +771,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!233 &2450057968626626176
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -848,7 +848,7 @@ GameObject:
   - component: {fileID: 2450057968805102348}
   - component: {fileID: 2450057968805102339}
   - component: {fileID: 2450057968805102336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chain1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -37,9 +37,11 @@ namespace BoomAway.Assets.Scripts.Game.Player
         {
             if(!Grid.gameStateManager.editing){
                 
-                if(horizontalInput != 0){
+                if(horizontalInput !=0){
                     initEndWalk=true;
-                    rb.velocity = new Vector2(horizontalInput * speed * Time.deltaTime* 100, rb.velocity.y);
+                    if(Mathf.Abs(horizontalInput)> 0.2f)
+                        rb.velocity = new Vector2(horizontalInput * speed * Time.deltaTime* 100, rb.velocity.y);
+
                     if(!isWalking && rb.velocity.y == 0){
                         Grid.audioManager.Play("WalkFX");
                         isWalking=true;
@@ -55,7 +57,6 @@ namespace BoomAway.Assets.Scripts.Game.Player
                     if(initEndWalk){
                         if(rb.velocity.x <0)
                             flipSprite();
-                        rb.velocity = new Vector2(0, rb.velocity.y);
                         Grid.audioManager.StopPlaying("WalkFX");
                         isWalking=false;
                         initEndWalk=false;
