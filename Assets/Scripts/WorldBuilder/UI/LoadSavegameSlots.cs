@@ -17,7 +17,8 @@ public class LoadSavegameSlots : MonoBehaviour
     public GameObject commentMenu;
     public GameObject onlineMenu;
 
-    
+    public CreateComment createComm;
+
     public GameObject loadingText;
 
     private List<string> author = new List<string>();
@@ -95,8 +96,7 @@ public class LoadSavegameSlots : MonoBehaviour
                 JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
                 foreach (JSONNode comment in data)
                 {
-                    foreach (JSONNode com in comment)
-                        { savedComments.Add(com); }
+                    Debug.Log(comment);savedComments.Add(comment);
                 }
             }
         }
@@ -251,11 +251,12 @@ public class LoadSavegameSlots : MonoBehaviour
             openCommentScript.commentMenu = commentMenu;
             if(onlineMenu!= null)
                 openCommentScript.onlineMenu = onlineMenu;
-
+            openCommentScript.create = createComm;
             commentButton.GetComponent<Button>().onClick.AddListener(openCommentScript.showHide);
             commentButton.GetComponent<Button>().onClick.AddListener(delegate {
                 showCommentScreen(templevel);
             });
+            commentButton.GetComponent<Button>().onClick.AddListener(delegate { openCommentScript.updateLevel(); });
             //Author
             GameObject authors = buttonObject.transform.GetChild(1).gameObject;
             authors.GetComponent<TextMeshProUGUI>().text = author[i];

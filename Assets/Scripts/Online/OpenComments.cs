@@ -17,9 +17,9 @@ public class OpenComments : MonoBehaviour
             onlineMenu.SetActive(false);
     }
 
-    public void sendComment()
+    public void updateLevel()
     {
-        
+        create.updateLevel(level);
     }
 
 }

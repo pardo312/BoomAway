@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -9,28 +10,37 @@ public class CreateComment : MonoBehaviour
 {
     public TMP_InputField comentario;
     private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/OnlineLevels";
-    public TextMeshProUGUI comm;
-    public string temp; 
-
+    private string lvl = "";
 
     public void enviarComentario()
     {
-        comentario = gameObject.GetComponent<TMP_InputField>();
-        comm = gameObject.GetComponent<TextMeshProUGUI>();
-        StartCoroutine(sendComment(temp));
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+        StartCoroutine(sendComment(comentario.text));
     }
 
-    public void change(string temp1)
+    public void updateLevel(string level)
     {
-        temp = temp1;
+        lvl = level;
     }
 
     IEnumerator sendComment(string level)
     {
-        using (UnityWebRequest webRequest = UnityWebRequest.Post(urlFirebaseOnline + '/' + level + '/' + "Comments" + ".json", "Comment: "+ '"' +  + '"' ))
+        Debug.Log(urlFirebaseOnline + '/' + lvl + '/' + "Comments" + ".json");
+        Debug.Log("Comment: " + '"' + comentario.text + '"');
+        using (UnityWebRequest webRequest = new UnityWebRequest(urlFirebaseOnline + '/' + lvl + '/' + "Comments" + ".json", "POST"))
         {
-            yield return webRequest.SendWebRequest();
+            
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(comentario.text);
+            webRequest.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+            webRequest.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+            webRequest.SetRequestHeader("Content-Type", "application/json"); 
+            if (webRequest.isNetworkError)
+            {
+                Debug.LogError(webRequest.responseCode);
+            }
+            else
+            {
+                Debug.Log("No errors");
+            }yield return webRequest.SendWebRequest();
         }
     }
 
