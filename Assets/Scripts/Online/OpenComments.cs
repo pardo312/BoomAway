@@ -8,11 +8,17 @@ public class OpenComments : MonoBehaviour
     public string level;
     public GameObject commentMenu;
     public GameObject onlineMenu;
+    public CreateComment create;
 
     public void showHide()
     {
         commentMenu.SetActive(true);
         onlineMenu.SetActive(false);
+    }
+
+    public void sendComment()
+    {
+        
     }
 
 }
