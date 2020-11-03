@@ -13,6 +13,7 @@ public class EndFlag : MonoBehaviour
     private GameObject player;
     private bool initFadeIn;
     private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/StoryLevels/";
+    private string urlFirebaseOnlineLevels = "https://boomaway-10de3.firebaseio.com/OnlineLevels/";
     void Awake()
     {
         animator = GameObject.Find("FadeEffect").GetComponent<Animator>();
@@ -27,7 +28,7 @@ public class EndFlag : MonoBehaviour
                 {
                     alredyLoading = true;
                     timeOnLevelScript.uploadLevelCompletionTime();
-                    StartCoroutine(sendScore(Grid.gameStateManager.currentLevel, Grid.gameStateManager.points));
+                    StartCoroutine(sendScore( Grid.gameStateManager.points));
                     switch (Grid.gameStateManager.currentLevel)
                     {
                         default:
@@ -73,20 +74,30 @@ public class EndFlag : MonoBehaviour
         }
     }
 
-    IEnumerator sendScore(string level, float score)
+    IEnumerator sendScore( float score)
     {
-
+        
         WWWForm form = new WWWForm();
         form.AddField( "Score",  ((int)score).ToString() );
         Debug.Log(Encoding.UTF8.GetString(form.data));
-
-
-        var request = new UnityWebRequest(urlFirebaseOnline + level + "/Leaderboard/" + Grid.gameStateManager.usernameOnline + ".json", "POST");
+        UnityWebRequest request = null;
+        if (Grid.gameStateManager.IsOnStoryMode)
+        {
+            string level = Grid.gameStateManager.currentLevel;
+            request = new UnityWebRequest(urlFirebaseOnline + level + "/Leaderboard/" + Grid.gameStateManager.usernameOnline + ".json", "POST");
+        }
+        else {
+            string level = Grid.gameStateManager.currentOnlineLevel;
+            request = new UnityWebRequest(urlFirebaseOnlineLevels + level + "/Leaderboard/" + Grid.gameStateManager.usernameOnline + ".json", "POST");
+        }
         byte[] bodyRaw = Encoding.UTF8.GetBytes(((int)score).ToString());
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
         yield return request.SendWebRequest();
+
+
+        //Intento anterior
         /*using (UnityWebRequest webRequest = UnityWebRequest.Post(urlFirebaseOnline + level + "/Leaderboard/" + Grid.gameStateManager.usernameOnline + ".json", form))
         {
             webRequest.SetRequestHeader("Content-Type", "application/json");
