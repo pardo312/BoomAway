@@ -134,4 +134,12 @@ public class GameStateManager : MonoBehaviour
         frequency.uploadLevelFrequency();
     }
 
+    //Function called from the html template to send analytics even if browser tab/window is closed
+    public void OnBrowserClose()
+    {
+        lastLevel.uploadLastLevel(currentLevel);
+        deaths.uploadDeaths(currentDeaths);
+        frequency.uploadLevelFrequency();
+    }
+
 }
