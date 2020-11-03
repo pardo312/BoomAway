@@ -96,7 +96,8 @@ public class LoadSavegameSlots : MonoBehaviour
                 JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
                 foreach (JSONNode comment in data)
                 {
-                    Debug.Log(comment);savedComments.Add(comment);
+                    Debug.Log(comment);
+                    savedComments.Add(comment);
                 }
             }
         }

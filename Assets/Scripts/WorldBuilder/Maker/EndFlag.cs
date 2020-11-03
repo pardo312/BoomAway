@@ -2,6 +2,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using BoomAway.Assets.Scripts.Game.Player;
+using UnityEngine.Networking;
+using System.Text;
 
 public class EndFlag : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class EndFlag : MonoBehaviour
     private Animator animator;
     private GameObject player;
     private bool initFadeIn;
+    private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/StoryLevels/";
     void Awake()
     {
         animator = GameObject.Find("FadeEffect").GetComponent<Animator>();
@@ -24,6 +27,7 @@ public class EndFlag : MonoBehaviour
                 {
                     alredyLoading = true;
                     timeOnLevelScript.uploadLevelCompletionTime();
+                    StartCoroutine(sendScore(Grid.gameStateManager.currentLevel, Grid.gameStateManager.points));
                     switch (Grid.gameStateManager.currentLevel)
                     {
                         default:
@@ -68,6 +72,40 @@ public class EndFlag : MonoBehaviour
             player.GetComponent<Animator>().speed -= Time.deltaTime*0.5f;
         }
     }
+
+    IEnumerator sendScore(string level, float score)
+    {
+
+        WWWForm form = new WWWForm();
+        form.AddField( "Score",  ((int)score).ToString() );
+        Debug.Log(Encoding.UTF8.GetString(form.data));
+
+
+        var request = new UnityWebRequest(urlFirebaseOnline + level + "/Leaderboard/" + Grid.gameStateManager.usernameOnline + ".json", "POST");
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(((int)score).ToString());
+        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        yield return request.SendWebRequest();
+        /*using (UnityWebRequest webRequest = UnityWebRequest.Post(urlFirebaseOnline + level + "/Leaderboard/" + Grid.gameStateManager.usernameOnline + ".json", form))
+        {
+            webRequest.SetRequestHeader("Content-Type", "application/json");
+            
+            yield return webRequest.SendWebRequest();
+            if (webRequest.isNetworkError || webRequest.isHttpError)
+            {
+                Debug.Log(urlFirebaseOnline + "/" + level + "/Leaderboard/" + Grid.gameStateManager.usernameOnline + ".json");
+                Debug.Log(webRequest.error);
+            }
+            else
+            {
+                Debug.Log(urlFirebaseOnline + "/" + level + "/Leaderboard/" + Grid.gameStateManager.usernameOnline + ".json");
+                Debug.Log("No errors");
+            }
+            Debug.Log(webRequest.result);
+        }*/
+    }
+
     IEnumerator fadeIn(string sceneName){    
         animator.SetBool("FadeIn",true);
         animator.SetBool("FadeOut",false);

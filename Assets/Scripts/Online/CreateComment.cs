@@ -26,7 +26,7 @@ public class CreateComment : MonoBehaviour
     {
         Debug.Log(urlFirebaseOnline + '/' + lvl + '/' + "Comments" + ".json");
         Debug.Log("Comment: " + '"' + comentario.text + '"');
-        using (UnityWebRequest webRequest = new UnityWebRequest(urlFirebaseOnline + '/' + lvl + '/' + "Comments" + ".json", "POST"))
+        using (UnityWebRequest webRequest = new UnityWebRequest(urlFirebaseOnline + '/' + lvl + '/' + "Comments.json", "POST"))
         {
             
             byte[] bodyRaw = Encoding.UTF8.GetBytes(comentario.text);
