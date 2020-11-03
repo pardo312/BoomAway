@@ -12,7 +12,7 @@ public class DeathsPerSession : MonoBehaviour
     {
         #if !UNITY_EDITOR
             string bodyJsonString = "{\"" + "Deaths" + "\":" + numDeaths + "}";
-            var request = new UnityWebRequest(urlFirebaseAnalytics, "POST");
+            var request = new UnityWebRequest(urlFirebaseAnalytics+"?auth="+Grid.gameStateManager.tokenFirebase, "POST");
             byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
             request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
             request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();

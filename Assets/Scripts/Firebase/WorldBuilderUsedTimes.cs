@@ -21,7 +21,7 @@ public class WorldBuilderUsedTimes : MonoBehaviour
     {
         string doubleQuotation  = ('"' + "" );
         string bodyJsonString ="{"+doubleQuotation+"usedTimes"+doubleQuotation+":"+ (currentUsedTimes+1) + "}";
-        var request = new UnityWebRequest(urlFirebaseAnalytics, "PUT");
+        var request = new UnityWebRequest(urlFirebaseAnalytics+ "?auth="+Grid.gameStateManager.tokenFirebase, "PUT");
         byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
         request.uploadHandler = (UploadHandler) new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler) new DownloadHandlerBuffer();

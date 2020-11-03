@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
+using SimpleJSON;
 
 public class GameStateManager : MonoBehaviour
 {
@@ -34,16 +36,54 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private DeathsPerSession deaths;
     [SerializeField] public List<Sprite> ammoTypeSprites;
     public LevelsPlayed frequency;
+    private string urlApiKeyAuth = "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCI7sFCh9GQhdWwAPtsXNWtwnia9YQPRHc";
 
+    public string tokenFirebase = "";
+    private int tokenExpirationTime =-1;
+     private float initTimeTokenFirebase;
     //Points
     public float points;
 
+    private void Update() {
+        if(tokenExpirationTime!= -1)
+        {
+            if(Time.time >= initTimeTokenFirebase + tokenExpirationTime)
+            {
+                Debug.Log("Reset Firebase Token");
+                getTokenFirebase();
+                initTimeTokenFirebase = Time.time;
+            }
+        }
+    }
     void Awake()
     {
+        initTimeTokenFirebase = Time.time;
+        getTokenFirebase();
         usernameOnline = "Anonymous";
         IsOnGame=false;
         setAmmo();
         initVariables();
+    }
+    public void getTokenFirebase()
+    {
+        StartCoroutine(requestTokenFirebase());
+    }
+    IEnumerator requestTokenFirebase()
+    {
+        using (UnityWebRequest webRequest = UnityWebRequest.Post(urlApiKeyAuth,""))
+        {
+            yield return webRequest.SendWebRequest();
+            if (webRequest.isNetworkError)
+            {
+                Debug.LogError("Error: " + webRequest.error);
+            }
+            else
+            {
+                JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
+                tokenFirebase = data["idToken"];
+                tokenExpirationTime = (int)data["expiresIn"];
+            }
+        }
     }
     void setAmmo(){
         currentBoxAmmoType= 0;
@@ -128,6 +168,14 @@ public class GameStateManager : MonoBehaviour
         }
     }
     private void OnApplicationQuit()
+    {
+        lastLevel.uploadLastLevel(currentLevel);
+        deaths.uploadDeaths(currentDeaths);
+        frequency.uploadLevelFrequency();
+    }
+
+    //Function called from the html template to send analytics even if browser tab/window is closed
+    public void OnBrowserClose()
     {
         lastLevel.uploadLastLevel(currentLevel);
         deaths.uploadDeaths(currentDeaths);

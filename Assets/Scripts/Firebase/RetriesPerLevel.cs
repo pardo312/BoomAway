@@ -24,7 +24,7 @@ public class RetriesPerLevel : MonoBehaviour
         var lvl = Grid.gameStateManager.currentLevel;
         string doubleQuotation = ('"' + "");
         string bodyJsonString = "{" + doubleQuotation + "retries" + doubleQuotation + ":" + (currentRetries + 1) + "}";
-        var request = new UnityWebRequest(urlFirebaseAnalytics + "/" + lvl + ".json", "PUT");
+        var request = new UnityWebRequest(urlFirebaseAnalytics + "/" + lvl + ".json?auth="+Grid.gameStateManager.tokenFirebase, "PUT");
         byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();

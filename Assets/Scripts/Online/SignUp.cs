@@ -80,7 +80,7 @@ public class SignUp : MonoBehaviour
         string dq = ('"' + "");
         string bodyJsonString = "{" + dq + "user" + dq + ":" + dq + (userTextField.text) + dq + "," + dq + "password" + dq + ":" + dq + (dataPassword) + dq + "}";
 
-        var request = new UnityWebRequest(urlFirebaseOnline + ".json", "POST");
+        var request = new UnityWebRequest(urlFirebaseOnline + ".json?auth="+Grid.gameStateManager.tokenFirebase, "POST");
         byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
