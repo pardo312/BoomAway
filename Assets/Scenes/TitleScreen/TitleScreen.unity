@@ -14299,6 +14299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comentario: {fileID: 1426017302}
+  loadSavegame: {fileID: 1273783813}
 --- !u!1 &2071673719
 GameObject:
   m_ObjectHideFlags: 0

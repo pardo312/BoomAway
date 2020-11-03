@@ -11,6 +11,7 @@ public class CreateComment : MonoBehaviour
     public TMP_InputField comentario;
     private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/OnlineLevels";
     private string lvl = "";
+    public LoadSavegameSlots loadSavegame; 
 
     public void enviarComentario()
     {
@@ -29,7 +30,7 @@ public class CreateComment : MonoBehaviour
         using (UnityWebRequest webRequest = new UnityWebRequest(urlFirebaseOnline + '/' + lvl + '/' + "Comments.json?auth="+Grid.gameStateManager.tokenFirebase, "POST"))
         {
             Debug.Log(urlFirebaseOnline + '/' + lvl + '/' + "Comments.json");
-            byte[] bodyRaw = Encoding.UTF8.GetBytes(comentario.text.ToString());
+            byte[] bodyRaw = Encoding.UTF8.GetBytes('"' + comentario.text + '"');
             webRequest.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
             webRequest.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
             webRequest.SetRequestHeader("Content-Type", "application/json");
@@ -42,6 +43,7 @@ public class CreateComment : MonoBehaviour
             else
             {
                 Debug.Log("No errors");
+                loadSavegame.showCommentScreen(lvl);
             }
         }
     }
