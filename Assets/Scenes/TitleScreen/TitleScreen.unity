@@ -4885,10 +4885,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9823f3f1fca7e674d9d698b336fcbe9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 
-  LeaderBoard: {fileID: 0}
-  ScorePrefab: {fileID: 0}
-  VerticalListArea: {fileID: 0}
+  level: LVL7
+  LeaderBoard: {fileID: 1455771100}
+  ScorePrefab: {fileID: 5946009920473999428, guid: 7592292b9bf758c49b1c770c73b45795, type: 3}
+  VerticalListArea: {fileID: 1198440885}
 --- !u!114 &697935415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9676,7 +9676,7 @@ RectTransform:
   - {fileID: 1322507807}
   - {fileID: 1359836745}
   m_Father: {fileID: 333997671}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -10949,10 +10949,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9823f3f1fca7e674d9d698b336fcbe9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 
-  LeaderBoard: {fileID: 0}
-  ScorePrefab: {fileID: 0}
-  VerticalListArea: {fileID: 0}
+  level: LVL5
+  LeaderBoard: {fileID: 1455771100}
+  ScorePrefab: {fileID: 5946009920473999428, guid: 7592292b9bf758c49b1c770c73b45795, type: 3}
+  VerticalListArea: {fileID: 1198440885}
 --- !u!114 &1671432832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12634,10 +12634,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9823f3f1fca7e674d9d698b336fcbe9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 
-  LeaderBoard: {fileID: 0}
-  ScorePrefab: {fileID: 0}
-  VerticalListArea: {fileID: 0}
+  level: LVL8
+  LeaderBoard: {fileID: 1455771100}
+  ScorePrefab: {fileID: 5946009920473999428, guid: 7592292b9bf758c49b1c770c73b45795, type: 3}
+  VerticalListArea: {fileID: 1198440885}
 --- !u!1 &1861350449
 GameObject:
   m_ObjectHideFlags: 0
@@ -12726,10 +12726,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9823f3f1fca7e674d9d698b336fcbe9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 
-  LeaderBoard: {fileID: 0}
-  ScorePrefab: {fileID: 0}
-  VerticalListArea: {fileID: 0}
+  level: LVL6
+  LeaderBoard: {fileID: 1455771100}
+  ScorePrefab: {fileID: 5946009920473999428, guid: 7592292b9bf758c49b1c770c73b45795, type: 3}
+  VerticalListArea: {fileID: 1198440885}
 --- !u!1 &1866340597
 GameObject:
   m_ObjectHideFlags: 0
@@ -14441,10 +14441,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9823f3f1fca7e674d9d698b336fcbe9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 
-  LeaderBoard: {fileID: 0}
-  ScorePrefab: {fileID: 0}
-  VerticalListArea: {fileID: 0}
+  level: LVL4
+  LeaderBoard: {fileID: 1455771100}
+  ScorePrefab: {fileID: 5946009920473999428, guid: 7592292b9bf758c49b1c770c73b45795, type: 3}
+  VerticalListArea: {fileID: 1198440885}
 --- !u!1 &2130716530
 GameObject:
   m_ObjectHideFlags: 0
@@ -14612,10 +14612,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9823f3f1fca7e674d9d698b336fcbe9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 
-  LeaderBoard: {fileID: 0}
-  ScorePrefab: {fileID: 0}
-  VerticalListArea: {fileID: 0}
+  level: LVL3
+  LeaderBoard: {fileID: 1455771100}
+  ScorePrefab: {fileID: 5946009920473999428, guid: 7592292b9bf758c49b1c770c73b45795, type: 3}
+  VerticalListArea: {fileID: 1198440885}
 --- !u!114 &2140392997
 MonoBehaviour:
   m_ObjectHideFlags: 0
