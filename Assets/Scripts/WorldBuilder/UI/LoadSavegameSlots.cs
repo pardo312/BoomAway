@@ -222,7 +222,7 @@ public class LoadSavegameSlots : MonoBehaviour
 
     IEnumerator sendUpvote(OpenComments openCommentScript, string upvotes)
     {
-        using (UnityWebRequest webRequest = UnityWebRequest.Put(urlFirebaseOnline + '/' + openCommentScript.level + '/' + "Upvotes.json", upvotes)) 
+        using (UnityWebRequest webRequest = UnityWebRequest.Put(urlFirebaseOnline + '/' + openCommentScript.level + '/' + "Upvotes.json?auth=" + Grid.gameStateManager.tokenFirebase, upvotes)) 
         {
             yield return webRequest.SendWebRequest();
         }
@@ -230,7 +230,7 @@ public class LoadSavegameSlots : MonoBehaviour
     
     IEnumerator sendDownvote(OpenComments openCommentScript, string downvotes)
     {
-        using (UnityWebRequest webRequest = UnityWebRequest.Put(urlFirebaseOnline + '/' + openCommentScript.level + '/' + "Downvotes.json", downvotes))
+        using (UnityWebRequest webRequest = UnityWebRequest.Put(urlFirebaseOnline + '/' + openCommentScript.level + '/' + "Downvotes.json?auth=" + Grid.gameStateManager.tokenFirebase, downvotes))
         {
             yield return webRequest.SendWebRequest();
         }

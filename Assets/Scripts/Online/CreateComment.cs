@@ -26,13 +26,15 @@ public class CreateComment : MonoBehaviour
     {
         Debug.Log(urlFirebaseOnline + '/' + lvl + '/' + "Comments" + ".json");
         Debug.Log("Comment: " + '"' + comentario.text + '"');
-        using (UnityWebRequest webRequest = new UnityWebRequest(urlFirebaseOnline + '/' + lvl + '/' + "Comments" + ".json?auth="+Grid.gameStateManager.tokenFirebase, "POST"))
+        using (UnityWebRequest webRequest = new UnityWebRequest(urlFirebaseOnline + '/' + lvl + '/' + "Comments.json?auth="+Grid.gameStateManager.tokenFirebase, "POST"))
         {
-            
-            byte[] bodyRaw = Encoding.UTF8.GetBytes(comentario.text);
+            Debug.Log(urlFirebaseOnline + '/' + lvl + '/' + "Comments.json");
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(comentario.text.ToString());
             webRequest.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
             webRequest.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-            webRequest.SetRequestHeader("Content-Type", "application/json"); 
+            webRequest.SetRequestHeader("Content-Type", "application/json");
+            yield return webRequest.SendWebRequest();
+            Debug.Log(webRequest.result);
             if (webRequest.isNetworkError)
             {
                 Debug.LogError(webRequest.responseCode);
@@ -40,7 +42,7 @@ public class CreateComment : MonoBehaviour
             else
             {
                 Debug.Log("No errors");
-            }yield return webRequest.SendWebRequest();
+            }
         }
     }
 

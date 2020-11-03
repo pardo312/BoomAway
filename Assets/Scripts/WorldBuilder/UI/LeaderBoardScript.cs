@@ -75,7 +75,7 @@ public class LeaderBoardScript : MonoBehaviour
             buttonObject.transform.SetParent(VerticalListArea.transform, false);
             buttonObject.transform.GetChild(0).GetChild(0).transform.GetComponent<TextMeshProUGUI>().text = "" + listaScores[i].Item2;
             buttonObject.transform.GetChild(1).GetChild(0).transform.GetComponent<TextMeshProUGUI>().text = "" + listaScores[i].Item1;
-            buttonObject.transform.GetChild(2).GetChild(0).transform.GetComponent<TextMeshProUGUI>().text = "" + i + 1;
+            buttonObject.transform.GetChild(2).GetChild(0).transform.GetComponent<TextMeshProUGUI>().text = "" + (i + 1);
         }
     }
 }
