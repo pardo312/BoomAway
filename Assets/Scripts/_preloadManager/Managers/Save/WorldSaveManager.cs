@@ -250,7 +250,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager
             string bodyJsonString = "{" + dq + "LevelName" + dq + ":" + dq + (levelName) + dq + "," + dq + "SAVE" + dq + ":" + dq + (dataSAVE) + dq + "," + dq + "STATE" + dq + ":" + dq + (dataSTATE) + dq +"," + dq + "user" + dq + ":" + dq + (Grid.gameStateManager.usernameOnline) + dq + "," + dq + "Thumbnail" + dq + ":" + dq + (levelThumbnail) + dq +"}";
               
 
-            var request = new UnityWebRequest(urlFirebaseOnline + ".json", "POST");
+            var request = new UnityWebRequest(urlFirebaseOnline + ".json?auth="+Grid.gameStateManager.tokenFirebase, "POST");
             byte[] bodyRaw = Encoding.UTF8.GetBytes(bodyJsonString);
             request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
             request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
