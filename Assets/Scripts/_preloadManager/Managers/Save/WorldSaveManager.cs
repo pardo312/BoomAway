@@ -22,7 +22,6 @@ namespace BoomAway.Assets.Scripts.PreloadManager
         private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/OnlineLevels/";
         private string urlFirebaseStory = "https://boomaway-10de3.firebaseio.com/StoryLevels/";
 
-
         #region Save
         public bool saveWorld(string saveName,byte[] imageBytes)
         {
