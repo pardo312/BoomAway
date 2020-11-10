@@ -64,7 +64,7 @@ public class EndFlag : MonoBehaviour
                     Grid.gameStateManager.initRestart();
                     StartCoroutine(fadeIn("StoryLevel"));
                 }
-                else if(SceneManager.GetActiveScene().name.Equals("StoryLevel") && Grid.gameStateManager.IsOnStoryMode == false)
+                else if(!SceneManager.GetActiveScene().name.Equals("WorldBuilder"))
                 {
                     StartCoroutine(sendScore(Grid.gameStateManager.points));
                 }
@@ -84,8 +84,8 @@ public class EndFlag : MonoBehaviour
         UnityWebRequest request = null;
         if (Grid.gameStateManager.IsOnStoryMode)
         {
-            string level = Grid.gameStateManager.currentLevel;
-            request = new UnityWebRequest(urlFirebaseOnline + level + "/Leaderboard/" + Grid.gameStateManager.usernameOnline + ".json?auth=" + Grid.gameStateManager.tokenFirebase, "POST");
+            
+            request = new UnityWebRequest(urlFirebaseOnline + Grid.gameStateManager.currentLevel + "/Leaderboard/" + Grid.gameStateManager.usernameOnline + ".json?auth=" + Grid.gameStateManager.tokenFirebase, "POST");
         }
         else {
             string level = Grid.gameStateManager.currentOnlineLevel;
@@ -93,6 +93,7 @@ public class EndFlag : MonoBehaviour
         }
 
         Debug.Log(((int)score).ToString());
+        Debug.Log(request.url);
         byte[] bodyRaw = Encoding.UTF8.GetBytes(((int)score).ToString());
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
