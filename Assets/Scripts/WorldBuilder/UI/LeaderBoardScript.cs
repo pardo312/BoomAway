@@ -91,7 +91,7 @@ public class LeaderBoardScript : MonoBehaviour
     {
         using (UnityWebRequest request = UnityWebRequest.Get(urlFirebaseOnlineLvls + level + "/Leaderboard.json"))
         {
-            Debug.Log(urlFirebaseOnline + level + "/Leaderboard.json");
+            Debug.Log(urlFirebaseOnlineLvls + level + "/Leaderboard.json");
             yield return request.SendWebRequest();
             if (request.isNetworkError)
             {

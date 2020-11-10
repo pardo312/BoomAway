@@ -245,6 +245,9 @@ public class LoadSavegameSlots : MonoBehaviour
     {
             for (int i = 0; i < saveFiles.Count; i++)
             {
+
+            string templevel = saveUserOfFile[i];
+
             GameObject buttonObject = Instantiate(loadButtonPrefab);
             buttonObject.transform.SetParent(loadArea.transform,false);
             LoadScene loadSceneScript = buttonObject.AddComponent<LoadScene>();
@@ -252,7 +255,6 @@ public class LoadSavegameSlots : MonoBehaviour
             //Comments
             GameObject commentButton = buttonObject.transform.GetChild(2).gameObject;
             OpenComments openCommentScript = commentButton.GetComponent<OpenComments>();
-            string templevel = saveUserOfFile[i];
             openCommentScript.level = templevel;
             openCommentScript.commentMenu = commentMenu;
             if(onlineMenu!= null)
@@ -307,6 +309,8 @@ public class LoadSavegameSlots : MonoBehaviour
                 buttonObject.GetComponent<Button>().onClick.AddListener(() =>
                 {
                     Grid.gameStateManager.currentOnlineLevel = saveFiles[index];
+                    //CurrentLevelForPost
+                    Grid.gameStateManager.currentOnlineLevelForPost = templevel;
                     loadSceneScript.loadScene("OnlineLevel");
                 });
             }

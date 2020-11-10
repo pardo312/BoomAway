@@ -25,7 +25,8 @@ public class GameStateManager : MonoBehaviour
 
     //StateOfGame
     [HideInInspector]public string currentLevel;
-    [HideInInspector]public string currentOnlineLevel;
+    [HideInInspector] public string currentOnlineLevel;
+    [HideInInspector] public string currentOnlineLevelForPost;
     [HideInInspector]public string currentWorldBuilderLevel;
     [HideInInspector]public float health;
     [HideInInspector]public bool damaged;

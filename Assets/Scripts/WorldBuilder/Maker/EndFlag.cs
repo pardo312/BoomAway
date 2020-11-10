@@ -9,6 +9,7 @@ public class EndFlag : MonoBehaviour
 {
     [SerializeField] private TimeOnLevel timeOnLevelScript;
     private bool alredyLoading = false;
+    private bool alreadyFinished = false;
     private Animator animator;
     private GameObject player;
     private bool initFadeIn;
@@ -66,7 +67,11 @@ public class EndFlag : MonoBehaviour
                 }
                 else if(!SceneManager.GetActiveScene().name.Equals("WorldBuilder"))
                 {
-                    StartCoroutine(sendScore(Grid.gameStateManager.points));
+                    if (!alreadyFinished)
+                    {
+                        StartCoroutine(sendScore(Grid.gameStateManager.points));
+                        alreadyFinished = true;
+                    }
                 }
             }
         }
@@ -88,7 +93,7 @@ public class EndFlag : MonoBehaviour
             request = new UnityWebRequest(urlFirebaseOnline + Grid.gameStateManager.currentLevel + "/Leaderboard/" + Grid.gameStateManager.usernameOnline + ".json?auth=" + Grid.gameStateManager.tokenFirebase, "POST");
         }
         else {
-            string level = Grid.gameStateManager.currentOnlineLevel;
+            string level = Grid.gameStateManager.currentOnlineLevelForPost;
             request = new UnityWebRequest(urlFirebaseOnlineLevels + level + "/Leaderboard/" + Grid.gameStateManager.usernameOnline + ".json?auth=" + Grid.gameStateManager.tokenFirebase, "POST");
         }
 
