@@ -64,6 +64,10 @@ public class EndFlag : MonoBehaviour
                     Grid.gameStateManager.initRestart();
                     StartCoroutine(fadeIn("StoryLevel"));
                 }
+                else if(SceneManager.GetActiveScene().name.Equals("StoryLevel") && Grid.gameStateManager.IsOnStoryMode == false)
+                {
+                    StartCoroutine(sendScore(Grid.gameStateManager.points));
+                }
             }
         }
 

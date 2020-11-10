@@ -217,7 +217,7 @@ public class LoadSavegameSlots : MonoBehaviour
     }
     IEnumerator loadThumbnail(GameObject buttonObject, int index){
             yield return null;
-            GameObject thumbnailImage = buttonObject.transform.GetChild(5).gameObject;
+            GameObject thumbnailImage = buttonObject.transform.GetChild(4).gameObject;
             Texture2D thumbnailTexture = new Texture2D(4, 2);
             byte[] thumbnailByte = System.Convert.FromBase64String(thumbnail[index]);
             thumbnailTexture.LoadImage(thumbnailByte);

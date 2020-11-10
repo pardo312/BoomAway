@@ -48,15 +48,18 @@ public class LeaderBoardScript : MonoBehaviour
             {
                 Debug.Log(request.result);
 
-                JSONNode data = JSON.Parse(request.downloadHandler.text);
-
-                foreach (KeyValuePair<string, JSONNode> kvp in (JSONObject)data)
+                if (request.downloadHandler.text != null || request.downloadHandler.text.Length > 0)
                 {
-                    Debug.Log(kvp.Key);
-                    foreach (JSONNode score in kvp.Value)
+                    JSONNode data = JSON.Parse(request.downloadHandler.text);
+
+                    foreach (KeyValuePair<string, JSONNode> kvp in (JSONObject)data)
                     {
-                        Debug.Log(score);
-                        listaScores.Add(new Tuple<string, int>(kvp.Key, (int)score));
+                        Debug.Log(kvp.Key);
+                        foreach (JSONNode score in kvp.Value)
+                        {
+                            Debug.Log(score);
+                            listaScores.Add(new Tuple<string, int>(kvp.Key, (int)score));
+                        }
                     }
                 }
             }
