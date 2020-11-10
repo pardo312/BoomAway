@@ -14,6 +14,11 @@ public class LoadSavegameSlots : MonoBehaviour
     public GameObject commentPrefab;
     public GameObject loadCommentArea;
 
+    public GameObject Leaderboard;
+    public GameObject ScorePrefab;
+    public GameObject VerticalListArea;
+    public LeaderBoardScript leaderBoardScript;
+
     public GameObject commentMenu;
     public GameObject onlineMenu;
 
@@ -266,10 +271,8 @@ public class LoadSavegameSlots : MonoBehaviour
             GameObject upVoteButton = buttonObject.transform.GetChild(3).gameObject;
             upVoteButton.GetComponent<TextMeshProUGUI>().text = upvotes[i].ToString();
 
-            GameObject downVoteButton = buttonObject.transform.GetChild(4).gameObject;
-            downVoteButton.GetComponent<TextMeshProUGUI>().text = downvotes[i].ToString();
-            if (votedUp[i] == 0 && votedDown[i] == 0)
-            {
+            //GameObject downVoteButton = buttonObject.transform.GetChild(4).gameObject;
+            //downVoteButton.GetComponent<TextMeshProUGUI>().text = downvotes[i].ToString();
                 string upvote = (upvotes[i] + 1).ToString();
                 upVoteButton.GetComponent<TextMeshProUGUI>().text = upvotes[i].ToString();
                 upVoteButton.GetComponent<Button>().onClick.AddListener(() =>
@@ -277,42 +280,14 @@ public class LoadSavegameSlots : MonoBehaviour
                     StartCoroutine(sendUpvote(openCommentScript, upvote));
                 });
 
-                string downvote = (downvotes[i] + 1).ToString();
-                downVoteButton.GetComponent<TextMeshProUGUI>().text = downvotes[i].ToString();
-                downVoteButton.GetComponent<Button>().onClick.AddListener(() =>
-                {
-                    StartCoroutine(sendDownvote(openCommentScript, downvote));
-                });
-            }
-            else if (votedUp[i] == 1 && votedDown[i] == 0)
-            {
-                string upvote = (upvotes[i] - 1).ToString();
-                upVoteButton.GetComponent<TextMeshProUGUI>().text = upvotes[i].ToString();
-                upVoteButton.GetComponent<Button>().onClick.AddListener(() =>
-                {
-                    StartCoroutine(sendUpvote(openCommentScript, upvote));
-                });
+            //LeaderBoardOnline
+            GameObject leaderBoardButton = buttonObject.transform.GetChild(5).gameObject;
+            leaderBoardButton.GetComponent<LeaderBoardScript>().level = templevel;
+            leaderBoardButton.GetComponent<LeaderBoardScript>().LeaderBoard = Leaderboard;
+            leaderBoardButton.GetComponent<LeaderBoardScript>().ScorePrefab = ScorePrefab;
+            leaderBoardButton.GetComponent<LeaderBoardScript>().VerticalListArea = VerticalListArea;
+            leaderBoardButton.GetComponent<Button>().onClick.AddListener(leaderBoardButton.GetComponent<LeaderBoardScript>().loadLeaderBoardOnline);
 
-                string downvote = (downvotes[i] + 1).ToString();
-                downVoteButton.GetComponent<TextMeshProUGUI>().text = downvotes[i].ToString();
-                downVoteButton.GetComponent<Button>().onClick.AddListener(() =>
-                {
-                    StartCoroutine(sendDownvote(openCommentScript, downvote));
-                });
-            }
-            else if (votedUp[i] == 0 && votedDown[i] == 1)
-            {
-                string upvote = (upvotes[i] + 1).ToString();
-                upVoteButton.GetComponent<TextMeshProUGUI>().text = upvotes[i].ToString();
-                upVoteButton.GetComponent<Button>().onClick.AddListener(() =>
-                {
-                    StartCoroutine(sendUpvote(openCommentScript, upvote));
-                });
-
-                string downvote = (downvotes[i] - 1).ToString();
-                downVoteButton.GetComponent<TextMeshProUGUI>().text = downvotes[i].ToString();
-                downVoteButton.GetComponent<Button>().onClick.AddListener(delegate { StartCoroutine(sendDownvote(openCommentScript, downvote)); }) ;
-            }
             //Thumbnail
             StartCoroutine(loadThumbnail(buttonObject,i));
             //OnClickButton

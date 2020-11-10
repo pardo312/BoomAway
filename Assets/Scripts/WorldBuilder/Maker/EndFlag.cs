@@ -87,7 +87,7 @@ public class EndFlag : MonoBehaviour
             string level = Grid.gameStateManager.currentOnlineLevel;
             request = new UnityWebRequest(urlFirebaseOnlineLevels + level + "/Leaderboard/" + Grid.gameStateManager.usernameOnline + ".json?auth=" + Grid.gameStateManager.tokenFirebase, "POST");
         }
-        Debug.Log(request.url);
+
         Debug.Log(((int)score).ToString());
         byte[] bodyRaw = Encoding.UTF8.GetBytes(((int)score).ToString());
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
