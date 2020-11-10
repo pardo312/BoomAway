@@ -48,10 +48,10 @@ public class LeaderBoardScript : MonoBehaviour
             {
                 Debug.Log(request.result);
 
-                if (request.downloadHandler.text != null || request.downloadHandler.text.Length > 0)
+                if (!request.downloadHandler.text.Equals("null"))
                 {
-                    JSONNode data = JSON.Parse(request.downloadHandler.text);
 
+                    JSONNode data = JSON.Parse(request.downloadHandler.text);
                     foreach (KeyValuePair<string, JSONNode> kvp in (JSONObject)data)
                     {
                         Debug.Log(kvp.Key);
@@ -64,7 +64,10 @@ public class LeaderBoardScript : MonoBehaviour
                 }
             }
         }
-        listaScores.Sort((a, b) => b.Item2.CompareTo(a.Item2));
+        if (listaScores.Count > 0)
+        {
+            listaScores.Sort((a, b) => b.Item2.CompareTo(a.Item2));
+        }
         instantiateScores();
     }
 
@@ -81,7 +84,7 @@ public class LeaderBoardScript : MonoBehaviour
 
     public void loadLeaderBoardOnline()
     {
-        StartCoroutine(RequestLeaderBoard());
+        StartCoroutine(RequestLeaderBoardOnline());
     }
 
     IEnumerator RequestLeaderBoardOnline()
@@ -97,21 +100,26 @@ public class LeaderBoardScript : MonoBehaviour
             else
             {
                 Debug.Log(request.result);
-
-                JSONNode data = JSON.Parse(request.downloadHandler.text);
-
-                foreach (KeyValuePair<string, JSONNode> kvp in (JSONObject)data)
+                if (!request.downloadHandler.text.Equals("null"))
                 {
-                    Debug.Log(kvp.Key);
-                    foreach (JSONNode score in kvp.Value)
+                    JSONNode data = JSON.Parse(request.downloadHandler.text);
+
+                    foreach (KeyValuePair<string, JSONNode> kvp in (JSONObject)data)
                     {
-                        Debug.Log(score);
-                        listaScores.Add(new Tuple<string, int>(kvp.Key, (int)score));
+                        Debug.Log(kvp.Key);
+                        foreach (JSONNode score in kvp.Value)
+                        {
+                            Debug.Log(score);
+                            listaScores.Add(new Tuple<string, int>(kvp.Key, (int)score));
+                        }
                     }
                 }
             }
         }
-        listaScores.Sort((a, b) => b.Item2.CompareTo(a.Item2));
+        if (listaScores.Count > 0)
+        {
+            listaScores.Sort((a, b) => b.Item2.CompareTo(a.Item2));
+        }
         instantiateScores();
     }
 
@@ -125,6 +133,7 @@ public class LeaderBoardScript : MonoBehaviour
             buttonObject.transform.GetChild(1).GetChild(0).transform.GetComponent<TextMeshProUGUI>().text = "" + listaScores[i].Item1;
             buttonObject.transform.GetChild(2).GetChild(0).transform.GetComponent<TextMeshProUGUI>().text = "" + (i + 1);
         }
+        LeaderBoard.SetActive(true);
     }
 }
 

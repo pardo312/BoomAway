@@ -286,7 +286,7 @@ public class LoadSavegameSlots : MonoBehaviour
             leaderBoardButton.GetComponent<LeaderBoardScript>().LeaderBoard = Leaderboard;
             leaderBoardButton.GetComponent<LeaderBoardScript>().ScorePrefab = ScorePrefab;
             leaderBoardButton.GetComponent<LeaderBoardScript>().VerticalListArea = VerticalListArea;
-            leaderBoardButton.GetComponent<Button>().onClick.AddListener(leaderBoardButton.GetComponent<LeaderBoardScript>().loadLeaderBoardOnline);
+            leaderBoardButton.GetComponent<Button>().onClick.AddListener(leaderBoardButton.GetComponent<LeaderBoardScript>().showOnlineLoadScreen);
 
             //Thumbnail
             StartCoroutine(loadThumbnail(buttonObject,i));
