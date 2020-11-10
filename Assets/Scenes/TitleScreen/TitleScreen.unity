@@ -8049,6 +8049,7 @@ GameObject:
   - component: {fileID: 1273783812}
   - component: {fileID: 1273783813}
   - component: {fileID: 1273783814}
+  - component: {fileID: 1273783815}
   m_Layer: 5
   m_Name: Online(hideOnAwake)
   m_TagString: Untagged
@@ -8095,6 +8096,10 @@ MonoBehaviour:
   loadArea: {fileID: 2130716530}
   commentPrefab: {fileID: 5942854257101032648, guid: b2c98380fac48ef4ba287117a815fa12, type: 3}
   loadCommentArea: {fileID: 28312111}
+  Leaderboard: {fileID: 1455771100}
+  ScorePrefab: {fileID: 5946009920473999428, guid: 7592292b9bf758c49b1c770c73b45795, type: 3}
+  VerticalListArea: {fileID: 1198440885}
+  leaderBoardScript: {fileID: 1273783815}
   commentMenu: {fileID: 1401379559}
   onlineMenu: {fileID: 464007312}
   createComm: {fileID: 2068477484}
@@ -8107,6 +8112,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273783811}
   m_CullTransparentMesh: 0
+--- !u!114 &1273783815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273783811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9823f3f1fca7e674d9d698b336fcbe9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 
+  LeaderBoard: {fileID: 0}
+  ScorePrefab: {fileID: 0}
+  VerticalListArea: {fileID: 0}
 --- !u!1 &1278456304
 GameObject:
   m_ObjectHideFlags: 0

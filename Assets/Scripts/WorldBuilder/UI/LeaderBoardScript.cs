@@ -15,7 +15,7 @@ public class LeaderBoardScript : MonoBehaviour
     private List<Tuple<string, int>> listaScores;
 
     private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/StoryLevels/";
-
+    private string urlFirebaseOnlineLvls = "https://boomaway-10de3.firebaseio.com/OnlineLevels/";
 
     public void showLoadScreen()
     {
@@ -48,6 +48,56 @@ public class LeaderBoardScript : MonoBehaviour
             {
                 Debug.Log(request.result);
 
+                if (request.downloadHandler.text != null || request.downloadHandler.text.Length > 0)
+                {
+                    JSONNode data = JSON.Parse(request.downloadHandler.text);
+
+                    foreach (KeyValuePair<string, JSONNode> kvp in (JSONObject)data)
+                    {
+                        Debug.Log(kvp.Key);
+                        foreach (JSONNode score in kvp.Value)
+                        {
+                            Debug.Log(score);
+                            listaScores.Add(new Tuple<string, int>(kvp.Key, (int)score));
+                        }
+                    }
+                }
+            }
+        }
+        listaScores.Sort((a, b) => b.Item2.CompareTo(a.Item2));
+        instantiateScores();
+    }
+
+    public void showOnlineLoadScreen()
+    {
+        listaScores = new List<Tuple<string, int>>();
+        for (int i = 0; i < VerticalListArea.transform.childCount; i++)
+        {
+            Transform button = VerticalListArea.transform.GetChild(i);
+            Destroy(button.gameObject);
+        }
+        loadLeaderBoardOnline();
+    }
+
+    public void loadLeaderBoardOnline()
+    {
+        StartCoroutine(RequestLeaderBoard());
+    }
+
+    IEnumerator RequestLeaderBoardOnline()
+    {
+        using (UnityWebRequest request = UnityWebRequest.Get(urlFirebaseOnlineLvls + level + "/Leaderboard.json"))
+        {
+            Debug.Log(urlFirebaseOnline + level + "/Leaderboard.json");
+            yield return request.SendWebRequest();
+            if (request.isNetworkError)
+            {
+                Debug.LogError("Error: " + request.error);
+            }
+            else
+            {
+                Debug.Log(request.result);
+
                 JSONNode data = JSON.Parse(request.downloadHandler.text);
 
                 foreach (KeyValuePair<string, JSONNode> kvp in (JSONObject)data)
@@ -65,8 +115,6 @@ public class LeaderBoardScript : MonoBehaviour
         instantiateScores();
     }
 
-
-    
     public void instantiateScores()
     {
         for (int i = 0; i < listaScores.Count; i++)
