@@ -43,10 +43,11 @@ public class GameStateManager : MonoBehaviour
     public float points;
 
     private void Update() {
+        getTokenFirebase();
         if(Time.time >= initTimeTokenFirebase + tokenExpirationTime)
         {
+            tokenFirebase= "";
             Debug.Log("Reset Firebase Token");
-            getTokenFirebase();
             initTimeTokenFirebase = Time.time;
         }
     }
@@ -61,7 +62,9 @@ public class GameStateManager : MonoBehaviour
     }
     public void getTokenFirebase()
     {
-        StartCoroutine(requestTokenFirebase());
+        if(tokenFirebase== ""){
+            StartCoroutine(requestTokenFirebase());
+        }
     }
     IEnumerator requestTokenFirebase()
     {
