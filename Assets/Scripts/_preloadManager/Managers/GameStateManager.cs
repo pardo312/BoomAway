@@ -36,23 +36,18 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private DeathsPerSession deaths;
     [SerializeField] public List<Sprite> ammoTypeSprites;
     public LevelsPlayed frequency;
-    private string urlApiKeyAuth = "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCI7sFCh9GQhdWwAPtsXNWtwnia9YQPRHc";
-
     public string tokenFirebase = "";
-    private int tokenExpirationTime =-1;
+    private int tokenExpirationTime =3600;
      private float initTimeTokenFirebase;
     //Points
     public float points;
 
     private void Update() {
-        if(tokenExpirationTime!= -1)
+        if(Time.time >= initTimeTokenFirebase + tokenExpirationTime)
         {
-            if(Time.time >= initTimeTokenFirebase + tokenExpirationTime)
-            {
-                Debug.Log("Reset Firebase Token");
-                getTokenFirebase();
-                initTimeTokenFirebase = Time.time;
-            }
+            Debug.Log("Reset Firebase Token");
+            getTokenFirebase();
+            initTimeTokenFirebase = Time.time;
         }
     }
     void Awake()
@@ -70,7 +65,7 @@ public class GameStateManager : MonoBehaviour
     }
     IEnumerator requestTokenFirebase()
     {
-        using (UnityWebRequest webRequest = UnityWebRequest.Post(urlApiKeyAuth,""))
+        using (UnityWebRequest webRequest = UnityWebRequest.Get("https://boomaway-ps.netlify.app/.netlify/functions/api"))
         {
             yield return webRequest.SendWebRequest();
             if (webRequest.isNetworkError)
@@ -79,9 +74,7 @@ public class GameStateManager : MonoBehaviour
             }
             else
             {
-                JSONNode data = JSON.Parse(webRequest.downloadHandler.text);
-                tokenFirebase = data["idToken"];
-                tokenExpirationTime = (int)data["expiresIn"];
+                tokenFirebase = webRequest.downloadHandler.text;
             }
         }
     }
