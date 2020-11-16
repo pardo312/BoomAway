@@ -14,6 +14,10 @@ namespace BoomAway.Assets.Scripts.Game.Player
         private bool isWalking;
         private bool initEndWalk;
         private Animator anim;
+
+        public float noMoveTime = 0.1f;
+        private bool canMove = true;
+
         void Start()
         {
             isWalking =false;
@@ -26,7 +30,7 @@ namespace BoomAway.Assets.Scripts.Game.Player
         // Update is called once per frame
         void Update()
         {
-            if(!Grid.gameStateManager.editing){
+            if(!Grid.gameStateManager.editing && canMove){
                 horizontalInput = Input.GetAxis("Horizontal");
 
                 anim.SetBool("walking", horizontalInput != 0);
@@ -36,7 +40,6 @@ namespace BoomAway.Assets.Scripts.Game.Player
         void FixedUpdate()
         {
             if(!Grid.gameStateManager.editing){
-                
                 if(horizontalInput !=0){
                     initEndWalk=true;
                     if(Mathf.Abs(horizontalInput)> 0.2f)
@@ -67,6 +70,20 @@ namespace BoomAway.Assets.Scripts.Game.Player
         void flipSprite()
         {
             sr.flipX = horizontalInput <= 0;
+        }
+
+        private void resetMovement()
+        {
+            canMove = true;
+        }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            if(rb.velocity.y > 1f)
+            {
+                canMove = false;
+                Invoke("resetMovement", noMoveTime);    //After noMoveTime seconds, movement is restored
+            }
         }
     }
 }

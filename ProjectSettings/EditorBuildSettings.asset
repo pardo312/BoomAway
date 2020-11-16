@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OnlineLevel/OnlineLevel.unity
     guid: 97c8bcc8113e3004d969909b62c09307
+  - enabled: 0
+    path: Assets/Scenes/Prototiping/PabloScene.unity
+    guid: 0744b74f409543147ab8e87195c01b8f
   m_configObjects: {}
