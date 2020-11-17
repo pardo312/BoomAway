@@ -79,11 +79,15 @@ namespace BoomAway.Assets.Scripts.Game.Player
 
         private void OnCollisionExit2D(Collision2D collision)
         {
-            if(rb.velocity.y > 1f)
+            if(rb.velocity.y > 0.1f)
             {
-                canMove = false;
-                Invoke("resetMovement", noMoveTime);    //After noMoveTime seconds, movement is restored
+                canMove = false;   //After noMoveTime seconds, movement is restored
             }
+        }
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+                canMove = true;    //After noMoveTime seconds, movement is restored
+        
         }
     }
 }
