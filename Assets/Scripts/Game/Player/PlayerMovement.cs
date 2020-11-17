@@ -81,13 +81,12 @@ namespace BoomAway.Assets.Scripts.Game.Player
         {
             if(rb.velocity.y > 0.1f)
             {
-                canMove = false;   //After noMoveTime seconds, movement is restored
+                canMove = false; 
             }
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
-                canMove = true;    //After noMoveTime seconds, movement is restored
-        
+                canMove = true;
         }
     }
 }
