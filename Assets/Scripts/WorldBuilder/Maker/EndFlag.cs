@@ -73,6 +73,13 @@ public class EndFlag : MonoBehaviour
                         alreadyFinished = true;
                     }
                 }
+                if(SceneManager.GetActiveScene().name.Equals("WorldBuilder")){
+                    SceneManager.LoadScene("WorldBuilder");
+                    Grid.gameStateManager.editing=true;
+                }
+                if(SceneManager.GetActiveScene().name.Equals("OnlineLevel")){
+                    SceneManager.LoadScene("TitleScreen");
+                }
             }
         }
 
