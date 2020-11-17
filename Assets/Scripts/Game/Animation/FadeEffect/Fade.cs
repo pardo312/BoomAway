@@ -13,7 +13,7 @@ public class Fade : MonoBehaviour
         GUI.enabled = false;
     }
     IEnumerator waitTillEndOfFade(){
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(5);
         GUI.enabled = true;
     }
 }

@@ -30,7 +30,7 @@ namespace BoomAway.Assets.Scripts.Game.Player
         // Update is called once per frame
         void Update()
         {
-            if(!Grid.gameStateManager.editing && canMove){
+            if(!Grid.gameStateManager.editing && canMove && Grid.gameStateManager.levelLoaded){
                 horizontalInput = Input.GetAxis("Horizontal");
 
                 anim.SetBool("walking", horizontalInput != 0);

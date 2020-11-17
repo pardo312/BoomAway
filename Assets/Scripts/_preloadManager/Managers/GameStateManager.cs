@@ -30,6 +30,7 @@ public class GameStateManager : MonoBehaviour
     [HideInInspector]public string currentWorldBuilderLevel;
     [HideInInspector]public float health;
     [HideInInspector]public bool damaged;
+    [HideInInspector]public bool levelLoaded = true;
 
     //Analytics
     [HideInInspector] public int currentDeaths;

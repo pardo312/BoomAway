@@ -18,10 +18,13 @@ public class WorldBuilderPlayerMovement : MonoBehaviour
         
         if (Grid.gameStateManager.editing)
         {
-            rb.bodyType = RigidbodyType2D.Static;
-            transform.position += new Vector3(Input.GetAxis("Horizontal")*speed*Time.deltaTime,
-            Input.GetAxis("Vertical")*speed*Time.deltaTime,0);
-            inEditMode=true;
+            if(Grid.gameStateManager.levelLoaded)
+            {
+                rb.bodyType = RigidbodyType2D.Static;
+                transform.position += new Vector3(Input.GetAxis("Horizontal")*speed*Time.deltaTime,
+                Input.GetAxis("Vertical")*speed*Time.deltaTime,0);
+                inEditMode=true;
+            }
         }
         else{
             if(inEditMode){

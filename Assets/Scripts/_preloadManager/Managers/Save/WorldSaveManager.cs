@@ -72,6 +72,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager
         #region Load
         public void loadWorldFromFirebase(string name, SaveType savetype)
         {
+            Grid.gameStateManager.levelLoaded= false;
             string url = "";
             switch (savetype)
             {
@@ -164,6 +165,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager
             //LEVEL STATE
             byte[] bytesNewSTATE = System.Convert.FromBase64String(queryResultSTATE);
             loadState(bytesNewSTATE);
+            Grid.gameStateManager.levelLoaded= true;
         }
         IEnumerator UnityRequestLevelStory(string url)
         {
@@ -202,6 +204,7 @@ namespace BoomAway.Assets.Scripts.PreloadManager
             //LEVEL STATE
             byte[] bytesNewSTATE = System.Convert.FromBase64String(queryResultSTATE);
             loadState(bytesNewSTATE);
+            Grid.gameStateManager.levelLoaded= true;
         }
         public bool loadState(byte[] bytesNewSTATE)
         {
