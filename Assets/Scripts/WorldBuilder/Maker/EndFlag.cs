@@ -68,12 +68,12 @@ public class EndFlag : MonoBehaviour
                 else if(!SceneManager.GetActiveScene().name.Equals("WorldBuilder"))
                 {
                     if (!alreadyFinished)
-                    {
+                    { 
                         StartCoroutine(sendScore(Grid.gameStateManager.points));
                         alreadyFinished = true;
                     }
                 }
-                if(SceneManager.GetActiveScene().name.Equals("WorldBuilder")){
+                if(SceneManager.GetActiveScene().name.Equals("WorldBuilder") && !Grid.gameStateManager.currentWorldBuilderLevel.Equals("")){
                     SceneManager.LoadScene("WorldBuilder");
                     Grid.gameStateManager.editing=true;
                 }
