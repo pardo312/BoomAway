@@ -13,8 +13,8 @@ public class EndFlag : MonoBehaviour
     private Animator animator;
     private GameObject player;
     private bool initFadeIn;
-    private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/StoryLevels/";
-    private string urlFirebaseOnlineLevels = "https://boomaway-10de3.firebaseio.com/OnlineLevels/";
+    private string urlFirebaseOnline = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/StoryLevels/";
+    private string urlFirebaseOnlineLevels = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/OnlineLevels/";
     void Awake()
     {
         animator = GameObject.Find("FadeEffect").GetComponent<Animator>();

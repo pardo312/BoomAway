@@ -14,8 +14,8 @@ public class LeaderBoardScript : MonoBehaviour
     public GameObject VerticalListArea;
     private List<Tuple<string, int>> listaScores;
 
-    private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/StoryLevels/";
-    private string urlFirebaseOnlineLvls = "https://boomaway-10de3.firebaseio.com/OnlineLevels/";
+    private string urlFirebaseOnline = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/StoryLevels/";
+    private string urlFirebaseOnlineLvls = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/OnlineLevels/";
 
     public void showLoadScreen()
     {

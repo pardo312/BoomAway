@@ -13,7 +13,7 @@ public class Login : MonoBehaviour
     [SerializeField]private TMP_InputField passwordTextField;
     [SerializeField]private GameObject onlineMenu;
     [SerializeField]private TextMeshProUGUI failedLoginMessage;
-    private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/Users/";
+    private string urlFirebaseOnline = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/Users/";
 
     public void loginOnline()
     {

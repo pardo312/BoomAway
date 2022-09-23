@@ -6,7 +6,7 @@ using System.Text;
 
 public class TimeOnLevel : MonoBehaviour
 {
-    string urlFirebaseAnalytics = "https://boomaway-10de3.firebaseio.com/Analytics/TimeOnLevel/.json";
+    string urlFirebaseAnalytics = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/Analytics/TimeOnLevel/.json";
     private float timer = 0f;
     void Update(){
          timer += Time.deltaTime;

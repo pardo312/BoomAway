@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 
 public class DeathsPerSession : MonoBehaviour
 {
-    string urlFirebaseAnalytics = "https://boomaway-10de3.firebaseio.com/Analytics/DeathsPerSession.json";
+    string urlFirebaseAnalytics = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/Analytics/DeathsPerSession.json";
 
     public void uploadDeaths(int numDeaths)
     {

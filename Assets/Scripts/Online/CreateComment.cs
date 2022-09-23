@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class CreateComment : MonoBehaviour
 {
     public TMP_InputField comentario;
-    private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/OnlineLevels";
+    private string urlFirebaseOnline = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/OnlineLevels";
     private string lvl = "";
     public LoadSavegameSlots loadSavegame; 
 

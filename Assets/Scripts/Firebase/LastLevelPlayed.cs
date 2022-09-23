@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 
 public class LastLevelPlayed : MonoBehaviour
 {
-    string urlFirebaseAnalytics = "https://boomaway-10de3.firebaseio.com/Analytics/LastLevel.json";
+    string urlFirebaseAnalytics = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/Analytics/LastLevel.json";
 
     public void uploadLastLevel(string lvl)
     {

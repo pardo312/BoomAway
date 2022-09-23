@@ -39,7 +39,7 @@ public class LoadSavegameSlots : MonoBehaviour
 
     private string templevel;
 
-    private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/OnlineLevels";
+    private string urlFirebaseOnline = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/OnlineLevels";
     public void showLoadScreen()
     {
         saveFiles = new List<string>();

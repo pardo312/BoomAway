@@ -7,7 +7,7 @@ using UnityEngine.Networking;
 
 public class RetriesPerLevel : MonoBehaviour
 {
-    string urlFirebaseAnalytics = "https://boomaway-10de3.firebaseio.com/Analytics/RetriesPerLevel";
+    string urlFirebaseAnalytics = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/Analytics/RetriesPerLevel";
     int currentRetries = 0;
     private void Awake()
     {

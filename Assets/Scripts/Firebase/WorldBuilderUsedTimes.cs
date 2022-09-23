@@ -7,7 +7,7 @@ using System.Text;
 public class WorldBuilderUsedTimes : MonoBehaviour
 {
     [SerializeField]private LoadScene loadSceneScript;
-    string urlFirebaseAnalytics = "https://boomaway-10de3.firebaseio.com/Analytics/WorldBuilder.json";
+    string urlFirebaseAnalytics = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/Analytics/WorldBuilder.json";
     int currentUsedTimes = 0;
     private void Awake() {
         GetWorldBuilderUsedTimesMethod();

@@ -15,7 +15,7 @@ public class SignUp : MonoBehaviour
     [SerializeField] private GameObject onlineMenu;
     [SerializeField] private TextMeshProUGUI failSingupText;
     private bool userExist = false;
-    private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/Users/";
+    private string urlFirebaseOnline = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/Users/";
 
     // Update is called once per frame
     public void SignUpRequest()

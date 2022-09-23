@@ -14,7 +14,7 @@ public class LevelsPlayed : MonoBehaviour
 
     private void Awake()
     {
-        urlFirebaseAnalytics = "https://boomaway-10de3.firebaseio.com/Analytics/LevelFrequency.json";
+        urlFirebaseAnalytics = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/Analytics/LevelFrequency.json";
         lvlFrequency = new Dictionary<string, int>();
 
         //Populate the dictionary, one entry per level

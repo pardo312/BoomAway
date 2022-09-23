@@ -19,13 +19,13 @@ namespace BoomAway.Assets.Scripts.PreloadManager
         private string queryResultSTATE = "";
 
 
-        private string urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/OnlineLevels/";
-        private string urlFirebaseStory = "https://boomaway-10de3.firebaseio.com/StoryLevels/";
+        private string urlFirebaseOnline = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/OnlineLevels/";
+        private string urlFirebaseStory = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/StoryLevels/";
 
         #region Save
         public bool saveWorld(string saveName,byte[] imageBytes)
         {
-            urlFirebaseOnline = "https://boomaway-10de3.firebaseio.com/OnlineLevels/"; 
+            urlFirebaseOnline = "https://boomaway-2ccf0-default-rtdb.firebaseio.com/OnlineLevels/"; 
             StartCoroutine(FindOnlineLevelWithSameNameToSave(saveName,imageBytes));
             return true;
         }
